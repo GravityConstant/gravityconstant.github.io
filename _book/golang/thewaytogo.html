@@ -1,0 +1,936 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>1.thewaytogo · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="build_and_install.html" />
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    golang
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.2.1" data-path="thewaytogo.html">
+            
+                <a href="thewaytogo.html">
+            
+                    
+                    1.thewaytogo
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="build_and_install.html">
+            
+                <a href="build_and_install.html">
+            
+                    
+                    2.golang 编译和编译包
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >1.thewaytogo</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p><a href="https://sites.google.com/site/thewaytogo2012/" target="_blank">&#x539F;&#x6587;&#x5730;&#x5740;</a><br><a href="http://golang.org/pkg/" target="_blank">golang&#x5305;&#x5730;&#x5740;</a></p>
+<h3 id="chapter1">Chapter1</h3>
+<pre><code>package main
+
+import (
+    &quot;fmt&quot;
+)
+
+const c = &quot;C&quot;
+
+var v int = 5
+
+type T struct{}
+
+func init() { // initialization of package
+}
+
+func main() {
+    var a int
+    Func1()
+    // ...
+    fmt.Println(a)
+}
+
+func (t T) Method1() {
+    //...
+}
+
+func Func1() { // exported function Func1
+    //...
+}
+</code></pre><html>
+<!--在这里插入内容-->
+<h4 id="the-order-of-execution-program-startup--of-a-go-application-is-as-follows--">The <u>order of execution</u> (program startup ) of a Go application is as follows:  </h4>
+
+<p>(1) all packages in package main are imported in the order as indicated,
+in every package:
+</p><p>(2) if it imports packages, (1) is called for this package (recursively)
+but a certain package is imported only once  
+</p><p>(3) then for every package (in reverse order) all constants and variables are evaluated, and the  
+init() if it contains this function.  
+</p><p>(4) at last in package main the same happens, and then main() starts executing.
+</p></html>
+
+<html>
+<h4 id="initialization-of-a-package">Initialization of a package</h4>
+<p>Program execution begins by importing the packages, initializing the main package and then invoking the function main().</p>
+<p>(1) A package with no imports is initialized by assigning initial values to all its package-level variables and then calling any package-level init() function defined in its source.
+</p><p>(2) init() functions cannot be called
+</p></html>
+
+
+
+
+<h3 id="chapter4">Chapter4</h3>
+<ol>
+<li>&#x7C7B;&#x578B;&#x8F6C;&#x6362;<pre><code>type IntArray []int
+data := []int{1, 5, 9, 4, 2, 8}
+a := IntArray(data)
+</code></pre></li>
+<li>&#x8FD0;&#x7B97;&#x7B26;&#x4F18;&#x5148;&#x987A;&#x5E8F;<pre><code>Precedence      Operator(s)
+7               ^ !
+6               * / % &lt;&lt; &gt;&gt; &amp; &amp;^
+5               + - | ^
+4               == != &lt; &lt;= &gt;= &gt;
+3               &lt;-
+2               &amp;&amp;
+1               ||
+</code></pre></li>
+<li>&#x6570;&#x7EC4;&#x7684;&#x521D;&#x59CB;&#x5316;<pre><code>a := []string{
+ 33: &quot;a&quot;,
+ 1:  &quot;b&quot;,    // &#x6700;&#x540E;&#x4E00;&#x4E2A;,&#x4E0D;&#x53EF;&#x7F3A;&#x5C11;
+}
+</code></pre></li>
+<li>&#x6570;&#x7EC4;&#x7684;&#x7D22;&#x5F15;</li>
+</ol>
+<pre><code>type Day int
+type Week int
+
+func main() {
+    s := [3]int{1, 2, 3}
+    // &#x53EA;&#x8981;[]&#x4E2D;&#x4E0D;&#x68C0;&#x67E5;Type&#xFF0C;&#x53EA;&#x8981;Kind&#x4E3A;int&#x5C31;&#x884C;
+    fmt.Println(s[Day(1)], s[Week(2)])
+}
+</code></pre><h3 id="chapter5-&#x63A7;&#x5236;&#x7ED3;&#x6784;">Chapter5 &#x63A7;&#x5236;&#x7ED3;&#x6784;</h3>
+<ul>
+<li>&#x8BED;&#x53E5;&#x5757;&#x8D4B;&#x503C;&#x7684;&#x53D8;&#x91CF;&#xFF0C;&#x4E0D;&#x80FD;&#x62FF;&#x5230;&#x5916;&#x9762;&#x4F7F;&#x7528;<pre><code>for i:=0; i&lt;12; i++ {
+  fmt.Printf(&quot;%d &quot;, i)
+}
+fmt.Printf(&quot;\n%d&quot;, i) // undefined: i
+</code></pre></li>
+<li>&#x683C;&#x5F0F;&#x5316;&#x6570;&#x636E;<pre><code>// %#v: go&#x7684;&#x539F;&#x59CB;&#x6570;&#x636E;&#x683C;&#x5F0F;&#x8F93;&#x51FA;
+fmt.Printf(&quot;XMLName: %#v\n&quot;, v.XMLName)
+// %q: &#x5E26;&#x53CC;&#x5F15;&#x53F7;&#x8F93;&#x51FA;
+fmt.Printf(&quot;Name: %q\n&quot;, v.Name)
+fmt.Printf(&quot;Phone: %q\n&quot;, v.Phone)
+fmt.Printf(&quot;Email: %v\n&quot;, v.Email)
+fmt.Printf(&quot;Groups: %v\n&quot;, v.Groups)
+fmt.Printf(&quot;Address: %v\n&quot;, v.Address)
+</code></pre></li>
+</ul>
+<h3 id="chapter6">Chapter6</h3>
+<ol>
+<li>Passing a variable number of parameters</li>
+</ol>
+<pre><code>package main
+
+import (
+    &quot;fmt&quot;
+)
+
+func main() {
+    x := Min(1, 3, 2, 0)
+    fmt.Printf(&quot;The minimum is: %d\n&quot;, x)
+    arr := []int{7, 9, 3, 5, 1}
+    x = Min(arr...)
+    fmt.Printf(&quot;The minimum in the array arr is: %d&quot;, x)
+}
+func Min(a ...int) int {
+    if len(a) == 0 {
+        return 0
+    }
+    min := a[0]
+    for _, v := range a {
+        if v &lt; min {
+            min = v
+        }
+    }
+    return min
+}
+</code></pre><ol>
+<li>defer executes before the } or return or error occur<br>arguments are evaluated at the line of the defer-statement
+parameters inverse order (like a stack or LIFO)  </li>
+</ol>
+<pre><code>package main
+
+import &quot;fmt&quot;
+
+var p = fmt.Printf
+
+func main() {
+    f()
+}
+func f() {
+    for i := 0; i &lt; 5; i++ {
+        defer fmt.Printf(&quot;%d &quot;, i) // output: 4 3 2 1
+    }
+}
+</code></pre><ol>
+<li>trace with defer</li>
+</ol>
+<pre><code>package main
+
+import (
+    &quot;io&quot;
+    &quot;log&quot;
+)
+
+func func1(s string) (n int, err error) {
+    defer func() {
+        log.Printf(&quot;func1(%q) = %d, %v&quot;, s, n, err)
+    }()
+    return 7, io.EOF
+}
+func main() {
+    func1(&quot;Go&quot;)
+}
+</code></pre><ol>
+<li>This can be convenient for modifying the error return value of a function</li>
+</ol>
+<pre><code>func f() (ret int) {
+    defer func() {
+        ret++
+    }()
+    return 1
+}
+func main() {
+    fmt.Println(f())
+}
+</code></pre><h3 id="chapter7">Chapter7</h3>
+<ol>
+<li>array define</li>
+</ol>
+<pre><code>//value type
+var arr1 [5]int
+for i:=0; i &lt; len(arr1); i++ {
+    arr1[i] = i * 2
+}
+// value type
+a := [...]int{1, 2, 3, 4, 5}
+a := [...]string{&#x201C;a&#x201D;, &#x201C;b&#x201D;, &#x201C;c&#x201D;, &#x201C;d&#x201D;}
+a := [5]int{1, 2, 3, 4, 5}
+
+// pointer type
+var arr1 = new([5]int)
+a := []int{1, 2, 3, 4, 5}
+
+slice1 = []int{1, 2, 3, 4, 5}[:]     // ok
+slice1 = [5]int{1, 2, 3, 4, 5}[:]    // error
+slice1 = [...]int{1, 2, 3, 4, 5}[:]  // error
+</code></pre><blockquote>
+<p>reference:<br>deal with array:<br><a href="http://github.com/feyeleanor/slices" target="_blank">http://github.com/feyeleanor/slices</a><br><a href="http://github.com/feyeleanor/chain" target="_blank">http://github.com/feyeleanor/chain</a><br><a href="http://github.com/feyeleanor/lists" target="_blank">http://github.com/feyeleanor/lists</a></p>
+</blockquote>
+<h3 id="chapter9">Chapter9</h3>
+<ol>
+<li>centos7 reboot.go(&#x4EB2;&#x6D4B;&#x80FD;&#x7528;)</li>
+</ol>
+<pre><code>package main
+
+import (
+    &quot;syscall&quot;
+)
+
+const LINUX_REBOOT_MAGIC1 uintptr = 0xfee1dead
+const LINUX_REBOOT_MAGIC2 uintptr = 672274793
+const LINUX_REBOOT_CMD_RESTART uintptr = 0x1234567
+
+func main() {
+    syscall.Syscall(syscall.SYS_REBOOT,
+        LINUX_REBOOT_MAGIC1,
+        LINUX_REBOOT_MAGIC2,
+        LINUX_REBOOT_CMD_RESTART)
+}
+</code></pre><ol>
+<li>&#x6D4B;&#x8BD5;&#x53D8;&#x91CF;&#x6240;&#x5360;&#x7528;&#x7684;&#x5B57;&#x8282;&#x6570;</li>
+</ol>
+<pre><code>package main
+
+import (
+    &quot;fmt&quot;
+    &quot;unsafe&quot;
+)
+
+func main() {
+    var i string
+    fmt.Println(unsafe.Sizeof(i))
+}
+
+string      16
+int         8
+byte        1
+
+[]byte      24
+[]string    24
+[]int       24
+
+new([]int)    8         // pointer, &#x9ED8;&#x8BA4;nil
+new([]int32)  8         // pointer
+make([]int32, 1)        24
+
+make(map[string]int)    8       // pointer
+make(map[string]int32)  8       // pointer
+// pointer, use make, or nil alway, cannot inital value
+new(map[string]int)     8
+</code></pre><ol>
+<li>[]byte(&quot;hello&quot;)&#x548C;[]byte{&quot;hello&quot;}&#x533A;&#x522B;</li>
+</ol>
+<pre><code>// []byte&#x662F;&#x5F3A;&#x5236;&#x7C7B;&#x578B;&#x8F6C;&#x6362;&#xFF0C;&#x8F93;&#x51FA;24
+var i []byte
+i = []byte(&quot;hello world!!!!!!!lalalalalalalalallalalalala&quot;)
+fmt.Println(unsafe.Sizeof(i)) // 24
+
+// []byte&#x662F;&#x521D;&#x59CB;&#x5316;&#xFF0C;&#x8F93;&#x51FA;24
+var i []byte
+i = []byte{&apos;h&apos;, &apos;e&apos;, &apos;l&apos;, &apos;l&apos;, &apos;o&apos;, &apos;a&apos;, &apos;b&apos;, &apos;c&apos;, &apos;d&apos;, &apos;e&apos;, &apos;f&apos;, &apos;h&apos;}
+fmt.Println(unsafe.Sizeof(i)) // 24
+
+// []byte&#x597D;&#x50CF;&#x662F;&#x6307;&#x9488;&#x554A;
+h := i
+h[0] = &apos;z&apos;
+fmt.Println(string(i)) // z...
+</code></pre><h4 id="chapter-9">Chapter 9</h4>
+<pre><code>godoc sort
+godoc cmd/sort
+// &#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x4E34;&#x65F6;&#x7684;&#x670D;&#x52A1;&#x5668; http://localhost:6060&#xFF0C;path&#x6211;&#x5E76;&#x6CA1;&#x6709;&#x6307;&#x5B9A;&#x6210;&#x529F;
+godoc -http=6060 -path=&quot;.&quot;
+// go&#x7684;&#x5E2E;&#x52A9;&#x6587;&#x6863;,localhost:6060&#x8BBF;&#x95EE;
+godoc -http=:6060
+// &#x5E2E;&#x52A9;&#x6587;&#x6863;&#x547D;&#x4EE4;
+godoc strings Fields
+// or
+godoc cmd/strings Fields
+</code></pre><h4 id="go-packages">go packages</h4>
+<blockquote>
+<p>reference</p>
+<ul>
+<li><a href="http://go-lang.cat-v.org/dev-utils" target="_blank">http://go-lang.cat-v.org/dev-utils</a> (Developer-oriented)</li>
+<li><a href="http://go-lang.cat-v.org/go-code" target="_blank">http://go-lang.cat-v.org/go-code</a> (Programs and applications)</li>
+<li><a href="http://go-lang.cat-v.org/library-bindings" target="_blank">http://go-lang.cat-v.org/library-bindings</a> (Library bindings)</li>
+<li><a href="http://go-lang.cat-v.org/pure-go-libs" target="_blank">http://go-lang.cat-v.org/pure-go-libs</a> (Pure Go libraries)</li>
+</ul>
+</blockquote>
+<h4 id="chapter10-structs-and-methods">Chapter10 Structs and Methods</h4>
+<ol>
+<li>&#x65B9;&#x6CD5;&#x6240;&#x5F15;&#x7528;&#x7684;&#x7ED3;&#x6784;&#x4F53;&#x53C2;&#x6570;&#xFF0C;&#x662F;&#x770B;&#x65B9;&#x6CD5;&#x4E0A;&#x7684;&#x7ED3;&#x6784;&#x4F53;&#x662F;&#x5426;&#x4E3A;&#x4F20;&#x6307;&#x9488;&#xFF0C;&#x800C;&#x4E0E;&#x521D;&#x59CB;&#x5316;&#x7684;
+&#x7ED3;&#x6784;&#x4F53;&#x662F;&#x5426;&#x4E3A;&#x6307;&#x9488;&#x7C7B;&#x578B;&#x65E0;&#x5173;</li>
+<li>&#x7ED3;&#x6784;&#x4F53;&#x65B9;&#x6CD5;&#x4E2D;&#x7684;&#x7ED3;&#x6784;&#x4F53;&#x4E0D;&#x8BBA;&#x662F;&#x5426;&#x4F20;&#x6307;&#x9488;&#xFF0C;&#x521D;&#x59CB;&#x5316;&#x7684;&#x7ED3;&#x6784;&#x4F53;&#x4E0D;&#x8BBA;&#x662F;&#x5426;&#x4E3A;&#x6307;&#x9488;&#x7C7B;&#x578B;&#x90FD;
+&#x53EF;&#x4EE5;&#x8C03;&#x7528;</li>
+<li>&#x4F46;&#x662F;&#x4F7F;&#x7528;&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x7ED3;&#x6784;&#x4F53;&#x65B9;&#x6CD5;&#x7684;&#x8BDD;&#xFF0C;&#x7ED3;&#x6784;&#x4F53;&#x65B9;&#x6CD5;&#x4E2D;&#x7684;&#x7ED3;&#x6784;&#x4F53;&#x90FD;&#x53EF;&#x4EE5;&#x4F20;&#x9012;&#x6307;&#x9488;&#xFF0C;
+&#x4F46;&#x662F;&#x4F20;&#x9012;&#x6307;&#x9488;&#x7C7B;&#x578B;&#x7684;&#x8BDD;&#xFF0C;&#x53EA;&#x80FD;&#x4F20;&#x9012;&#x53EA;&#x80FD;&#xFF0C;&#x800C;&#x4E0D;&#x80FD;&#x4F20;&#x9012;&#x7ED3;&#x6784;&#x4F53;</li>
+</ol>
+<pre><code>type Upper interface {
+    UpPerson()
+}
+type Person struct {
+    firstName string
+    lastName  string
+}
+
+func (p *Person) UpPerson() {
+    p.firstName = strings.ToUpper(p.firstName)
+    p.lastName = strings.ToUpper(p.lastName)
+}
+func (p *Person) LowPerson() {
+    p.firstName = strings.ToLower(p.firstName)
+    p.lastName = strings.ToLower(p.lastName)
+}
+func (p Person) lowPerson() {
+    p.firstName = strings.ToLower(p.firstName)
+    p.lastName = strings.ToLower(p.lastName)
+}
+
+func main() {
+    // &#x8BF4;&#x660E;1
+    var pers1 *Person = &amp;Person{&quot;Chris&quot;, &quot;Woodward&quot;}
+    pers1.UpPerson()
+    fmt.Println(pers1) // &amp;{CHRIS WOODWARD}
+    pers1.LowPerson()
+    fmt.Println(pers1) // &amp;{chris woodward}
+    pers1.lowPerson()
+    fmt.Println(pers1) // &amp;{CHRIS WOODWARD}
+    // &#x8BF4;&#x660E;2&#xFF0C;&#x7ED3;&#x5408;&#x4E0A;&#x6587;&#x53EF;&#x8BF4;&#x660E;
+    pers2 := Person{&quot;Lucy&quot;, &quot;Lily&quot;}
+    pers2.UpPerson()
+    fmt.Println(pers2) // {LUCY LILY}
+    pers2.LowPerson()
+    fmt.Println(pers2) // {lucy lily}
+    pers2.lowPerson()
+    fmt.Println(pers2) // {lucy lily}
+    // &#x8BF4;&#x660E;3&#xFF0C;&#x7ED3;&#x5408;1&#xFF0C;2
+    ups := []Upper{pers1, pers2} // err:pers2&#x9700;&#x8981;&#x4F7F;&#x7528;&#x6307;&#x9488;
+    ups := []Upper{pers1, &amp;pers2} // ok
+    for n, _ := range ups {
+        ups[n].UpPerson()
+        fmt.Println(&quot;detail:&quot;, ups[n])
+    }
+}
+</code></pre><h4 id="chapter11-interfaces-and-reflection">Chapter11 Interfaces and reflection</h4>
+<ul>
+<li><p>Using method sets with interface<br>==Summarized:== when you call a method on an interface, it must either have an identical receiver type or it must be directly discernible from the concrete type: P</p>
+<ol>
+<li>Pointer methods can be called with pointers.</li>
+<li>Value methods can be called with values.</li>
+<li>Value-receiver methods can be called with pointer values because they can be dereferenced first.</li>
+<li>Pointer-receiver methods ==cannot== be called with values, however, because the value stored inside an interface has no address.</li>
+</ol>
+</li>
+<li><p>&#x63A5;&#x53E3;&#x7C7B;&#x578B;&#x65AD;&#x8A00;&#x548C;switch...type</p>
+</li>
+</ul>
+<pre><code>type Interface interface{}
+func main() {
+    a := 1
+    i := Interface(a)
+    b := i.(int) // &#x65AD;&#x8A00;&#x4E0D;&#x8FDB;&#x884C;&#x7C7B;&#x578B;&#x68C0;&#x6D4B;
+    if t, ok := i.(int); ok {
+        fmt.Println(&amp;t, &amp;a)
+    }
+    switch t := i.(type) {
+    case int:
+        fmt.Println(&amp;t, &amp;a)
+    }
+}
+</code></pre><h4 id="chapter13-error-handling-and-testing">Chapter13 Error-handling and Testing</h4>
+<ul>
+<li>&#x9519;&#x8BEF;&#x5904;&#x7406;&#x548C;&#x6062;&#x590D;</li>
+</ul>
+<pre><code>package main
+
+import (
+    &quot;fmt&quot;
+)
+
+func badcall() {
+    panic(&quot;bad end&quot;)
+}
+
+func test() {
+    defer func() {
+        if e := recover(); e != nil {
+            fmt.Printf(&quot;Panicking %s\r\n&quot;, e)
+        }
+    }()
+    badcall()
+    fmt.Printf(&quot;After bad call\r\n&quot;)
+}
+
+func main() {
+    fmt.Printf(&quot;Calling test\r\n&quot;)
+    test()
+    fmt.Printf(&quot;Test completed\r\n&quot;)
+}
+</code></pre><ul>
+<li><p>&#x6D4B;&#x8BD5;&#x548C;&#x57FA;&#x51C6;&#x68C0;&#x67E5;&#x7A0B;&#x5E8F;</p>
+<ol>
+<li>&#x6D4B;&#x8BD5;&#x7A0B;&#x5E8F;&#x5FC5;&#x987B;&#x5728;&#x8981;&#x6D4B;&#x8BD5;&#x7684;&#x5305;&#x91CC;&#x9762;</li>
+<li>&#x6587;&#x4EF6;&#x540D;&#x5FC5;&#x987B;&#x662F;*_test.go&#x7684;&#x5F62;&#x5F0F;</li>
+<li>&#x6D4B;&#x8BD5;&#x7A0B;&#x5E8F;&#x4E0D;&#x4F1A;&#x548C;&#x6B63;&#x5E38;&#x7684;go&#x7A0B;&#x5E8F;&#x4E00;&#x8D77;&#x7F16;&#x8BD1;&#xFF0C;&#x53EA;&#x6709;go test&#x624D;&#x7F16;&#x8BD1;&#x6240;&#x6709;&#x7684;&#x6587;&#x4EF6;</li>
+<li>&#x5F62;&#x5F0F;&#xFF0C;Abcde&#x4E2D;&#x7684;A&#x53EF;&#x4EE5;&#x5C0F;&#x5199;&#xFF0C;&#x770B;testing&#x5305;&#x4E2D;&#x5199;&#x7684;&#x662F;&#x5C0F;&#x5199;&#x4EE5;rountine&#x7684;&#x65B9;&#x5F0F;&#x8FD0;&#x884C;<pre><code>func TestAbcde(t *testing.T)
+</code></pre></li>
+<li>&#x6D4B;&#x8BD5;T&#x7ED3;&#x6784;&#x4F53;&#x7BA1;&#x7406;&#x6D4B;&#x8BD5;&#x72B6;&#x6001;&#x548C;&#x652F;&#x6301;&#x6D4B;&#x8BD5;&#x683C;&#x5F0F;&#x5316;<pre><code># &#x6807;&#x8BB0;&#x6D4B;&#x8BD5;&#x5931;&#x8D25;&#xFF0C;&#x5E76;&#x7EE7;&#x7EED;&#x6267;&#x884C;
+func (t *T) Fail()
+# &#x6807;&#x8BB0;&#x6D4B;&#x8BD5;&#x5931;&#x8D25;&#xFF0C;&#x505C;&#x6B62;&#x6267;&#x884C;&#xFF1B;&#x8BE5;&#x6587;&#x4EF6;&#x6240;&#x6709;&#x7684;&#x5176;&#x4ED6;&#x6D4B;&#x8BD5;&#x505C;&#x6B62;&#xFF0C;&#x7EE7;&#x7EED;&#x6267;&#x884C;&#x5176;&#x4ED6;&#x6587;&#x4EF6;&#x6D4B;&#x8BD5;
+func (t *T) FailNow()
+# &#x8BB0;&#x5F55;&#x65E5;&#x5FD7;
+func (t *T) Log(args &#x2026;interface{})
+# &#x5148;&#x8BB0;&#x5F55;&#x65E5;&#x5FD7;&#xFF0C;&#x7136;&#x540E;&#x5F71;&#x54CD;&#x540C;FailNow()
+func (t *T) Fatal(args &#x2026;interface{})
+</code></pre></li>
+<li>&#x8FDB;&#x884C;&#x6D4B;&#x8BD5;&#x4E4B;&#x524D;&#x9700;&#x8981;&#x521D;&#x59CB;&#x5316;&#x64CD;&#x4F5C;(&#x4F8B;&#x5982;&#x6253;&#x5F00;&#x8FDE;&#x63A5;)&#xFF0C;&#x6D4B;&#x8BD5;&#x7ED3;&#x675F;&#x540E;&#xFF0C;&#x9700;&#x8981;&#x505A;&#x6E05;&#x7406;&#x5DE5;&#x4F5C;(&#x4F8B;&#x5982;&#x5173;&#x95ED;&#x8FDE;&#x63A5;)&#x7B49;&#x7B49;&#xFF0C;&#x4F7F;&#x7528;&#x4F7F;&#x7528;TestMain()&#xFF0C;<a href="https://blog.csdn.net/lanyang123456/article/details/79776410" target="_blank">&#x7528;&#x4F8B;&#x6765;&#x6E90;</a><ul>
+<li>add.go<pre><code>package hello
+func Add(a, b int) int {
+  return a + b
+}
+</code></pre></li>
+<li>add_test.go<pre><code>package hello
+import (
+ &quot;fmt&quot;
+ &quot;testing&quot;
+)
+func TestAdd(t *testing.T) {
+  if Add(1, 2) != 3 {
+      t.Errorf(&quot;Add(1, 2) failed. Got %d, expected 3.&quot;, r)
+  }
+}
+func TestMain(m *testing.M) {
+  fmt.Println(&quot;begin&quot;)
+  m.Run()
+  fmt.Println(&quot;end&quot;)
+}
+</code></pre></li>
+<li>&#x6D4B;&#x8BD5;<pre><code>$ go test -v
+begin 
+=== RUN TestAdd 
+&#x2014; PASS: TestAdd (0.00s) 
+PASS 
+end 
+ok hello 0.432s
+</code></pre></li>
+</ul>
+</li>
+<li><p>Benchmark&#x6D4B;&#x8BD5;</p>
+<pre><code>func BenchmarkReverse(b *testing.B) {
+}
+
+$ go test -bench=.*
+</code></pre></li>
+</ol>
+</li>
+</ul>
+<h4 id="chapter14-goroutines-and-channels">Chapter14 Goroutines and Channels</h4>
+<ul>
+<li>&#x5176;&#x5B9E;&#x5F15;&#x7528;&#x4F20;&#x9012;&#x4E5F;&#x662F;&#x503C;&#x4F20;&#x9012;&#xFF0C;&#x53EA;&#x4E0D;&#x8FC7;&#x662F;&#x5C06;&#x6570;&#x636E;&#x7684;&#x5730;&#x5740;&#x8D4B;&#x503C;&#x7ED9;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x6307;&#x9488;</li>
+</ul>
+<pre><code>// polartocartesian.go
+package main
+
+import (
+    &quot;bufio&quot;
+    &quot;fmt&quot;
+    &quot;math&quot;
+    &quot;os&quot;
+    &quot;runtime&quot;
+    &quot;strconv&quot;
+    &quot;strings&quot;
+)
+
+type polar struct {
+    radius float64
+    &#x398;      float64
+}
+
+type cartesian struct {
+    x float64
+    y float64
+}
+
+const result = &quot;Polar: radius=%.02f angle=%.02f degrees -- Cartesian: x=%.02f y=%.02f\n&quot;
+
+var prompt = &quot;Enter a radius and an angle (in degrees), e.g., 12.5 90, &quot; + &quot;or %s to quit.&quot;
+
+func init() {
+    if runtime.GOOS == &quot;windows&quot; {
+        prompt = fmt.Sprintf(prompt, &quot;Ctrl+Z, Enter&quot;)
+    } else { // Unix-like
+        prompt = fmt.Sprintf(prompt, &quot;Ctrl+D&quot;)
+    }
+}
+
+func main() {
+    questions := make(chan polar)
+    defer close(questions)
+    answers := createSolver(questions)
+    defer close(answers)
+    interact(questions, answers)
+}
+
+func createSolver(questions chan polar) chan cartesian {
+    answers := make(chan cartesian)
+    go func() {
+        for {
+            polarCoord := &lt;-questions
+            &#x398; := polarCoord.&#x398; * math.Pi / 180.0 // degrees to radians
+            x := polarCoord.radius * math.Cos(&#x398;)
+            y := polarCoord.radius * math.Sin(&#x398;)
+            answers &lt;- cartesian{x, y}
+        }
+    }()
+    return answers
+}
+
+func interact(questions chan polar, answers chan cartesian) {
+    reader := bufio.NewReader(os.Stdin)
+    fmt.Println(prompt)
+    for {
+        fmt.Printf(&quot;Radius and angle: &quot;)
+        line, err := reader.ReadString(&apos;\n&apos;)
+        if err != nil {
+            break
+        }
+        line = line[:len(line)-1] // chop of newline character
+        if numbers := strings.Fields(line); len(numbers) == 2 {
+            polars, err := floatsForStrings(numbers)
+            if err != nil {
+                fmt.Fprintln(os.Stderr, &quot;invalid number&quot;)
+                continue
+            }
+            questions &lt;- polar{polars[0], polars[1]}
+            coord := &lt;-answers
+            fmt.Printf(result, polars[0], polars[1], coord.x, coord.y)
+        } else {
+            fmt.Fprintln(os.Stderr, &quot;invalid input&quot;)
+        }
+    }
+    fmt.Println()
+}
+
+func floatsForStrings(numbers []string) ([]float64, error) {
+    var floats []float64
+    for _, number := range numbers {
+        if x, err := strconv.ParseFloat(number, 64); err != nil {
+            return nil, err
+        } else {
+            floats = append(floats, x)
+        }
+    }
+    return floats, nil
+}
+/* Output:
+Enter a radius and an angle (in degrees), e.g., 12.5 90, or Ctrl+Z, Enter to qui
+t.
+Radius and angle: 12.5 90
+Polar: radius=12.50 angle=90.00 degrees -- Cartesian: x=0.00 y=12.50
+Radius and angle: ^Z
+*/
+</code></pre><p>&#x901A;&#x9053;&#x53D8;&#x91CF;&#x53EF;&#x4EE5;&#x6307;&#x5B9A;&#x8BFB;&#x5199;&#x65B9;&#x5411;</p>
+<pre><code>package main
+
+import (
+    &quot;bufio&quot;
+    &quot;fmt&quot;
+    &quot;math&quot;
+    &quot;os&quot;
+    &quot;runtime&quot;
+    &quot;strconv&quot;
+    &quot;strings&quot;
+)
+
+type polar struct {
+    radius float64
+    &#x398;      float64
+}
+
+type cartesion struct {
+    x float64
+    y float64
+}
+
+const result = &quot;Polar: radius=%.02f angle=%.02f degrees -- &quot; +
+    &quot;Cartesion: x=%.02f y=%.02f\n&quot;
+
+var prompt = &quot;Enter a radius and an angle (in degrees), e.g., 12.5 90, &quot; +
+    &quot;or %s to quit.&quot;
+
+func init() {
+    if runtime.GOOS == &quot;windows&quot; {
+        prompt = fmt.Sprintf(prompt, &quot;Ctrl+Z, Enter&quot;)
+    } else {
+        prompt = fmt.Sprintf(prompt, &quot;Ctrl+D&quot;)
+    }
+}
+
+func main() {
+    // questions := make(chan&lt;- polar) error
+    questions := make(chan polar)
+    defer close(questions)
+    answers := createSlover(questions)
+    defer close(answers)
+    interact(questions, answers)
+}
+
+func createSlover(questions &lt;-chan polar) chan cartesion {
+    answers := make(chan cartesion)
+    go func() {
+        for {
+            polarCoord := &lt;-questions
+            &#x398; := polarCoord.&#x398; * math.Pi / 180.0
+            x := polarCoord.radius * math.Cos(&#x398;)
+            y := polarCoord.radius * math.Sin(&#x398;)
+            answers &lt;- cartesion{x, y}
+        }
+    }()
+    return answers
+}
+
+func interact(questions chan&lt;- polar, answers &lt;-chan cartesion) {
+    reader := bufio.NewReader(os.Stdin)
+    fmt.Println(prompt)
+    for {
+        fmt.Printf(&quot;Radius and angle: &quot;)
+        line, err := reader.ReadString(&apos;\n&apos;)
+        if err != nil {
+            break
+        }
+        line = line[:len(line)-1]
+        if numbers := strings.Fields(line); len(numbers) == 2 {
+            polars, err := floatsForStrings(numbers)
+            if err != nil {
+                fmt.Println(os.Stderr, &quot;invalid number&quot;)
+                continue
+            }
+            questions &lt;- polar{polars[0], polars[1]}
+            coord := &lt;-answers
+            fmt.Printf(result, polars[0], polars[1], coord.x, coord.y)
+        } else {
+            fmt.Fprintln(os.Stderr, &quot;invalid input&quot;)
+        }
+    }
+}
+
+func floatsForStrings(numbers []string) ([]float64, error) {
+    var floats []float64
+    for _, number := range numbers {
+        if x, err := strconv.ParseFloat(number, 64); err != nil {
+            return nil, err
+        } else {
+            floats = append(floats, x)
+        }
+    }
+    return floats, nil
+}
+</code></pre><ul>
+<li>&#x9ED8;&#x8BA4;&#x7684;&#xFF0C;&#x901A;&#x8BAF;&#x65F6;&#x540C;&#x6B65;&#x7684;&#xFF0C;&#x5E76;&#x4E14;&#x662F;&#x4E0D;&#x7F13;&#x5B58;&#xFF1A;&#x53D1;&#x9001;&#x4E0D;&#x4F1A;&#x5B8C;&#x6210;&#x76F4;&#x5230;&#x6709;&#x4E00;&#x4E2A;&#x63A5;&#x53D7;&#x8005;&#x63A5;&#x6536;&#x4E86;&#x6570;&#x636E;&#x3002;&#x8BD5;&#x60F3;&#x4E00;&#x4E2A;&#x4E0D;&#x7F13;&#x5B58;&#x7684;&#x901A;&#x9053;&#x597D;&#x50CF;&#x5728;&#x901A;&#x9053;&#x6CA1;&#x6709;&#x6570;&#x636E;&#x3002;<ol>
+<li>&#x53D1;&#x9001;&#x8005;&#x5728;&#x901A;&#x9053;&#x4E2D;&#x963B;&#x585E;</li>
+<li>&#x63A5;&#x53D7;&#x8005;&#x4E5F;&#x5728;&#x901A;&#x9053;&#x4E2D;&#x963B;&#x585E;</li>
+</ol>
+</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                
+                <a href="build_and_install.html" class="navigation navigation-next navigation-unique" aria-label="Next page: 2.golang 编译和编译包">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"1.thewaytogo","level":"1.2.1","depth":2,"next":{"title":"2.golang 编译和编译包","level":"1.2.2","depth":2,"path":"golang/build_and_install.md","ref":"golang/build_and_install.md","articles":[]},"previous":{"title":"golang","level":"1.2","depth":1,"ref":"","articles":[{"title":"1.thewaytogo","level":"1.2.1","depth":2,"path":"golang/thewaytogo.md","ref":"golang/thewaytogo.md","articles":[]},{"title":"2.golang 编译和编译包","level":"1.2.2","depth":2,"path":"golang/build_and_install.md","ref":"golang/build_and_install.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"golang/thewaytogo.md","mtime":"2019-04-03T13:50:22.274Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-04-03T13:56:20.173Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
