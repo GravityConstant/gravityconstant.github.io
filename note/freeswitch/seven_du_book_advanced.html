@@ -1,0 +1,503 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>4.freeswitch权威指南 -- 高级篇 16_ · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="cookbook.html" />
+    
+    
+    <link rel="prev" href="seven_du_book_12_13.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    golang
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../golang/thewaytogo.html">
+            
+                <a href="../golang/thewaytogo.html">
+            
+                    
+                    1.thewaytogo
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../golang/build_and_install.html">
+            
+                <a href="../golang/build_and_install.html">
+            
+                    
+                    2.golang 编译和编译包
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    freeswitch
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="mtg_notice.html">
+            
+                <a href="mtg_notice.html">
+            
+                    
+                    1.MTG落地网关注意事项
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="seven_du_book_10_11.html">
+            
+                <a href="seven_du_book_10_11.html">
+            
+                    
+                    2.freeswitch权威指南 -- 实战篇10_11
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="seven_du_book_12_13.html">
+            
+                <a href="seven_du_book_12_13.html">
+            
+                    
+                    3.freeswitch权威指南 -- 实战篇12_13
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.4" data-path="seven_du_book_advanced.html">
+            
+                <a href="seven_du_book_advanced.html">
+            
+                    
+                    4.freeswitch权威指南 -- 高级篇 16_
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="cookbook.html">
+            
+                <a href="cookbook.html">
+            
+                    
+                    5.freeswitch cookbook
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="pbx.html">
+            
+                <a href="pbx.html">
+            
+                    
+                    6.pbx
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >4.freeswitch权威指南 -- 高级篇 16_</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h4 id="chapter16-&#x5D4C;&#x5165;&#x5F0F;&#x811A;&#x672C;">Chapter16 &#x5D4C;&#x5165;&#x5F0F;&#x811A;&#x672C;</h4>
+<ul>
+<li>FreeSWITCH&#x4E2D;&#x7684;&#x5D4C;&#x5165;&#x5F0F;&#x811A;&#x672C;</li>
+<li><p>Lua</p>
+<ul>
+<li>&#x8BED;&#x6CD5;&#x7B80;&#x4ECB;<ol>
+<li>Programming Lua</li>
+<li>Programming in Lua</li>
+</ol>
+</li>
+<li>&#x5C06;&#x7535;&#x8BDD;&#x8DEF;&#x7531;&#x5230;Lua&#x811A;&#x672C;<pre><code>originate user/1000 &amp;lua(test.lua)
+&lt;action application=&quot;lua&quot; data=&quot;test.lua&quot;/&gt;
+uuid_transfer &lt;uuid&gt; lua:/tmp/test.lua inline
+</code></pre></li>
+<li><p>Session&#x76F8;&#x5173;&#x51FD;&#x6570;</p>
+<pre><code>session:answer()
+session.sleep(1000)
+session:streamFile(&quot;/tmp/hello.wav&quot;)
+-- &#x6CA1;&#x6709;&#x5BF9;&#x5E94;&#x7684;&#x51FD;&#x6570;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;execute&#x6267;&#x884C;
+-- session:execute(&quot;playback&quot;, &quot;/tmp/sound.wav&quot;)
+session.hangup()
+</code></pre><ol>
+<li>lua&#x811A;&#x672C;&#x6267;&#x884C;&#x5B8C;&#xFF0C;&#x4F1A;&#x81EA;&#x52A8;&#x6302;&#x673A;<pre><code>-- &#x8BBE;&#x7F6E;&#x4E0D;&#x81EA;&#x52A8;&#x6302;&#x673A;
+session:setAutoHangup(false)
+</code></pre></li>
+<li>getVariable<pre><code>local moh = session:getVariable(&quot;hold_music&quot;)
+local context = session:getVariable(&quot;context&quot;)
+local dest_number = session:getVariable(&quot;destination_number&quot;)
+local cid_name = session:getVariable(&quot;caller_id_name&quot;)
+local cid_number = session:getVariable(&quot;caller_id_number&quot;)
+local ani = session:getVariable(&quot;ani&quot;)
+local uuid = session:getVariable(&quot;uuid&quot;)
+</code></pre></li>
+<li>getUUID<pre><code>local uuid = session:get_uuid()
+-- &#x7B49;&#x4EF7;&#x4E8E;
+local uuid = session:getVariable(&quot;uuid&quot;)
+</code></pre></li>
+<li>setVariable&#x3002;&#x8BBE;&#x7F6E;&#x901A;&#x9053;&#x53D8;&#x91CF;&#xFF0C;&#x7B49;&#x4EF7;&#x4E8E;Dialplan App&#x91CC;&#x7684;set<pre><code>session:setVariable(&quot;varname&quot;, &quot;varval&quot;)
+</code></pre></li>
+<li>hangup&#x3002;&#x6302;&#x65AD;&#x5F53;&#x524D;&#x901A;&#x8BDD;<pre><code>session:hangup()
+-- &#x6307;&#x5B9A;&#x6302;&#x65AD;&#x539F;&#x56E0;
+session:hangup(&quot;USER_BUSY&quot;)
+</code></pre></li>
+<li>ready&#x3002;&#x68C0;&#x67E5;session&#x662F;&#x5426;&#x53EF;&#x6B63;&#x5E38;&#x4F7F;&#x7528;&#xFF0C;&#x6302;&#x673A;&#x8FD4;&#x56DE;false<pre><code>-- &#x6709;&#x5FAA;&#x73AF;&#x4E00;&#x5B9A;&#x8981;&#x68C0;&#x6D4B;session&#x72B6;&#x6001;
+while (session:ready() == true) do
+ -- do something here
+end
+</code></pre></li>
+<li>streamFile&#x3002;&#x653E;&#x97F3;&#xFF0C;&#x76F8;&#x5F53;&#x4E8E;playback<pre><code>session:streamFile(&quot;/tmp/test.wav&quot;)
+</code></pre></li>
+<li>recordFile&#xFF1A;&#x5F55;&#x97F3;&#xFF0C;&#x76F8;&#x5F53;&#x4E8E;record
+```
+session:recordFile(file_name [,max_len_secs] [,silence_threshold], [,silence_secs])
+-- file_name&#xFF1A;&#x6587;&#x4EF6;&#x540D;
+-- max_len_secs&#xFF1A;&#x5F55;&#x97F3;&#x6700;&#x957F;&#x79D2;&#x6570;
+-- silence_threshold&#xFF1A;&#x58F0;&#x97F3;&#x9608;&#x503C;&#xFF0C;&#x5C0F;&#x4E8E;&#x8BE5;&#x58F0;&#x97F3;&#x5C31;&#x8BA4;&#x4E3A;&#x662F;&#x9759;&#x97F3;
+-- silence_secs&#xFF1A;&#x5982;&#x679C;&#x9759;&#x97F3;&#x65F6;&#x957F;&#x5927;&#x4E8E;&#x4E00;&#x5B9A;&#x79D2;&#x6570;&#xFF0C;&#x5219;&#x505C;&#x6B62;&#x5F55;&#x97F3;</li>
+</ol>
+<p>session:recordFile(&quot;/tmp/test_record.wav&quot;)</p>
+<pre><code>8. read&#xFF1A;&#x76F8;&#x5F53;&#x4E8E;dialplan App&#x4E2D;&#x7684;read&#xFF0C;&#x7528;&#x4E8E;&#x64AD;&#x653E;&#x4E00;&#x4E2A;&#x58F0;&#x97F3;&#xFF0C;&#x5E76;&#x83B7;&#x53D6;DTMF
+</code></pre><p><min digits=""><max digits=""><file to="" play=""><inter-digit timeout=""><terminators></terminators></inter-digit></file></max></min></p>
+<p>digits = session:read(15, 18, &quot;/tmp/input-id-card.wav&quot;, &quot;5000&quot;, &quot;#&quot;)
+session:consoleLog(&quot;info&quot;, &quot;INFO ID Card Number: &quot; .. digits .. &quot;\n&quot;)</p>
+<pre><code>9. palyAndGetDigits&#x3002;&#x76F8;&#x5F53;&#x4E8E;play_and_get_digits&#x3002;&#x53C2;&#x6570;&#x683C;&#x5F0F;&#x662F;&#xFF1A;
+</code></pre><p><min_digits>, <max_digits>, <max_attempts>, <timeout>, <terminators>, 
+<prompt_audio_files>, <input_error_audio>, <digit_regex>, [variable_name],
+[digit_timeout], [transfer_on_failure]
+-- timeout&#xFF1A;&#x6536;&#x9F50;&#x6240;&#x6709;&#x53F7;&#x7684;&#x8D85;&#x65F6;&#x503C;
+-- digit_timeout&#xFF1A;&#x5141;&#x8BB8;&#x4E24;&#x6B21;&#x6309;&#x952E;&#x4E4B;&#x95F4;&#x7684;&#x65F6;&#x95F4;&#x95F4;&#x9694;&#x6700;&#x5927;&#x503C;
+-- transfer_on_failure&#xFF1A;&#x5931;&#x8D25;&#x540E;&#x8F6C;&#x5230;dialplan&#x7684;&#x4E00;&#x4E2A;extension
+-- &#x5982;&#xFF1A;failed XML dialplan</digit_regex></input_error_audio></prompt_audio_files></terminators></timeout></max_attempts></max_digits></min_digits></p>
+<p>digits = session:playAndGetDigits(15, 18, 3, 10000, &quot;#&quot;, </p>
+<pre><code>&quot;/tmp/input-id-card.wav&quot;, &quot;/tmp/invalid_num.wav&quot;,
+&quot;^\\d{15}|\\d{17}|[0-9\\*]$&quot;)
+</code></pre><p>session:execute(&quot;log&quot;, &quot;INFO ID Card Number: &quot; .. digits .. &quot;\n&quot;)</p>
+<pre><code>10. setInputCallback&#x3002;&#x5728;&#x653E;&#x97F3;&#x6216;&#x5F55;&#x97F3;&#x65F6;&#xFF0C;&#x7528;&#x6237;&#x6309;&#x4E0B;&#x7684;DTMF&#x53EF;&#x4EE5;&#x7528;&#x4E8E;&#x89E6;&#x53D1;&#x4E00;&#x4E9B;&#x529F;&#x80FD;&#x3002;
+</code></pre><p>-- type&#xFF1A;dtmf
+-- obj&#xFF1A;obj.digit(&#x94FE;&#x503C;)&#x548C;obj.duration(&#x65F6;&#x957F;)
+function onInputCBF(s, type, obj, arg)</p>
+<pre><code>if (type == &quot;dtmf&quot;) then
+    freeswitch.consoleLog(&quot;INFO&quot;, &quot;Got DTMF: &quot; ..
+        &quot; Duration: &quot; .. obj.digit .. obj.duration .. &quot;\\n&quot;)
+    if (obj.digit == &quot;3&quot;) then
+        return &quot;break&quot;
+    end
+end
+return &apos;&apos;
+</code></pre><p>end</p>
+<p>session:setInputCallback(&apos;onInputCBF&apos;, &apos;&apos;);
+session:streamFile(&quot;local_stream://moh&quot;);
+```</p>
+</li>
+<li><p>&#x975E;Session&#x51FD;&#x6570;&#x548C;&#x72EC;&#x7ACB;&#x7684;Lua&#x811A;&#x672C;</p>
+<pre><code>-- &#x65E5;&#x5FD7;&#x8F93;&#x51FA;
+freeswitch.consoleLog(&quot;NOTICE&quot;, &quot;Hello lua log!\n&quot;)
+-- &#x5141;&#x8BB8;&#x5728;lua&#x6267;&#x884C;&#x4EFB;&#x610F;&#x7684;API
+api = freeswitch.API()
+reply = api:execute(&quot;version&quot;, &quot;&quot;)
+freeswitch.consoleLog(&quot;INFO&quot;, reply .. &quot;\n&quot;)
+
+-- &#x6267;&#x884C;
+freeswitch&gt; lua lua/version.lua
+-ERR no reply
+
+freeswitch&gt; luarun lua/version.lua
++OK
+
+-- &#x5176;&#x4ED6;
+freeswitch.bridge()
+freeswitch.email()
+</code></pre><p>lua&#x662F;&#x4E00;&#x4E2A;App&#xFF0C;&#x81EA;&#x52A8;&#x83B7;&#x5F97;&#x4E00;&#x4E2A;session&#x5BF9;&#x8C61;<br>luarun&#x662F;&#x4E00;&#x4E2A;API&#xFF0C;&#x53EF;&#x5728;&#x63A7;&#x5236;&#x53F0;&#x72EC;&#x7ACB;&#x8FD0;&#x884C;&#x3002;&#x4E0D;&#x4F1A;&#x81EA;&#x52A8;&#x83B7;&#x5F97;session&#xFF0C;&#x4F46;&#x53EF;&#x4EE5;&#x81EA;&#x5DF1;&#x521B;&#x5EFA;  </p>
+</li>
+<li><p>Event&#x76F8;&#x5173;&#x51FD;&#x6570;<br>Lua&#x53EF;&#x4EE5;&#x4EA7;&#x751F;&#x4E8B;&#x4EF6;&#xFF0C;&#x4E5F;&#x80FD;&#x6D88;&#x8D39;&#x4E8B;&#x4EF6;</p>
+<ol>
+<li>freeswitch.Event&#x3002;&#x521D;&#x59CB;&#x5316;&#x4E8B;&#x4EF6;</li>
+<li>event:addHeader</li>
+<li>event:fire&#x3002;&#x4EA7;&#x751F;&#x4E8B;&#x4EF6;</li>
+<li>event:addBody</li>
+<li>event:delHeader</li>
+<li>event:getHeader</li>
+<li>event:getBody</li>
+<li>event:getType</li>
+<li>event:serialize</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="seven_du_book_12_13.html" class="navigation navigation-prev " aria-label="Previous page: 3.freeswitch权威指南 -- 实战篇12_13">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="cookbook.html" class="navigation navigation-next " aria-label="Next page: 5.freeswitch cookbook">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"4.freeswitch权威指南 -- 高级篇 16_","level":"1.3.4","depth":2,"next":{"title":"5.freeswitch cookbook","level":"1.3.5","depth":2,"path":"freeswitch/cookbook.md","ref":"freeswitch/cookbook.md","articles":[]},"previous":{"title":"3.freeswitch权威指南 -- 实战篇12_13","level":"1.3.3","depth":2,"path":"freeswitch/seven_du_book_12_13.md","ref":"freeswitch/seven_du_book_12_13.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"freeswitch/seven_du_book_advanced.md","mtime":"2019-06-25T16:47:40.585Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-06-25T16:59:42.175Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

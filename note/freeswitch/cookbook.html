@@ -1,0 +1,1457 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>5.freeswitch cookbook · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="pbx.html" />
+    
+    
+    <link rel="prev" href="seven_du_book_advanced.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    golang
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../golang/thewaytogo.html">
+            
+                <a href="../golang/thewaytogo.html">
+            
+                    
+                    1.thewaytogo
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../golang/build_and_install.html">
+            
+                <a href="../golang/build_and_install.html">
+            
+                    
+                    2.golang 编译和编译包
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    freeswitch
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="mtg_notice.html">
+            
+                <a href="mtg_notice.html">
+            
+                    
+                    1.MTG落地网关注意事项
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="seven_du_book_10_11.html">
+            
+                <a href="seven_du_book_10_11.html">
+            
+                    
+                    2.freeswitch权威指南 -- 实战篇10_11
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="seven_du_book_12_13.html">
+            
+                <a href="seven_du_book_12_13.html">
+            
+                    
+                    3.freeswitch权威指南 -- 实战篇12_13
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="seven_du_book_advanced.html">
+            
+                <a href="seven_du_book_advanced.html">
+            
+                    
+                    4.freeswitch权威指南 -- 高级篇 16_
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.5" data-path="cookbook.html">
+            
+                <a href="cookbook.html">
+            
+                    
+                    5.freeswitch cookbook
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="pbx.html">
+            
+                <a href="pbx.html">
+            
+                    
+                    6.pbx
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >5.freeswitch cookbook</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>Anthony Menissale &#x300A;FreeSWITCH 1.2&#x300B;&#x4E2D;&#x8BF4;&#x8FC7;&#xFF1A;&#x201C;&#x4E16;&#x754C;&#x6539;&#x53D8;&#x5F97;&#x8D8A;&#x5FEB;&#xFF0C;&#x4EBA;&#x4EEC;&#x5C31;&#x8D8A;&#x5BB9;&#x6613;&#x6000;&#x65E7;&#x3002;&#x6280;&#x672F;&#x7684;&#x8FDB;&#x6B65;&#x548C;&#x9769;&#x547D;&#x4E5F;&#x662F;&#x5982;&#x6B64;&#x3002;
+&#x6211;&#x4EEC;&#x7684;&#x6C7D;&#x8F66;&#x4ECD;&#x7136;&#x5047;&#x88C5;&#x6709;&#x901F;&#x5EA6;&#x6307;&#x9488;&#xFF0C;&#x4F60;&#x559C;&#x6B22;&#x7684;&#x7F51;&#x7AD9;&#x4E0A;&#x4ECD;&#x7136;&#x4F7F;&#x7528;&#x8FC7;&#x65F6;&#x7684;&#x6309;&#x94AE;&#x548C;&#x5F00;&#x5173;&#x56FE;&#x7247;&#xFF0C;&#x6211;&#x4EEC;&#x4F5C;&#x4E3A;&#x793E;&#x4F1A;&#x7684;&#x4E00;&#x4EFD;&#x5B50;&#xFF0C;&#x4ECD;&#x7136;&#x4FE1;&#x5949;
+&#x4E00;&#x53E5;&#x8BDD;&#xFF1A;&#x4E1C;&#x897F;&#xFF0C;&#x5982;&#x679C;&#x5B83;&#x4E0D;&#x574F;&#xFF0C;&#x5C31;&#x4E0D;&#x8981;&#x53BB;&#x4FEE;&#x5B83;&#x201D;&#x3002;</p>
+<p>In &#x300A;FreeSWITCH 1.2&#x300B; Anthony Menissale said:&quot; The more things change, the more everybody wants it to stay
+the same. It&apos;s just a part of how technology evolution works. Our cars still pretend to have speedometer 
+needles; the graphics on your favorite website look like an old-fashioned set of buttons and switches. We
+as a society also try to live by the motto: if it ain&apos;t broke, don&apos;t fix it!&quot;&quot;</p>
+<blockquote>
+<p>microphone, line-phone</p>
+</blockquote>
+<h5 id="1-cdr">1. cdr</h5>
+<p>config by hand</p>
+<ol>
+<li>Open conf/autoload_configs/cdr_csv.conf.xml.</li>
+<li>Change the default-template parameter to <param name="defaulttemplate" value="sql">.</li>
+<li>Save the fle and exit. Issue the reload mod_cdr_csv command at fs_cli</li>
+<li>Issue the fsctl send_sighup command at fs_cli to rotate the log fles.
+You are now ready to create and process CDRs</li>
+</ol>
+<pre><code>// tr &#x5C06;&quot; -&gt; &apos;
+// cdr&#x88AB;&#x6211;&#x6362;&#x6210;postgres&#xFF0C;&#x5426;&#x5219;&#x62A5;&#x9519;
+cat Master.csv.2015-04-06-03-37-51 | tr \&quot; \&apos; |
+psql -U postgres cdr
+</code></pre><hr>
+<h2 id="freeswitch&#x6743;&#x5A01;&#x6307;&#x5357;">freeswitch&#x6743;&#x5A01;&#x6307;&#x5357;</h2>
+<h4 id="chapter4">Chapter4</h4>
+<pre><code>version     // &#x67E5;&#x770B;&#x7248;&#x672C;&#x53F7;
+status      // &#x67E5;&#x770B;&#x72B6;&#x6001;
+conf/autoload_configs/switch.conf.xml &#x5B9A;&#x4E49;&#x63A7;&#x5236;&#x53F0;&#x5FEB;&#x6377;&#x952E;
+</code></pre><ul>
+<li><p>fs_cli</p>
+<pre><code>$ bin/fs_cli -x &quot;version&quot;   // &#x6267;&#x884C;&#x4E00;&#x6761;&#x547D;&#x4EE4;&#x540E;&#x9000;&#x51FA;
+$ bin/fs_cli -x &quot;originate user/1000 &amp;bridge(user/1001)&quot;   // &#x56DE;&#x62E8;
+
+// fs_cli&#x8FDC;&#x7A0B;&#x8FDE;&#x63A5;
+$ cd ~
+$ emacs .fs_cli_conf
+[server1]
+host =&gt; 192.168.1.144
+port =&gt; 8021
+password =&gt; secret_password
+debug =&gt; 7
+
+$ emacs conf/autoload_configs/event_socket.conf.xml
+listen_ip 127.0.0.1&#x6539;&#x4E3A;0.0.0.0 
+
+$ fs_cli server1
+
+$ fs_cli
+/event        -- &#x5F00;&#x542F;&#x4E8B;&#x4EF6;&#x63A5;&#x6536;
+/noevents     -- &#x5173;&#x95ED;&#x4E8B;&#x4EF6;&#x63A5;&#x6536;
+/nixevent     -- &#x9664;&#x4E86;&#x7279;&#x5B9A;&#x4E00;&#x79CD;&#x5916;&#xFF0C;&#x5F00;&#x542F;&#x6240;&#x6709;&#x4E8B;&#x4EF6;
+/log          -- &#x8BBE;&#x7F6E;log&#x7EA7;&#x522B;&#xFF0C;&#x5982;/log info&#x6216;/log debug&#x7B49;
+/nolog        -- &#x5173;&#x95ED;log
+/filter       -- &#x8FC7;&#x6EE4;&#x4E8B;&#x4EF6;
+</code></pre></li>
+<li><p>&#x547C;&#x53EB;</p>
+<ul>
+<li><p>&#x53D1;&#x8D77;&#x547C;&#x53EB;</p>
+<pre><code>freeswitch&gt; originate user/1000 &amp;ecaho // &#x628A;&#x547C;&#x53EB;&#x4EBA;&#x8BF4;&#x7684;&#x58F0;&#x97F3;&#x8FD4;&#x56DE;&#x7ED9;&#x547C;&#x53EB;&#x4EBA;
+</code></pre></li>
+<li><p>&#x547C;&#x53EB;&#x5B57;&#x7B26;&#x4E32;</p>
+<ul>
+<li>user/1000&#x6210;&#x4E3A;&#x547C;&#x53EB;&#x5B57;&#x7B26;&#x4E32;</li>
+<li>1000@192.168.1.144&#x53E6;&#x5916;&#x7684;&#x547C;&#x53EB;&#x5B57;&#x7B26;&#x4E32;</li>
+</ul>
+<pre><code>freeswitch&gt; sofia status profile internal reg
+</code></pre></li>
+</ul>
+</li>
+<li><p>APP&#x548C;API</p>
+<ul>
+<li><p>App&#x662F;&#x4E00;&#x4E2A;&#x7A0B;&#x5E8F;&#xFF0C;&#x5B83;&#x4F5C;&#x4E3A;&#x4E00;&#x4E2A;channel&#x4E00;&#x7AEF;&#x4E0E;&#x53E6;&#x4E00;&#x7AEF;&#x7684;UA&#x901A;&#x4FE1;&#xFF0C;&#x76F8;&#x5F53;&#x4E8E;&#x5B83;&#x5728;channel&#x5185;&#x90E8;&#x5DE5;&#x3002;
+&#x4E5F;&#x53EB;&#x62E8;&#x53F7;&#x8BA1;&#x5212;&#x5DE5;&#x5177;&#x5728;freeswitch1.6.20/src/mod/applications/mod_dptools&#x6A21;&#x5757;&#x4E2D;&#x52A0;&#x8F7D;</p>
+</li>
+<li><p>API&#x5DE5;&#x4F5C;&#x5728;channel&#x5916;&#x90E8;&#xFF0C;&#x901A;&#x8FC7;UUID&#x63A7;&#x5236;&#x4E00;&#x4E2A;channel&#x3002;&#x5728;&#x63A7;&#x5236;&#x53F0;&#x8F93;&#x5165;&#x7684;&#x90FD;&#x662F;API&#xFF0C;&#x800C;&#x5728;
+dialplan&#x4E2D;&#x4E5F;&#x80FD;&#x6267;&#x884C;&#x4E00;&#x4E9B;&#x7279;&#x6B8A;&#x7684;API&#x3002;&#x5728;freeswitch1.6.20/src/mod/applications/
+mod_commands&#x6A21;&#x5757;&#x4E2D;&#x52A0;&#x8F7D;</p>
+</li>
+<li><p>mod_sofia&#x6709;&#x81EA;&#x5DF1;&#x7279;&#x6709;&#x7684;API&#x548C;App</p>
+</li>
+<li><p>&#x4E00;&#x6761;&#x817F;&#x901A;&#x8BDD;</p>
+<pre><code>freeswitch&gt; originate user/1000 &amp;park   // &#x6302;&#x8D77;
+freeswitch&gt; originate user/1000 &amp;hold   // &#x4FDD;&#x6301;&#x97F3;&#x4E50;
+freeswitch&gt; originate user/1000 &amp;playback(/root/welcome.wav) //&#x76F4;&#x63A5;&#x64AD;&#x653E;&#x7279;&#x5B9A;&#x97F3;&#x4E50;
+freeswitch&gt; originate user/1000 &amp;record(/tmp/voice_of_alice.wav) //&#x76F4;&#x63A5;&#x5F55;&#x97F3;
+</code></pre></li>
+<li><p>&#x6865;&#x63A5;</p>
+<pre><code>freeswitch&gt; originate user/1000 &amp;bridge(user/1002)   // &#x6302;&#x8D77;
+
+// &#x53E6;&#x5916;&#x7684;&#x6865;&#x63A5;&#x65B9;&#x6CD5;
+originate user/1000 &amp;park
+originate user/1002 &amp;park
+show channels
+uuid_bridge &lt;1000_uuid&gt; &lt;1002_uuid&gt;
+</code></pre></li>
+</ul>
+</li>
+<li><p>API&#x5E2E;&#x52A9;</p>
+<ul>
+<li>&lt;&gt;&#x4E3A;&#x5FC5;&#x9009;&#x53C2;&#x6570;</li>
+<li>[]&#x4E3A;&#x53EF;&#x9009;&#x53C2;&#x6570;</li>
+<li>|&#x5206;&#x5F00;&#x7684;&#x53C2;&#x6570;&#x5217;&#x8868;&#x4E3A;&#x6216;&#xFF0C;&#x53EA;&#x80FD;&#x9009;&#x5176;&#x4E00;<pre><code>freeswitch&gt; sofia help
+</code></pre></li>
+</ul>
+</li>
+</ul>
+<h4 id="chapter5-freeswitch&#x67B6;&#x6784;">Chapter5 freeswitch&#x67B6;&#x6784;</h4>
+<ul>
+<li><p>&#x603B;&#x4F53;&#x67B6;&#x6784;</p>
+<ul>
+<li><p>&#x6838;&#x5FC3;</p>
+<ol>
+<li><p>&#x6570;&#x636E;&#x5E93;</p>
+<ul>
+<li>&#x9ED8;&#x8BA4;&#x4F7F;&#x7528;SQLite, show calls&#x3001;show channels&#x7B49;&#x90FD;&#x662F;&#x76F4;&#x63A5;&#x8BFB;&#x53D6;&#x6570;&#x636E;&#x5E93;</li>
+<li>SQLite&#x4E0D;&#x5EFA;&#x8BAE;&#x901A;&#x8FC7;&#x5916;&#x90E8;&#x76F4;&#x63A5;&#x8BFB;&#x53D6;&#x6838;&#x5FC3;&#x6570;&#x636E;&#x5E93;</li>
+<li>&#x4F46;&#x4F7F;&#x7528;odbc&#x8FDE;&#x63A5;&#x6570;&#x636E;&#x5E93;&#xFF0C;MySQL&#x6216;PostgreSQL&#x53C8;&#x5EFA;&#x8BAE;&#x76F4;&#x63A5;&#x8BFB;&#x53D6;</li>
+</ul>
+</li>
+<li><p>&#x516C;&#x5171;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x63A5;&#x53E3;</p>
+</li>
+<li>&#x63A5;&#x53E3;</li>
+<li>&#x4E8B;&#x4EF6;<pre><code> fs_cli&gt; /event plain all        // &#x8BA2;&#x9605;&#x6240;&#x6709;&#x4E8B;&#x4EF6;
+ fs_cli&gt; /event plain CHANNEL_ANSWER     // &#x4E3B;&#x4E8B;&#x4EF6;
+ fs_cli&gt; /event CUSTOM plain sofia::register    // &#x81EA;&#x5B9A;&#x4E49;&#x4E8B;&#x4EF6;
+</code></pre></li>
+</ol>
+</li>
+<li><p>&#x63A5;&#x53E3;&#x5B9E;&#x73B0;</p>
+<ul>
+<li>Endpoint&#xFF1A;&#x8D85;&#x51FA;freeswitch&#x63A7;&#x5236;&#x8303;&#x56F4;&#x4E86;&#x3002;&#x5982;&#xFF1A;SIP&#x3001;TDM&#x786C;&#x4EF6;&#x3001;H323&#x3001;GoogleTalk
+mod_skypopen&#x4E0E;skype&#x901A;&#x4FE1;&#xFF0C;mod_portaudio&#x9A71;&#x52A8;&#x672C;&#x5730;&#x58F0;&#x5361;</li>
+<li>Dialplan&#xFF1A;mod_dialplan_xml</li>
+<li>Chatplan&#xFF1A;&#x4E3B;&#x8981;&#x5BF9;&#x6587;&#x672C;&#x6D88;&#x606F;&#x8FDB;&#x884C;&#x8DEF;&#x7531;&#xFF0C;&#x5982;SIP SIMPLE&#x3001;Skype Message.&#x5728;mod_sms&#x4E2D;</li>
+<li>APP&#xFF1A;&#x5728;mod_dptools</li>
+<li>FSAPI&#xFF1A;mod_commands</li>
+<li>XML&#x63A5;&#x53E3;&#xFF1A;mod_xml_prc&#x3001;mod_xml_curl&#x3001;mod_xml_cdr&#x7B49;</li>
+<li>Codec&#xFF1A;VoIP&#x7CFB;&#x7EDF;&#x652F;&#x6301;&#x7684;G711(PCM)&#x3001;G722&#x3001;G729&#x3001;GSM</li>
+<li>&#x8BED;&#x97F3;&#x8BC6;&#x522B;&#x548C;&#x8BED;&#x97F3;&#x5408;&#x6210;(ASR/TTS): mod_flite&#x3001;mod_unimrcp</li>
+<li>Format, File Interface: wav/mp3&#x7B49;. mod_sndfile, mp3&#x5728;mod_shout&#x5B9E;&#x73B0;</li>
+<li>Logger&#xFF1A;mod_console&#x3001;mod_logfile&#x3001;mod_syslog</li>
+<li>Timer&#xFF1A;&#x5B9E;&#x65F6;&#x8BED;&#x97F3;&#x901A;&#x8BDD;&#x9700;&#x8981;&#x975E;&#x5E38;&#x7CBE;&#x786E;&#x7684;&#x5B9A;&#x65F6;&#x5668;&#x3002;Linux&#x4E2D;&#x7684;timefd&#x3001;posix timer&#x7B49;
+freeswitch&#x7684;&#x7406;&#x60F3;&#x5DE5;&#x4F5C;&#x9891;&#x7387;&#x662F;1000Hz&#x3002;</li>
+<li>Embeded Language: &#x901A;&#x8FC7;swig&#x652F;&#x6301;&#x591A;&#x79CD;&#x5D4C;&#x5165;&#x5F0F;&#x3002;Lua&#x3001;JavaScript&#x3001;Perl&#x7B49;</li>
+<li>Event Socket&#xFF1A; &#x901A;&#x8FC7;&#x4E8B;&#x4EF6;&#x5957;&#x63A5;&#x5B57;&#x53EF;&#x4EE5;&#x652F;&#x6301;&#x4EFB;&#x4F55;&#x4E00;&#x79CD;&#x8BED;&#x8A00;</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>&#x914D;&#x7F6E;&#x6587;&#x4EF6;</p>
+<ul>
+<li><p>freeswitch.xml</p>
+<pre><code>// &#x6CE8;&#x91CA;&#x6CA1;&#x7528;,&#x800C;&#x4E14;&#x4F1A;&#x5F15;&#x53D1;&#x9519;&#x8BEF;
+&lt;!-- &lt;X-PRE-PROCESS cmd=&quot;include&quot; data=&quot;vars.xml&quot;/&gt; --&gt;
+// &#x5408;&#x6CD5;&#x7684;&#x6CE8;&#x91CA;
+&lt;xX-PRE-PROCESS cmd=&quot;include&quot; data=&quot;vars.xml&quot;/&gt;
+</code></pre></li>
+<li><p>vars.xml</p>
+<pre><code>$${var}     &#x8868;&#x793A;&#x5168;&#x5C40;&#x53D8;&#x91CF;
+${var}      &#x8868;&#x793A;&#x4E34;&#x65F6;&#x53D8;&#x91CF;
+
+freeswitch&gt; global_getvar sound_prefix
+freeswitch&gt; global_getvar
+</code></pre></li>
+</ul>
+</li>
+</ul>
+<h4 id="chapter6-&#x62E8;&#x53F7;&#x8BA1;&#x5212;">Chapter6 &#x62E8;&#x53F7;&#x8BA1;&#x5212;</h4>
+<ul>
+<li><p>XML dialplan</p>
+<ul>
+<li><p>&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;</p>
+<pre><code>freeswitch&gt; regex 1234 | \d{5}      // false,&#x6D4B;&#x8BD5;&#x662F;&#x5426;&#x5339;&#x914D;
+</code></pre></li>
+<li><p>&#x901A;&#x9053;&#x53D8;&#x91CF;</p>
+<ul>
+<li>&#x5176;&#x4E2D;&#x7684;&#x4E00;&#x6761;&#x817F;&#x79F0;&#x4E3A;&#x4E00;&#x4E2A;Channel(&#x901A;&#x9053;)</li>
+<li>&#x901A;&#x8FC7;&#x4F7F;&#x7528;info&#x8FD9;&#x4E2A;App,&#x67E5;&#x770B;&#x6240;&#x6709;&#x901A;&#x9053;&#x53D8;&#x91CF;<pre><code>&lt;extension name=&quot;Show Channel Variable&quot;&gt;
+  &lt;condition field=&quot;destination_number&quot; expression=&quot;^1235|info$&quot;&gt;
+    &lt;action application=&quot;info&quot; data=&quot;&quot;/&gt;
+  &lt;/condition&gt;
+&lt;/extension&gt;
+</code></pre></li>
+<li>log&#x7EA7;&#x522B;<pre><code>0 - Console
+1 - Alert
+2 - CRIT
+3 - ERR
+4 - WARNING
+5 - NOTICE
+6 - INFO
+7 - DEBUG
+</code></pre></li>
+<li>INFO&#x4E2D;&#x663E;&#x793A;&#x7684;&#x53D8;&#x91CF;&#x4E0E;&#x901A;&#x9053;&#x53D8;&#x91CF;&#x7684;&#x5173;&#x7CFB;<pre><code>Info variable name       | Channel Var Name | desc
+Channel-State              state              &#x5F53;&#x524D;channel&#x7684;&#x72B6;&#x6001;
+Channel-State-Number       state_number       &#x5F53;&#x524D;channel&#x7684;&#x72B6;&#x6001;&#x6574;&#x6570;&#x503C;
+Channel-Name               channel_name       Channel&#x540D;&#x79F0;
+Unique-ID                  uuid               Channel&#x7684;UUID
+Call-Direction             direction          &#x547C;&#x53EB;&#x65B9;&#x5411;,Inbound&#x6216;Outbound
+Answer-State               state              &#x5E94;&#x7B54;&#x72B6;&#x6001;
+Channel-Read-Codec-Name    read_codec         &#x8BFB;Codec
+Channel-Read-Codec-Rate    read_rate          &#x8BFB;caiyanglv
+Channel-Write-Codec-Name   write_codec        &#x5199;&#x91C7;&#x6837;&#x7387;
+Caller-Username            username           &#x7528;&#x6237;&#x540D;
+Caller-Dialplan            dialplan           &#x4F7F;&#x7528;&#x7684;dialplan,&#x5982;xml&#x3001;lua&#x3001;enum
+Caller-Caller-ID-Name      caller_id_name     &#x4E3B;&#x53EB;&#x540D;&#x79F0;
+Caller-Caller-ID-Number    caller_id_no       &#x4E3B;&#x53EB;&#x53F7;&#x7801;
+Caller-ANI                 ani                &#x4E00;&#x822C;&#x4E0E;call_id_number&#x540C;
+Caller-ANI-II              aniii              &#x4E3B;&#x53EB;&#x7684;ANI II,&#x5982;&#x679C;&#x6709;&#x7684;&#x8BDD;
+Caller-Network-Addr        network_addr       &#x4E3B;&#x53EB;&#x7684;IP
+Caller-Destination-Number  destination_number &#x88AB;&#x53EB;&#x53F7;&#x7801;
+Caller-Unique-ID           uuid               Channel UUID
+Caller-Source              source             &#x547C;&#x53EB;&#x6765;&#x6E90;,mod_sofia,mod_freetdm&#x7B49;
+Caller-Context             context            Dialplan context
+Caller-RDNIS               rdnis              &#x539F;&#x88AB;&#x53EB;&#x53F7;&#x7801;&#xFF0C;&#x4E00;&#x822C;&#x7528;&#x6237;&#x547C;&#x53EB;&#x8F6C;&#x79FB;
+Caller-Channel-Name        channel_name       Channel&#x7684;&#x540D;&#x5B57;
+Caller-Profile-Index       profile_index      Profile Index
+Caller-Channel-Create-Time create_time        &#x521B;&#x5EFA;&#x65F6;&#x95F4;
+Caller-Channel-Answered-Time answered_time    &#x5E94;&#x7B54;&#x65F6;&#x95F4;
+Caller-Channel-Hangup-Time hangup_time        &#x6302;&#x673A;&#x65F6;&#x95F4;
+Caller-Channel-Transfer-Time transfer_time    &#x8F6C;&#x79FB;&#x65F6;&#x95F4;
+</code></pre></li>
+<li><p>&#x6D4B;&#x8BD5;&#x6761;&#x4EF6;</p>
+<ul>
+<li>&#x5728;&#x7528;&#x6237;&#x76EE;&#x5F55;&#x4E2D;&#x5B9A;&#x4E49;&#x7684;&#x53D8;&#x91CF;</li>
+</ul>
+<pre><code>&lt;user id=&quot;1000&quot;&gt;
+  &lt;variables&gt;
+      &lt;variable name=&quot;my_test_var&quot; value=&quot;my_test_value&quot;/&gt;
+  &lt;/variables&gt;
+&lt;/user&gt;
+
+&lt;condition field=&quot;${my_test_var}&quot; expression=&quot;^my_test_value$&quot;&gt;
+</code></pre><ul>
+<li><p>&#x591A;&#x4E2A;condition&#x53EF;&#x4EE5;&#x6784;&#x6210;&#x7684;&#x5173;&#x7CFB;,&#x53EF;&#x4EE5;&#x7528;break&#x5B9E;&#x73B0;</p>
+<ol>
+<li>on-false: &#x9ED8;&#x8BA4;&#x914D;&#x7F6E;(false, break)&#xFF0C;&#x5728;&#x7B2C;&#x4E00;&#x6B21;&#x5339;&#x914D;&#x5931;&#x8D25;&#x65F6;&#x505C;&#x6B62;&#xFF0C;
+&#x7EE7;&#x7EED;&#x5904;&#x7406;&#x5176;&#x4ED6;extension&#x3002;</li>
+<li>on-true: true, break</li>
+<li>always: whatever, break</li>
+<li>never: whatever, continue</li>
+</ol>
+<pre><code>if (destination_number =~ /^1234$/) then
+    if (network_addr =~ /^192\.168\.7\.7$/) then
+        // play good morning
+    else if (network_addr =~ /^192\.168\.7\.7$/) then
+        // play good night  
+    end
+end
+
+&lt;extension name=&quot;Testing Stacked Conditions&quot;&gt;
+  &lt;condition field=&quot;destination_number&quot; expression=&quot;^1234$&quot; /&gt;
+  &lt;condition field=&quot;network_addr&quot; expression=&quot;^192\.168\.7\.7$&quot; break=&quot;on-ture&quot;&gt;
+    &lt;action application=&quot;playback&quot; data=&quot;good-morning.wav&quot;/&gt;
+  &lt;/conditon&gt;
+  &lt;condition field=&quot;network_addr&quot; expression=&quot;^192\.168\.7\.8$&quot;&gt;
+    &lt;action application=&quot;playback&quot; data=&quot;good-night.wav&quot;/&gt;
+  &lt;/conditon&gt;
+&lt;/extension&gt;
+</code></pre></li>
+<li><p>&#x52A8;&#x4F5C;&#x4E0E;&#x53CD;&#x52A8;&#x4F5C;</p>
+<pre><code>&lt;extension name=&quot;Testing Stacked Conditions&quot;&gt;
+  &lt;condition field=&quot;destination_number&quot; expression=&quot;^1234$&quot; /&gt;
+  &lt;condition field=&quot;network_addr&quot; expression=&quot;^192\.168\.7\.7$&quot; break=&quot;on-ture&quot;&gt;
+    &lt;action application=&quot;playback&quot; data=&quot;good-morning.wav&quot;/&gt;
+    &lt;action application=&quot;playback&quot; data=&quot;good-night.wav&quot;/&gt;
+  &lt;/conditon&gt;
+&lt;/extension&gt;
+</code></pre></li>
+<li><p>&#x901A;&#x9053;&#x53D8;&#x91CF;&#x672C;&#x8EAB;</p>
+</li>
+</ul>
+</li>
+</ul>
+<pre><code>&lt;condition field=&quot;network_addr&quot; expression=&quot;^192\.168\.7\.7$&quot;&gt;
+
+&#x53D8;&#x91CF;              | &#x8BF4;&#x660E;
+context             Dialplan&#x5F53;&#x524D;&#x7684;Context
+rdnis               &#x88AB;&#x8F6C;&#x79FB;&#x7684;&#x53F7;&#x7801;(&#x5728;&#x547C;&#x53EB;&#x8F6C;&#x79FB;&#x4E2D;&#x8BBE;&#x7F6E;)
+destination_number  &#x88AB;&#x53EB;&#x53F7;&#x7801;
+dialplan            dialplan&#x6A21;&#x5757;&#x7684;&#x540D;&#x5B57;&#xFF0C;&#x5982;XML&#x3001;YAML&#x3001;inline&#x3001;asterisk&#x3001;enum&#x7B49;
+caller_id_name      &#x4E3B;&#x53EB;(&#x6765;&#x7535;&#x663E;&#x793A;)&#x7684;&#x540D;&#x79F0;
+caller_id_number    &#x4E3B;&#x53EB;&#x53F7;&#x7801;
+ani                 &#x4E3B;&#x53EB;&#x7684;&#x81EA;&#x52A8;&#x53F7;&#x7801;&#x8BC6;&#x522B;(automatic number identification)
+aniii               &#x4E3B;&#x53EB;&#x7C7B;&#x578B;&#xFF0C;&#x5982;&#x6295;&#x5E01;&#x7535;&#x8BDD;(payphone)
+uuid                &#x672C;channel&#x7684;&#x552F;&#x4E00;&#x6807;&#x5FD7;
+source              &#x547C;&#x53EB;&#x6E90;,&#x6765;&#x81EA;&#x54EA;&#x4E00;&#x4E2A;FreeSwitch&#x6A21;&#x5757;&#xFF0C;&#x5982;mod_portaudio&#x3001;mod_sofia
+chan_name           Channel&#x540D;&#x5B57;&#xFF0C;&#x5982;portaudio/1234
+network_addr        &#x4E3B;&#x53EB;&#x7684;IP&#x5730;&#x5740;
+year                &#x5F53;&#x524D;&#x7684;&#x5E74;&#xFF0C;0 ~ 9999
+yday                &#x4E00;&#x5E74;&#x4E2D;&#x7684;&#x7B2C;&#x51E0;&#x5929;&#xFF0C;1-366
+mon                 &#x6708;&#xFF0C;1-12
+mday                &#x65E5;&#xFF0C;1-31
+week                &#x4E00;&#x5E74;&#x4E2D;&#x7684;&#x7B2C;&#x51E0;&#x5468;&#xFF0C;1-53
+mweek               &#x672C;&#x6708;&#x4E2D;&#x7684;&#x7B2C;&#x51E0;&#x5468;&#xFF0C;1-6
+wday                &#x4E00;&#x5468;&#x4E2D;&#x7684;&#x7B2C;&#x51E0;&#x5929;&#xFF0C;1-7(&#x5468;&#x65E5;=1&#xFF0C;&#x5468;&#x4E00;=2)
+hour                &#x5C0F;&#x65F6;&#xFF0C;0-23
+minute              &#x5206;&#xFF0C;0-59
+minute-of-day       &#x4E00;&#x5929;&#x4E2D;&#x7684;&#x7B2C;&#x51E0;&#x5206;&#x949F;&#xFF0C;(1-1440)(&#x5348;&#x591C;=1&#xFF0C;&#x4E00;&#x70B9;=60&#xFF0C;&#x4E2D;&#x5348;=720)
+</code></pre><ul>
+<li><p>&#x5DE5;&#x4F5C;&#x673A;&#x5236;&#x6DF1;&#x5165;&#x5256;&#x6790;  </p>
+<ul>
+<li><p>channel&#x72B6;&#x6001;&#x673A;</p>
+<pre><code>graph LR
+A(NEW)--&gt;B(INIT)
+B(INIT)--&gt;C(ROUTING)
+C(ROUTING)--&gt;D(EXECUTE)
+D(EXECUTE)--&gt;|Transfer|C(ROUTING)
+D(EXECUTE)--&gt;E(HANGUP)
+E(HANGUP)--&gt;F(REPORTING)
+F(REPORTING)--&gt;G(DESTROY)
+</code></pre></li>
+<li><p>ROUTING&#x548C;EXECUTE&#x5C5E;&#x4E8E;&#x4E24;&#x4E2A;&#x4E0D;&#x540C;&#x7684;&#x9636;&#x6BB5;&#xFF0C;&#x53EA;&#x6709;routing&#x5B8C;&#x624D;&#x4F1A;&#x8FDB;&#x884C;execute&#x9636;&#x6BB5;&#x3002;</p>
+<ol>
+<li>&#x5F53;&#x4E00;&#x4E2A;channel&#x8FDB;&#x5165;routing&#x9636;&#x6BB5;&#xFF0C;&#x5230;&#x8FBE;dialplan&#xFF0C;&#x5BF9;dialplan&#x8FDB;&#x884C;&#x89E3;&#x6790;&#xFF0C;&#x5F97;&#x5230;
+==&#x4E00;&#x4E9B;action==</li>
+<li>&#x7136;&#x540E;channel&#x8FDB;&#x5165;execute&#x9636;&#x6BB5;&#xFF0C;==&#x4F9D;&#x6B21;&#x6267;&#x884C;&#x6240;&#x6709;action==</li>
+<li>&#x5728;dialplan&#x4E2D;&#xFF0C;&#x8981;&#x6267;&#x884C;&#x591A;&#x4E2A;&#x5339;&#x914D;&#x7684;extension&#xFF0C;&#x8981;&#x52A0;continue=true</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p>&#x5185;&#x8054;&#x6267;&#x884C;</p>
+<ul>
+<li>&#x5728;dialplan&#x7684;Hunting&#x9636;&#x6BB5;&#xFF0C;&#x4E0D;&#x6267;&#x884C;action&#xFF0C;&#x53EA;&#x6709;&#x52A0;&#x5165;inline=true&#xFF0C;&#x5728;hunting&#x9636;&#x6BB5;&#x624D;&#x4F1A;&#x7ACB;&#x5373;execute&#x3002;</li>
+<li>inline&#x6267;&#x884C;&#x7684;app&#x5FC5;&#x987B;&#x80FD;&#x5F88;&#x5FEB;&#x7684;&#x6267;&#x884C;&#xFF0C;&#x5982;&#xFF1A;&#x5FEB;&#x901F;&#x5B58;&#x53D6;&#x67D0;&#x4E2A;&#x53D8;&#x91CF;&#xFF0C;&#x5E76;&#x4E14;&#x4E0D;&#x80FD;&#x6539;&#x53D8;&#x5F53;&#x524D;channel&#x7684;&#x72B6;&#x6001;&#x3002;&#x6EE1;&#x8DB3;&#x8FD9;&#x4E2A;&#x7684;App&#x6709;&#xFF1A;check_acl,eval,event,export,enum,log,presence,set,
+set_global,lcr,set_profile_var,set_user,sleep,unset,nibblebill,verbose_events,
+cidlookup,curl,easyroute,odbc_query</li>
+</ul>
+</li>
+<li><p>&#x5B9E;&#x4F8B;&#x89E3;&#x6790;</p>
+<ol>
+<li><p>Local_Extension</p>
+<ul>
+<li>set: &#x7ED1;&#x5230;a-leg</li>
+<li>export&#xFF1A;&#x7ED1;&#x5230;a-leg&#x548C;b-leg&#x3002;&#x540C;&#x65F6;&#x8BBE;&#x7F6E;&#x4E86;export_vars=dialed_extension</li>
+<li>bind_meta_app: &#x8BE5;channel&#x7ED1;&#x5B9A;DTML</li>
+<li>ringback&#x56DE;&#x94C3;&#x97F3;&#xFF0C;transfer_ringback:answer&#x540E;&#x653E;&#x7684;&#xFF0C;&#x5982;IVR&#x9636;&#x6BB5;</li>
+<li>set: &#x7ED1;&#x5B9A;&#x5230;channel&#x4E0A;&#xFF0C;hash&#xFF1A;&#x4FDD;&#x5B58;&#x5230;&#x5185;&#x5B58;&#x7684;&#x54C8;&#x5E0C;&#x8868;&#x7ED3;&#x6784;&#x4E2D;</li>
+<li>nolocal&#xFF1A;&#x544A;&#x8BC9;export&#x5C06;&#x8BE5;&#x53D8;&#x91CF;&#x8BBE;&#x7F6E;&#x5230;b-leg,&#x800C;&#x4E0D;&#x8BBE;&#x7F6E;&#x5230;a-leg&#x4E0A;</li>
+</ul>
+</li>
+<li><p>&#x56DE;&#x58F0;&#x548C;&#x5EF6;&#x8FDF;&#x56DE;&#x58F0;</p>
+<pre><code>&lt;action application=&quot;echo&quot;/&gt;
+&lt;action application=&quot;delay_echo&quot;/&gt;
+</code></pre></li>
+<li><p>&#x4F1A;&#x8BAE;</p>
+<pre><code>&lt;!-- default&#x662F;&#x4E00;&#x4E2A;&#x4F1A;&#x8BAE;&#x7684;profile(&#x914D;&#x7F6E;) --&gt;
+&lt;extension name=&quot;nb_conference&quot;
+  &lt;condition field=&quot;destination_number&quot; expression=&quot;^(30\d{2})$&quot;&gt;
+    &lt;action application=&quot;answer&quot; data=&quot;&quot;/&gt;
+    &lt;action application=&quot;conference&quot; data=&quot;$1-${domain_name}@default&quot;/&gt;
+  &lt;/condition&gt;
+&lt;/extension&gt;
+</code></pre></li>
+<li><p>&#x5C06;&#x901A;&#x8BDD;&#x7684;&#x53CC;&#x65B9;&#x8F6C;&#x5165;&#x4F1A;&#x8BAE;</p>
+<pre><code>&lt;!--conf/dialplan/default.xml--&gt;
+&lt;!--DTMF&#x7684;&#x6848;&#x4EF6;3&#xFF1B;&#x7ED1;&#x5B9A;&#x5230;b-leg&#xFF1B;s&#x8868;&#x793A;same--&gt;
+&lt;!--&#x5373;&#x5728;b-leg&#x4E0A;&#x6309;&#x201C;*3&#x201D;&#x6267;&#x884C;context&#x4E3A;feature&#x4E2D;extension&#x4E3A;cf&#x7684;&#x8FD9;&#x4E2A;app--&gt;
+&lt;action application=&quot;bind_meta_app&quot; data=&quot;3 b s execute_extension::cf XML feature&quot;/&gt;
+
+&lt;!--conf/dialplan/features.xml--&gt;
+&lt;!-- Used to transfer both legs into a conference --&gt;
+&lt;!--&#x5DF2;&#x7ECF;&#x5E94;&#x7B54;&#x4E86;&#xFF0C;answer&#x8FD9;&#x4E2A;app&#x88AB;&#x5FFD;&#x7565;--&gt;
+&lt;!-- -both&#x5C06;&#x4E24;&#x6761;&#x817F;&#x90FD;&#x8F6C;&#x5165;3001&#x8FD9;&#x4E2A;extension--&gt;
+&lt;!--dialed_extension&#x5728;Local_Extension&#x4E2D;&#x5B9A;&#x4E49;&#x4E86;&#x4E3A;caller_number:1001--&gt;
+&lt;!--${dialed_extension:2}&#x4E3A;1001&#x5728;&#x4F4D;&#x7F6E;2&#x622A;&#x53D6;&#x5B57;&#x7B26;&#xFF0C;&#x76F8;&#x5F53;&#x4E8E;dialed_extension[2:]--&gt;
+&lt;!--&#x76F8;&#x5F53;&#x4E8E;&lt;action application=&quot;transfer&quot; data=&quot;-both 3001 XML default&quot;/&gt;
+&#x5728;&#x91CD;&#x65B0;&#x8DEF;&#x7531;&#x4E00;&#x6B21;&#x5230;&#x4F1A;&#x8BAE;--&gt;
+&lt;extension name=&quot;cf&quot;&gt;
+  &lt;condition field=&quot;destination_number&quot; expression=&quot;^cf$&quot;&gt;
+    &lt;action application=&quot;answer&quot;/&gt;
+    &lt;action application=&quot;transfer&quot; data=&quot;-both 30${dialed_extension:2} XML default&quot;/&gt;
+  &lt;/condition&gt;
+&lt;/extension&gt;
+</code></pre></li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>inline dialplan</p>
+<ul>
+<li>&#x8BED;&#x6CD5;&#x683C;&#x5F0F;<pre><code>// &#x53C2;&#x6570;&#x4E2D;&#x6709;&#x7A7A;&#x683C;,&#x5219;&#x8981;&#x8981;&#x5355;&#x5F15;&#x53F7;&#x5F15;&#x8D77;&#x6765;
+app1:arg1,app2:arg2,app3:arg3
+</code></pre></li>
+<li><p>&#x5B9E;&#x4F8B;</p>
+<pre><code>originate user/1000 echo inline
+originate user/1000 answer,echo inline
+
+originate user/1000 9196    // &#x9ED8;&#x8BA4;&#x5728;XML dialplan&#x4E2D;&#x67E5;&#x627E;
+originate user/1000 9196 XML default
+
+// cid_name, cid_number, &#x547C;&#x53EB;&#x8D85;&#x65F6;&#x79D2;&#x6570;
+originate user/1000 9196 XML default &apos;Seven Du&apos; 9196 30
+
+originate user/1000 &apos;m:^:playback:/tmp/beep.wav^bridge:{ignore_early_media=true,
+originate_caller_id_number=1000}user/1001&apos; inline
+</code></pre></li>
+</ul>
+</li>
+<li><p>&#x5176;&#x4ED6;&#x7684;dialplan</p>
+<pre><code>freeswitch&gt; show dialplan
+</code></pre></li>
+</ul>
+<h4 id="chapter7-sip&#x534F;&#x8BAE;">Chapter7 SIP&#x534F;&#x8BAE;</h4>
+<h5 id="&#x534F;&#x8BAE;&#x57FA;&#x7840;">&#x534F;&#x8BAE;&#x57FA;&#x7840;</h5>
+<p>SIP&#x5FC5;&#x987B;&#x5305;&#x542B;&#x7684;&#x5934;&#x57DF;</p>
+<table>
+<thead>
+<tr>
+<th>&#x540D;&#x79F0;</th>
+<th>&#x63CF;&#x8FF0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Call-ID</td>
+<td>&#x7528;&#x4E8E;&#x533A;&#x5206;&#x4E0D;&#x540C;&#x4F1A;&#x8BDD;&#x7684;&#x552F;&#x4E00;&#x6807;&#x5FD7;</td>
+</tr>
+<tr>
+<td>CSeq</td>
+<td>&#x987A;&#x5E8F;&#x53F7;&#xFF0C;&#x7528;&#x4E8E;&#x5728;&#x540C;&#x4E00;&#x4F1A;&#x8BDD;&#x4E2D;&#x533A;&#x5206;&#x4E8B;&#x52A1;</td>
+</tr>
+<tr>
+<td>From</td>
+<td>&#x8BF4;&#x660E;&#x8BF7;&#x6C42;&#x6765;&#x6E90;</td>
+</tr>
+<tr>
+<td>To</td>
+<td>&#x8BF4;&#x660E;&#x8BF7;&#x6C42;&#x63A5;&#x53D7;&#x65B9;</td>
+</tr>
+<tr>
+<td>Max-Forwards</td>
+<td>&#x9650;&#x5236;&#x8DF3;&#x8DC3;&#x70B9;&#x6570;&#x548C;&#x6700;&#x5927;&#x8F6C;&#x53D1;&#x6B21;&#x6570;</td>
+</tr>
+<tr>
+<td>Via</td>
+<td>&#x63CF;&#x8FF0;&#x8BF7;&#x6C42;&#x6D88;&#x606F;&#x7ECF;&#x8FC7;&#x7684;&#x8DEF;&#x5F84;</td>
+</tr>
+</tbody>
+</table>
+<h5 id="sip&#x6CE8;&#x518C;">SIP&#x6CE8;&#x518C;</h5>
+<ul>
+<li><p>&#x6CE8;&#x518C;&#x6D41;&#x7A0B;</p>
+<pre><code>sequenceDiagram
+Alice-&gt;&gt;FreeSWITCH: REGISTER
+FreeSWITCH-&gt;&gt;Alice: SIP/2.0 401 Unauthorized
+Alice-&gt;&gt;FreeSWITCH: REGISTER
+FreeSWITCH-&gt;&gt;Alice: SIP/2.0 200 OK
+</code></pre></li>
+<li><p>SIP&#x6CE8;&#x518C;</p>
+<ul>
+<li><p>UA&#x95F4;&#x76F4;&#x63A5;&#x547C;&#x53EB;</p>
+<pre><code>sequenceDiagram
+bob-&gt;&gt;alice: INVITE alice@example.com
+alice-&gt;&gt;bob: 100 trying
+alice-&gt;&gt;bob: 180 Ringing
+bob-&gt;&gt;alice: 200 OK
+alice-&gt;&gt;bob: RTP
+bob-&gt;&gt;alice: RTP
+alice-&gt;&gt;bob: BYE
+bob-&gt;&gt;alice: 200 OK
+</code></pre><p>&#x8BF7;&#x6C42;&#x6D88;&#x606F;</p>
+<ol>
+<li>INVITE</li>
+<li>ACK</li>
+<li>OPTIOS</li>
+<li>BYE</li>
+<li>CANCEL</li>
+<li>REGISTER</li>
+<li>re-INVITE</li>
+<li>PRACK</li>
+<li>SUBSCRIBE</li>
+<li>NOTIFY</li>
+<li>UPDATE</li>
+<li>MESSAGE</li>
+<li>REFER&#x7B49;&#x7B49;
+&#x54CD;&#x5E94;&#x6D88;&#x606F;</li>
+<li>1xx&#xFF1A;&#x4E34;&#x65F6;&#x72B6;&#x6001;&#xFF0C;&#x8868;&#x660E;&#x547C;&#x53EB;&#x8FDB;&#x5C55;&#x7684;&#x60C5;&#x51B5;</li>
+<li>2xx&#xFF1A;&#x8868;&#x660E;&#x8BF7;&#x6C42;&#x5DF2;&#x88AB;&#x6210;&#x529F;&#x6536;&#x5230;&#x3001;&#x7406;&#x89E3;&#x548C;&#x63A5;&#x53D7;</li>
+<li>3xx&#xFF1A;&#x91CD;&#x5B9A;&#x5411;&#xFF0C;&#x8868;&#x660E;SIP&#x8BF7;&#x6C42;&#x9700;&#x8981;&#x8F6C;&#x5411;&#x5230;&#x53E6;&#x4E00;&#x4E2A;UAS&#x5904;&#x7406;</li>
+<li>4xx&#xFF1A;&#x8BF7;&#x6C42;&#x5931;&#x8D25;&#xFF0C;&#x4E00;&#x822C;&#x7531;&#x4E8E;&#x5BA2;&#x6237;&#x7AEF;&#x6216;&#x7F51;&#x7EDC;&#x5F15;&#x8D77;&#xFF0C;&#x5982;&#xFF1A;&#x5BC6;&#x7801;&#x9519;&#x8BEF;&#x3001;&#x7A7A;&#x53F7;&#x7B49;</li>
+<li>5xx&#xFF1A;&#x670D;&#x52A1;&#x5668;&#x5185;&#x90E8;&#x9519;&#x8BEF;&#xFF0C;&#x8868;&#x660E;&#x670D;&#x52A1;&#x5668;&#x9519;&#x8BEF;&#xFF0C;&#x4E0D;&#x80FD;&#x54CD;&#x5E94;&#x5408;&#x6CD5;&#x7684;&#x8BF7;&#x6C42;</li>
+<li>6xx&#xFF1A;&#x5168;&#x5C40;&#x6027;&#x9519;&#x8BEF;&#xFF0C;&#x5982;600 busy everywhere</li>
+</ol>
+</li>
+<li></li>
+</ul>
+</li>
+<li><p>SIP&#x547C;&#x53EB;&#x6D41;&#x7A0B;</p>
+<ul>
+<li>RTP&#x6D41;
+1.G711A: PCMA&#x7684;&#x97F3;&#x9891;&#x548C;H264&#x7684;&#x89C6;&#x9891;</li>
+<li>&#x542F;&#x52A8;fs_cli&#x5F00;&#x542F;sip&#x8DDF;&#x8E2A;</li>
+</ul>
+<pre><code>sofia global siptrace on
+sofia global siptrace off
+</code></pre></li>
+</ul>
+<pre><code>07:51:57.822805 IP (tos 0x0, ttl 128, id 26041, offset 0, flags [none], proto UDP (17), length 769)
+    192.168.1.201.sip &gt; 192.168.1.144.onscreen: [udp sum ok] UDP, length 741
+.INVITE sip:28324284@192.168.1.144 SIP/2.0
+Via: SIP/2.0/UDP 192.168.1.201;branch=z9hG4bKe8911e42a5a969f51827b0b2b9f0446b;rport
+From: &lt;sip:13675017141@192.168.1.201&gt;;tag=15950d5686a5cc16f20c2069c70b4822
+To: &lt;sip:28324284@192.168.1.144&gt;
+Call-ID: 38afe83ac04cc81e3a647582628e2caa@192.168.1.201
+CSeq: 35248 INVITE
+Contact: &lt;sip:13675017141@192.168.1.201&gt;
+Supported: 100rel,replaces
+Allow: INVITE, ACK, CANCEL, BYE, OPTIONS, INFO, UPDATE, PRACK, REFER
+Content-Type: application/sdp
+Max-Forwards: 70
+Content-Length:   212
+
+v=0
+o=sip-2.03.04.01 6152066 6152067 IN IP4 192.168.1.201
+s=-
+c=IN IP4 192.168.1.201
+t=0 0
+m=audio 5104 RTP/AVP 18 101
+a=rtpmap:18 G729/8000
+a=rtpmap:101 telephone-event/8000
+a=fmtp:101 0-11
+a=ptime:20 // RTP&#x6570;&#x636E;&#x6253;&#x5305;&#x65F6;&#x95F4;
+</code></pre><ul>
+<li><p>&#x6DF1;&#x5165;&#x7406;&#x89E3;SIP</p>
+<ul>
+<li><p>SIP&#x4E2D;&#x7684;body&#x90E8;&#x5206;SDP</p>
+<ol>
+<li>v=: Version,&#x534F;&#x8BAE;&#x7248;&#x672C;&#x53F7;</li>
+<li>o=: Origin, &#x8868;&#x793A;&#x6E90;&#x3002;&#x503C;&#x57DF;&#x4E2D;&#x5404;&#x9879;&#x8868;&#x793A;&#xFF1A;username&#x3001;sess-id&#x3001;sess-version&#x3001;nettype&#x3001;addrtype&#x3001;unicast-address(&#x5355;&#x64AD;&#x5730;&#x5740;)</li>
+<li>s=: Session Name, SDP&#x6240;&#x63CF;&#x8FF0;&#x7684;session&#x540D;&#x5B57;</li>
+<li>c=: Connection Data, &#x8FDE;&#x63A5;&#x6570;&#x636E;&#xFF0C;&#x7F51;&#x7EDC;&#x7C7B;&#x578B;&#x548C;&#x7F51;&#x8DEF;&#x5730;&#x5740;&#xFF0C;&#x4EE5;&#x540E;&#x7684;RTP&#x5C31;&#x4F1A;&#x53D1;&#x5230;&#x8BE5;&#x5730;&#x5740;&#x3002;</li>
+<li>b=: BandWidth Type, &#x5E26;&#x5BBD;&#x7C7B;&#x578B;</li>
+<li>t=: Timing,&#x8D77;&#x6B62;&#x65F6;&#x95F4;&#x3002;0&#x8868;&#x793A;&#x65E0;&#x9650;</li>
+<li>m=: audio media type,&#x5A92;&#x4F53;&#x7C7B;&#x578B;&#x3002;audio&#x8868;&#x793A;&#x97F3;&#x9891;&#xFF0C;5140&#x8868;&#x793A;&#x97F3;&#x9891;&#x7684;&#x7AEF;&#x53E3;&#x53F7;&#xFF1B;
+RTP/AVP&#x662F;&#x4F20;&#x8F93;&#x534F;&#x8BAE;&#xFF1B;&#x540E;&#x9762;&#x7684;&#x6570;&#x5B57;biaosh&#x652F;&#x6301;&#x7684;codec&#x7C7B;&#x578B;&#xFF0C;&#x4E0E;RTP&#x6D41;&#x4E2D;&#x7684;Payload Type(&#x8F7D;&#x8377;&#x7C7B;&#x578B;)&#x76F8;&#x5BF9;&#x5E94;&#x3002;&#x8FD9;&#x91CC;&#x662F;18&#x3001;101&#xFF08;&#x4E66;&#x4E2D;&#x662F;8&#x3001;0&#x3001;98&#x548C;101&#xFF09;&#xFF0C;8&#x548C;0&#x5206;&#x522B;&#x4EE3;&#x8868;PCMA&#x548C;PCMU&#xFF0C;&#x4ED6;&#x4EEC;&#x5C5E;&#x4E8E;&#x9759;&#x6001;&#x7F16;&#x7801;&#xFF0C;&#x56E0;&#x800C;&#x6709;&#x4E00;&#x4E00;&#x5BF9;&#x5E94;&#x5173;&#x7CFB;&#xFF0C;&#x800C;&#x5BF9;&#x4E8E;&#x5927;&#x4E8E;95&#x7684;&#x7F16;&#x7801;&#x90FD;&#x5C5E;&#x4E8E;&#x52A8;&#x6001;&#x7F16;&#x7801;&#xFF08;18&#x4E5F;&#x662F;&#x52A8;&#x6001;&#x7F16;&#x7801;&#x5427;&#xFF09;&#xFF0C;&#x9700;&#x8981;&#x5728;&#x540E;&#x9762;&#x4F7F;&#x7528;&quot;a=rtpmap&quot;&#x8FDB;&#x884C;&#x8BF4;&#x660E;</li>
+<li>a=: Attribute,&#x5C5E;&#x6027;&#xFF1B;98&#x4EE3;&#x7801;8000Hz&#x7684;ILBC&#x7F16;&#x7801;&#xFF0C;101&#x4EE3;&#x8868;RFC2833 DTMF&#x4E8B;&#x4EF6;&#x3002;a=sendrecv&#x8868;&#x793A;&#x8BE5;&#x5A92;&#x4F53;&#x6D41;&#x53EF;&#x7528;&#x4E8E;&#x6536;&#x548C;&#x53D1;&#xFF0C;sendonly/recvonly/inactive</li>
+<li>v=: Vedio&#xFF0C;&#x89C6;&#x9891;</li>
+</ol>
+</li>
+<li><p>&#x5A92;&#x4F53;&#x6D41;&#x7684;&#x534F;&#x5546;&#x8FC7;&#x7A0B;&#x79F0;&#x4E3A;SOA&#xFF08;service offer and answer,&#x63D0;&#x8BAE;/&#x5E94;&#x7B54;&#xFF09;&#x3002;&#x901A;&#x4FD7;&#x7684;&#x8BB2;&#xFF0C;
+&#x5B83;&#x9996;&#x5148;&#x7531;&#x4E00;&#x65B9;&#x63D0;&#x4F9B;&#x652F;&#x6301;&#x7684;Codec&#x7C7B;&#x578B;&#xFF0C;&#x53E6;&#x4E00;&#x65B9;&#x9009;&#x62E9;&#xFF0C;&#x5728;sdp&#x7684;m&#x4E2D;&#x53EF;&#x4EE5;&#x77E5;&#x9053;&#x3002;</p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>3PCC(Third Party Call Control&#x7B2C;&#x4E09;&#x65B9;&#x7535;&#x8BDD;&#x547C;&#x53EB;&#x63A7;&#x5236;)</p>
+<pre><code>sequenceDiagram
+  participant A
+  participant Controller
+  Controller-&gt;A: 1)INVITE&#x65E0;SDP
+  A--&gt;Controller: 2)200OK&#x5E26;SDP offer
+  Controller-&gt;B: 3)INVITE&#x5E26;SDP offer
+  B--&gt;Controller: 4)200OK&#x5E26;SDP answer
+  Controller-&gt;B: 5)ACK&#x65E0;SDP
+  Controller-&gt;A: 6)ACK&#x5E26;SDP answer
+</code></pre></li>
+</ul>
+<h3 id="chapter8-media">Chapter8 Media</h3>
+<h5 id="&#x5A92;&#x4F53;&#x4E0E;&#x5A92;&#x4F53;&#x5904;&#x7406;">&#x5A92;&#x4F53;&#x4E0E;&#x5A92;&#x4F53;&#x5904;&#x7406;</h5>
+<ul>
+<li>&#x97F3;&#x9891;&#x7F16;&#x7801;<ol>
+<li>PCM&#x7F16;&#x7801;(G711&#x7F16;&#x7801;)<ul>
+<li>PCMA&#xFF1A;A&#x5F8B;</li>
+<li>PCMU&#xFF1A;u&#x5F8B;</li>
+<li>G722&#x9AD8;&#x6E05;&#x7F16;&#x7801;</li>
+<li>8000Hz&#x91C7;&#x6837;&#xFF0C;20ms&#x6253;&#x4E00;&#x6B21;&#x5305;&#x3002;&#x4E00;&#x79D2;&#x4F20;&#x8F93;1000ms/20ms=50&#x4E2A;&#x5305;&#xFF0C;&#x6BCF;&#x4E2A;&#x5305;&#x643A;&#x5E26;8000/50=160&#x4E2A;&#x91C7;&#x6837;&#x6570;&#x636E;</li>
+</ul>
+</li>
+<li>freeswitch&#x7684;&#x7F16;&#x7801;<pre><code>show codec
+</code></pre></li>
+</ol>
+</li>
+<li><p>&#x5A92;&#x4F53;&#x5DE5;&#x4F5C;&#x673A;&#x7406;&#x548C;&#x76F8;&#x5173;&#x914D;&#x7F6E;</p>
+<ol>
+<li>&#x5728;vars.xml&#x4E2D;</li>
+</ol>
+<pre><code>&lt;X-PRE-PROCESS cmd=&quot;set&quot; data=&quot;global_codec_prefs=OPUS,G722,G729,PCMU,PCMA,VP8&quot;/&gt;
+&lt;X-PRE-PROCESS cmd=&quot;set&quot;  data=&quot;outbound_codec_prefs=
+OPUS,G722,G729,PCMU,PCMA,VP8&quot;/&gt;
+</code></pre><p>&#x5982;&#x679C;&#x9891;&#x7E41;&#x505A;&#x5B9E;&#x9A8C;&#xFF0C;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x4FEE;&#x6539;sip_profiles&#x4E0B;&#x7684;internal.xml</p>
+<pre><code>&lt;param name=&quot;inbound-codec-prefs&quot; value=&quot;$${global_codec_prefs}&quot;/&gt;
+</code></pre><p>&#x6539;&#x4E3A;</p>
+<pre><code>&lt;param name=&quot;inbound-codec-prefs&quot; value=&quot;PCMU,PCMA,iLBC,H264,VP8&quot;/&gt;
+</code></pre><p>&#x5728;fs_cli&#x6267;&#x884C;</p>
+<pre><code>sofia profile internal rescan
+</code></pre><p>&#x67E5;&#x770B;&#x4E0E;profile&#x76F8;&#x5173;&#x7684;&#x914D;&#x7F6E;&#x60C5;&#x51B5;</p>
+<pre><code>sofia status profile internal
+</code></pre></li>
+</ul>
+<h5 id="&#x5A92;&#x4F53;&#x534F;&#x5546;">&#x5A92;&#x4F53;&#x534F;&#x5546;</h5>
+<ul>
+<li><p>&#x534F;&#x5546;&#x8FC7;&#x7A0B;</p>
+<pre><code>// &#x547C;&#x5165;&#x65F6;&#x4F7F;&#x7528;iLBC&#x7F16;&#x7801;&#xFF0C;&#x6253;&#x5305;&#x5468;&#x671F;&#x662F;60ms&#xFF0C;payload type&#x662F;97
+Audio Codec Compare [iLBC:97:8000:60:0]/[G722:9:8000:20:64000]
+Audio Codec Compare [PCMA:8:8000:20:64000]/[PCMA:8:8000:20:64000]
+</code></pre><p>&#x53EA;&#x6709;offer/answer(&#x8BF7;&#x6C42;/&#x5E94;&#x7B54;)&#x5339;&#x914D;&#x5230;&#x4E00;&#x81F4;&#xFF0C;&#x534F;&#x5546;&#x624D;&#x6210;&#x529F;&#xFF1B;&#x5426;&#x5219;FreeSWITCH&#x8FD4;&#x56DE;SIP488&#x6D88;&#x606F;&#x3002;
+&#x5931;&#x8D25;&#x539F;&#x56E0;[INCOMPATIBLE_DESTINATION]&#x76EE;&#x7684;&#x5730;&#x4E0D;&#x517C;&#x5BB9;</p>
+<ol>
+<li><p>&#x534F;&#x5546;&#x65F6;&#x673A;&#x548C;&#x7B56;&#x7565;</p>
+<ul>
+<li>&#x65E9;&#x534F;&#x5546;&#xFF1A;&#x6536;&#x5230;invite&#x8BF7;&#x6C42;&#x800C;&#x672A;&#x5230;&#x8FBE;&#x8DEF;&#x7531;&#x9636;&#x6BB5;&#xFF0C;&#x5C31;&#x5148;&#x884C;&#x534F;&#x5546;</li>
+<li>&#x665A;&#x534F;&#x5546;&#xFF1A;&#x7B49;&#x5230;&#x8DEF;&#x7531;&#x9636;&#x6BB5;&#x518D;&#x8FDB;&#x884C;&#x534F;&#x5546;</li>
+</ul>
+<pre><code>// &#x7CFB;&#x7EDF;&#x9ED8;&#x8BA4;&#x665A;&#x534F;&#x5546;
+&lt;param name=&quot;inbound-late-negotiation&quot; value=&quot;false&quot;/&gt;
+</code></pre><p>&#x5982;&#x679C;&#x542F;&#x7528;inbound-zrtp-passthru(&#x9ED8;&#x8BA4;),&#x5219;&#x9ED8;&#x8BA4;&#x8BBE;&#x7F6E;&#x4E3A;true</p>
+<ul>
+<li><p>&#x534F;&#x5546;&#x7B56;&#x7565;<br>&#x5047;&#x8BBE;&#x5BA2;&#x6237;&#x7684;&#x7F16;&#x7801;&#x5217;&#x8868;&#x4E3A;PCMA&#x3001;G729<br>FreeSWITCH&#x652F;&#x6301;&#x7684;&#x5217;&#x8868;&#x4F18;&#x5148;&#x987A;&#x5E8F;&#xFF1A;G729&#x3001;PCMU&#x3001;PCMA</p>
+<ol>
+<li>generous&#x666E;&#x901A;&#xFF1A;&#x4F18;&#x5148;&#x4F7F;&#x7528;pcma</li>
+<li>greedy&#x8D2A;&#x5A6A;&#xFF1A;&#x4F18;&#x5148;&#x4F7F;&#x7528;g729</li>
+<li>scrooge&#x541D;&#x556C;&#xFF1A;&#x4F18;&#x5148;&#x4F7F;&#x7528;g729&#xFF0C;&#x8FD8;&#x4F1A;&#x5F3A;&#x5236;&#x4F7F;&#x7528;&#x81EA;&#x5DF1;&#x7684;&#x91C7;&#x6837;&#x7387;</li>
+</ol>
+</li>
+<li><p>&#x7531;&#x4E8E;freeswitch&#x662F;B2BUA,&#x5728;&#x9884;&#x8BA1;&#x4F7F;&#x7528;&#x4E24;&#x6761;&#x817F;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x542F;&#x7528;&#x665A;&#x534F;&#x5546;&#x6548;&#x679C;&#x597D;&#x3002;</p>
+</li>
+<li>&#x6BD4;&#x5982;&#xFF1A;&#x5728;SIP Profile&#x4E2D;&#x8BBE;&#x7F6E;disable-transcoding&#x4E3A;true&#x65F6;&#xFF0C;&#x9996;&#x5148;&#x547C;&#x53EB;bleg&#xFF0C;
+&#x5E76;&#x4EC5;offer aleg&#x63D0;&#x4F9B;&#x7684;&#x7F16;&#x7801;&#xFF0C;&#x4ECE;&#x800C;&#x907F;&#x514D;&#x8F6C;&#x7801;</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><p>&#x5176;&#x4ED6;&#x5A92;&#x4F53;</p>
+<ul>
+<li><p>RTP(Real-time Transport Protocol)</p>
+<ol>
+<li>&#x8BBE;&#x8BA1;&#x662F;&#x591A;&#x64AD;&#x534F;&#x8BAE;</li>
+<li>&#x4F7F;&#x7528;&#x5076;&#x6570;&#x7AEF;&#x53E3;</li>
+<li>&#x540E;&#x6765;&#x88AB;&#x5E94;&#x7528;&#x4E8E;&#x5F88;&#x591A;&#x5355;&#x64AD;</li>
+<li>&#x5EFA;&#x7ACB;&#x5728;UDP&#x57FA;&#x7840;&#x4E4B;&#x4E0A;</li>
+<li>&#x5E38;&#x7528;&#x4E8E;&#x6D41;&#x5A92;&#x4F53;&#x7CFB;&#x7EDF;&#x3001;&#x89C6;&#x9891;&#x4F1A;&#x8BAE;&#x548C;&#x4E00;&#x952E;&#x901A;(Push to talk)&#x7CFB;&#x7EDF;(&#x914D;&#x5408;H.323&#x6216;SIP)</li>
+</ol>
+</li>
+<li><p>RTCP(Real-time Transport Control Protocol)</p>
+<ol>
+<li>&#x91C7;&#x7528;&#x4E0E;RTP&#x7AEF;&#x53E3;&#x76F8;&#x90BB;&#x7684;&#x5947;&#x6570;&#x7AEF;&#x53E3;</li>
+<li>&#x662F;&#x4E00;&#x4E2A;&#x63A7;&#x5236;RTP&#x7684;&#x534F;&#x8BAE;&#xFF0C;&#x63D0;&#x4F9B;&#x8BF8;&#x5982;&#x4F20;&#x8F93;&#x5B57;&#x8282;&#x6570;&#x3001;&#x4F20;&#x8F93;&#x5206;&#x7EC4;&#x6570;&#x3001;&#x4E22;&#x5931;&#x5206;&#x7EC4;&#x6570;&#x3001;&#x62C9;&#x52A8;(jitter)
+&#x5355;&#x5411;&#x53CC;&#x5411;&#x7F51;&#x7EDC;&#x5EF6;&#x8FDF;&#x7B49;&#x7EDF;&#x8BA1;&#x4FE1;&#x606F;</li>
+</ol>
+</li>
+<li><p>&#x8F6C;&#x7801;  </p>
+<ol>
+<li>&#x4E24;&#x6761;&#x817F;&#x4F7F;&#x7528;&#x4E0D;&#x540C;&#x7684;&#x7F16;&#x7801;&#xFF0C;&#x5219;&#x9700;&#x8981;&#x7ECF;&#x8FC7;&#x4E00;&#x4E2A;&#x8F6C;&#x7801;&#x8FC7;&#x7A0B;&#x3002;</li>
+<li>&#x5C06;&#x97F3;&#x9891;&#x6570;&#x636E;&#x8F6C;&#x4E3A;&#x4E00;&#x79CD;&#x4E2D;&#x95F4;&#x683C;&#x5F0F;&#xFF0C;&#x79F0;&#x4E3A;L16&#x3002;&#x8FD9;&#x79CD;&#x683C;&#x5F0F;&#x53EF;&#x4EE5;&#x4E0E;&#x5176;&#x4ED6;&#x5404;&#x79CD;&#x7F16;&#x7801;&#x8FDB;&#x884C;&#x8F6C;&#x6362;</li>
+<li>&#x5373;&#x4F7F;&#x91C7;&#x7528;&#x76F8;&#x540C;&#x7F16;&#x7801;&#x3002;IVR&#x3001;&#x5F55;&#x3001;&#x653E;&#x97F3;&#x7B49;&#x4E2D;&#x95F4;&#x73AF;&#x8282;&#xFF0C;&#x4E5F;&#x9700;&#x8981;&#x8F6C;&#x7801;</li>
+<li>&#x9ED8;&#x8BA4;&#x4E0D;&#x8F6C;&#x7801;&#xFF0C;&#x8F6C;&#x7801;&#x9700;&#x8981;&#x5728;sip_profiles&#x4E2D;&#x7684;internal.xml&#x6CE8;&#x91CA;&#x6389;&#x4E0B;&#x9762;<pre><code>&lt;param name=&quot;inbound-zrtp-passthru&quot; value=&quot;true&quot;/&gt;
+// &#x91CD;&#x542F;
+sofia profile internal restart
+// &#x67E5;&#x770B;
+sofia status profile internal
+</code></pre></li>
+<li>G729&#x5B58;&#x5728;&#x7248;&#x6743;&#x95EE;&#x9898;&#xFF0C;&#x4E0D;&#x80FD;&#x8F6C;&#x7801;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x900F;&#x4F20;</li>
+</ol>
+</li>
+<li><p>&#x900F;&#x4F20;&#x3001;&#x5A92;&#x4F53;&#x7ED5;&#x8FC7;&#x4E0E;&#x5A92;&#x4F53;&#x4EE3;&#x7406;</p>
+<ol>
+<li>&#x5728;&#x4E0D;&#x652F;&#x6301;&#x8F6C;&#x7801;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x53EA;&#x8981;&#x901A;&#x8BDD;&#x53CC;&#x65B9;&#x90FD;&#x652F;&#x6301;G729&#xFF0C;freeswitch&#x53EF;&#x4EE5;&#x5EFA;&#x7ACB;&#x901A;&#x8BDD;&#xFF0C;&#x4F7F;&#x7528;&#xFF1A;<ul>
+<li>&#x900F;&#x4F20;</li>
+<li>&#x5A92;&#x4F53;&#x7ED5;&#x8FC7;</li>
+<li>&#x5A92;&#x4F53;&#x4EE3;&#x7406;</li>
+</ul>
+</li>
+<li>&#x900F;&#x4F20;(Passthru)&#xFF1A;&#x5728;&#x4E0D;&#x7ECF;&#x8FC7;&#x8F6C;&#x7801;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x5C06;&#x4ECE;&#x4E00;&#x65B9;&#x6536;&#x5230;&#x5A92;&#x4F53;&#x6D41;&#x539F;&#x6837;&#x8F6C;&#x7ED9;&#x53E6;&#x4E00;&#x65B9;&#xFF1B;&#x4F46;&#x5728;&#x5A92;&#x4F53;&#x5904;&#x7406;&#x7684;
+&#x60C5;&#x51B5;&#x4E0B;&#xFF08;IVR&#x3001;&#x5F55;&#x97F3;&#xFF09;&#x5C31;&#x4F1A;&#x6709;&#x4E9B;&#x9650;&#x5236;</li>
+<li>&#x5A92;&#x4F53;&#x7ED5;&#x8FC7;(Bypass Media)&#xFF1A;&#x771F;&#x6B63;&#x7684;&#x5A92;&#x4F53;&#x6D41;&#x4F7F;&#x7528;&#x70B9;&#x5230;&#x70B9;&#x4F20;&#x8F93;&#xFF0C;&#x4E0D;&#x7ECF;&#x8FC7;freeswitch&#xFF0C;&#x4F46;&#x662F;
+&#x901A;&#x8BDD;&#x53CC;&#x65B9;&#x5FC5;&#x987B;&#x90FD;&#x652F;&#x6301;&#x8BE5;&#x5A92;&#x4F53;&#x7C7B;&#x578B;&#x3002;</li>
+<li>&#x5A92;&#x4F53;&#x4EE3;&#x7406;&#xFF1A;&#x5BF9;RTP&#x6570;&#x636E;&#x90FD;&#x4E0D;&#x8FDB;&#x884C;&#x5904;&#x7406;&#xFF0C;&#x53EA;&#x6539;&#x53D8;&quot;c=&quot;&#x90E8;&#x5206;&quot;&#xFF0C;&#x5982;&#x4ECD;&#x4FDD;&#x7559;&#x65F6;&#x95F4;&#x6233;</li>
+</ol>
+</li>
+<li><p>Media Bug<br>&#x4E3A;&#x4E86;&#x89E3;&#x51B3;&#x76D1;&#x542C;&#x5F55;&#x97F3;&#x95EE;&#x9898;&#xFF0C;freeswitch&#x5728;&#x5A92;&#x4F53;&#x6D41;&#x8DEF;&#x5F84;&#x4E0A;&#x653E;&#x4E86;&#x4E00;&#x4E2A;Media Bug&#x3002;
+&#x76F8;&#x5F53;&#x4E8E;&#x6C34;&#x7BA1;&#x7684;&#x4E09;&#x901A;&#x3002;</p>
+<ol>
+<li>Media Bug&#x5A92;&#x4F53;&#x6D41;&#x662F;&#x53CC;&#x5411;&#x7684;&#xFF0C;&#x53EF;&#x53D1;&#x9001;&#x97F3;&#x9891;&#x5F62;&#x6210;&#x4E09;&#x65B9;&#x901A;&#x8BDD;</li>
+<li>eavesdrop&#x548C;three_way&#x4E24;&#x4E2A;APP&#x6765;&#x5206;&#x522B;&#x5B8C;&#x6210;&#x8BE5;&#x529F;&#x80FD;</li>
+<li>&#x53EF;&#x7528;&#x4F5C;&#x97F3;&#x4FE1;&#x53F7;&#x68C0;&#x6D4B;(Tone Detect)&#x3001;&#x4F20;&#x771F;&#x97F3;&#x6216;inband DTMF</li>
+</ol>
+</li>
+<li><p>&#x89C6;&#x9891;</p>
+<pre><code>m=video 22252 RTP/AVP 123
+a=rtpmap:123 H264/90000
+</code></pre></li>
+<li><p>&#x6392;&#x9519;</p>
+<ol>
+<li>&#x9047;&#x5230;&#x5A92;&#x4F53;&#x534F;&#x5546;&#x95EE;&#x9898;&#xFF0C;&#x53EF;&#x5728;Log&#x4E2D;&#x67E5;&#x627E;&#x4E0E;&quot;Audio Codec Compare&quot;&#x76F8;&#x5173;&#x7684;&#x884C;</li>
+<li>&#x4F7F;&#x7528;&#x6293;&#x5305;&#x5DE5;&#x5177;&#xFF0C;tcpdump&#x3001;Wireshark</li>
+<li>freeswitch&#x7684;&#x5A92;&#x4F53;&#x6D41;&#x5DE5;&#x5177;</li>
+</ol>
+<pre><code>uuid_debug_media &lt;uuid&gt;&lt;read|write|both&gt;&lt;on|off&gt;
+uuid_debug_media f87f1d62-ec54-44bd-ab37-cf2fb5b6a5a7 read on
+// &#x52A0;v&#x53EF;&#x4EE5;&#x6253;&#x5370;&#x5A92;&#x4F53;&#x6D41;&#x4FE1;&#x606F;
+uuid_debug_media f87f1d62-ec54-44bd-ab37-cf2fb5b6a5a7 vread on
+</code></pre></li>
+</ul>
+</li>
+</ul>
+<h5 id="chapter9-sip&#x6A21;&#x5757;">Chapter9 SIP&#x6A21;&#x5757;</h5>
+<ul>
+<li><p>&#x57FA;&#x672C;&#x6982;&#x5FF5;</p>
+<ul>
+<li>Sofia-SIP: &#x4F7F;&#x7528;&#x8BFA;&#x57FA;&#x4E9A;&#x5F00;&#x53D1;&#x7684;SIP&#x534F;&#x8BAE;&#x6808;&#xFF0C;&#x5728;mod_sofia&#x4E2D;&#x5B9E;&#x73B0;</li>
+<li>Endpoint&#xFF1A;&#x5B9E;&#x73B0;&#x4E00;&#x4E9B;&#x4E92;&#x8054;&#x534F;&#x8BAE;&#x63A5;&#x53E3;&#x7684;&#x6A21;&#x5757;&#x79F0;&#x4E3A;Endpoint&#xFF0C;&#x5982;sip&#x548C;H232,&#x4F7F;&#x7528;&#x4E0D;&#x540C;&#x7684;
+&#x63A7;&#x5236;&#x534F;&#x8BAE;&#x548C;&#x5176;&#x4ED6;&#x7684;Endpoint&#x901A;&#x8BDD;&#xFF0C;&#x4E00;&#x822C;&#x8DDF;&#x901A;&#x8BDD;&#x76F8;&#x5173;</li>
+<li>mod_sofia: &#x5B9E;&#x73B0;SIP&#x4E2D;&#x7684;&#x6CE8;&#x518C;&#x670D;&#x52A1;&#x5668;&#x3001;&#x91CD;&#x5B9A;&#x5411;&#x670D;&#x52A1;&#x5668;&#x3001;&#x5A92;&#x4F53;&#x670D;&#x52A1;&#x5668;&#x3001;&#x5448;&#x73B0;&#x670D;&#x52A1;&#x5668;&#x3001;SBC
+&#x7B49;&#x529F;&#x80FD;&#x3002;&#x5B83;&#x662F;&#x4E00;&#x4E2A;B2BUA&#xFF0C;&#x5B83;&#x4E0D;&#x80FD;&#x5B9E;&#x73B0;SIP&#x4EE3;&#x7406;&#x670D;&#x52A1;&#x5668;&#x7684;&#x529F;&#x80FD;&#x3002;&#x5B9E;&#x73B0;SIP&#x4EE3;&#x7406;&#x670D;&#x52A1;&#x5668;&#x7684;
+&#x5F00;&#x6E90;&#x8F6F;&#x4EF6;&#x6709;OpenSIPS&#x3001;Kamailio&#x7B49;</li>
+<li>SIP Profile&#xFF1A;&#x5728;mod_sofia&#x4E2D;&#xFF0C;&#x901A;&#x8FC7;&#x5404;&#x79CD;&#x4E0D;&#x540C;&#x7684;&#x914D;&#x7F6E;&#x53C2;&#x6570;&#x53EF;&#x4EE5;&#x914D;&#x7F6E;&#x4E00;&#x4E2A;UA&#x7684;&#x884C;&#x4E3A;&#x3002;
+&#x4E00;&#x4E2A;&#x7CFB;&#x7EDF;&#x4E2D;&#x6709;&#x591A;&#x4E2A;SIP Profile&#xFF0C;&#x6BCF;&#x4E2A;SIP Profile&#x90FD;&#x53EF;&#x4EE5;&#x76D1;&#x542C;&#x4E0D;&#x540C;IP&#x5730;&#x5740;&#x548C;&#x7AEF;&#x53E3;&#x5BF9;&#x3002;</li>
+<li>Gateway&#xFF1A;&#x4E00;&#x4E2A;SIP Profile&#x4E2D;&#x6709;&#x591A;&#x4E2A;Gateway&#x3002;&#x7528;&#x4E8E;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x8FDC;&#x7AEF;&#x7684;SIP&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x4F7F;
+freeswitch&#x53EF;&#x4EE5;yu&#x5176;&#x4ED6;&#x670D;&#x52A1;&#x5668;&#x901A;&#x4FE1;&#x3002;<ol>
+<li>freeswitch&#x53EF;&#x4EE5;&#x4F5C;&#x4E3A;&#x4E00;&#x4E2A;SIP&#x5BA2;&#x6237;&#x7AEF;&#xFF08;UAC&#xFF09;&#x5411;&#x8FDC;&#x7AEF;&#x7684;&#x7F51;&#x5173;&#x6CE8;&#x518C;&#xFF1B;</li>
+<li>&#x6216;&#x4F7F;&#x7528;&#x4E0E;&#x8FDC;&#x7AEF;&#x670D;&#x52A1;&#x5668;&#x5BF9;&#x7B49;&#x7684;&#x65B9;&#x5F0F;&#xFF08;SIPTrunk&#xFF0C;&#x5373;SIP&#x4E2D;&#x7EE7;&#xFF09;&#x76F8;&#x4E92;&#x901A;&#x4FE1;</li>
+</ol>
+</li>
+<li>&#x672C;&#x5730;SIP&#x7528;&#x6237;&#xFF1A;freeswitch&#x4F5C;&#x4E3A;&#x6CE8;&#x518C;&#x670D;&#x52A1;&#x5668;&#x65F6;&#xFF0C;&#x5176;&#x4ED6;&#x5BA2;&#x6237;&#x7AEF;&#x53EF;&#x4EE5;&#x5411;&#x5B83;&#x6CE8;&#x518C;</li>
+<li>&#x6765;&#x8BDD;&#x548C;&#x53BB;&#x8BDD;&#xFF1A;&#x5982;&#x679C;&#x6765;&#x53BB;&#x8BDD;&#x90FD;&#x662F;&#x672C;&#x5730;&#x7684;&#xFF0C;&#x53EB;&#x672C;&#x5730;&#x6765;&#x8BDD;&#x548C;&#x672C;&#x5730;&#x53BB;&#x8BDD;<ul>
+<li>&#x6765;&#x8BDD;(InboundCall): Alice&#x5411;freeswitch&#x53D1;&#x8D77;&#x547C;&#x53EB;</li>
+<li>&#x53BB;&#x8BDD;(OutboundCall): freeswitch&#x518D;&#x53BB;&#x547C;&#x53EB;Bob</li>
+</ul>
+</li>
+<li>&#x4E2D;&#x7EE7;&#x6765;&#x8BDD;&#x6216;&#x4E2D;&#x7EE7;&#x53BB;&#x8BDD;</li>
+</ul>
+</li>
+<li><p>Sofia&#x914D;&#x7F6E;&#x6587;&#x4EF6;</p>
+<p>&#x5728;conf/autoload_configs/sofia.conf.xml&#x88C5;&#x5165;conf/sip_profiles/</p>
+<pre><code>&lt;X-PRE-PROCESS cmd=&quot;include&quot; data=&quot;../sip_profiles/*.xml&quot;/&gt;
+// &#x603B;&#x4F53;&#x7ED3;&#x6784;
+&lt;configuration name=&quot;sofia.conf&quot; description=&quot;sofia Endpoint&quot;&gt;
+  &lt;global_settings&gt;
+  &lt;/global_settings&gt;
+
+  &lt;profiles&gt;
+      &lt;profile name=&quot;profile1&quot;&gt;
+      &lt;/profile&gt;
+      &lt;profile name=&quot;profile2&quot;&gt;
+      &lt;/profile&gt;
+  &lt;/profiles&gt;
+&lt;/configuration&gt;
+</code></pre><ol>
+<li>&#x4E00;&#x4E2A;profile&#x76F8;&#x5F53;&#x4E8E;&#x4E00;&#x4E2A;SIP UA&#xFF0C;&#x542F;&#x52A8;&#x540E;&#x4F1A;&#x76D1;&#x542C;&#x4E00;&#x4E2A;&quot;IP&#x5730;&#x5740;:&#x7AEF;&#x53E3;&quot;&#x5BF9;</li>
+<li><p>freeswitch&#x9ED8;&#x8BA4;&#x914D;&#x7F6E;&#x4E09;&#x4E2A;profile&#xFF0C;internal&#x3001;external&#x3001;ipv6</p>
+</li>
+<li><p>profile&#x914D;&#x7F6E;&#x6587;&#x4EF6;</p>
+<pre><code>&lt;domains&gt;
+    &lt;domain name=&quot;all&quot; alias=&quot;true&quot; parse=&quot;false&quot;/&gt;
+&lt;/domains&gt;
+</code></pre><ol>
+<li>alias=&quot;true&quot;, &#x4F1A;&#x4E3A;&#x6240;&#x6709;&#x7684;domain&#x53D6;&#x4E00;&#x4E2A;&#x522B;&#x540D;</li>
+<li>parse=&quot;true&quot;, freeswitch&#x4F1A;&#x89E3;&#x6790;&#x8BE5;profile&#x4E2D;&#x6240;&#x6709;&#x7684;&#x7F51;&#x5173;</li>
+<li>alias&#x548C;parse&#x90FD;&#x5177;&#x6709;&#x6392;&#x4ED6;&#x6027;&#xFF0C;&#x5373;&#x5728;&#x591A;&#x4E2A;profile&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x5B83;&#x4EEC;&#x7684;&#x503C;&#x53EA;&#x80FD;&#x6709;&#x4E00;&#x4E2A;&#x4E3A;true&#xFF0C;
+&#x5426;&#x5219;&#x4EA7;&#x751F;&#x51B2;&#x7A81;&#x3002;</li>
+</ol>
+</li>
+<li><p>Profile&#x7684;&#x51E0;&#x4E2A;&#x91CD;&#x8981;&#x53C2;&#x6570;</p>
+<pre><code>// &#x5A92;&#x4F53;&#x7ED5;&#x8FC7;&#xFF1A;&#x5EFA;&#x7ACB;&#x5B8C;&#x6210;&#x540E;&#xFF0C;&#x901A;&#x8BDD;&#x4E0D;&#x7ECF;&#x8FC7;freeswitch
+&lt;param name=&quot;inbound-bypass-media&quot; value=&quot;true&quot;/&gt;
+// &#x5A92;&#x4F53;&#x9009;&#x9879;&#xFF1A;&#x5728;bypass-media&#x548C;&#x6B63;&#x5E38;&#x5A92;&#x4F53;&#x95F4;&#x5207;&#x6362;
+&lt;param name=&quot;media-option&quot; value=&quot;resume-media-on-hold&quot;/&gt;
+&lt;param name=&quot;media-option&quot; value=&quot;bypass-media-after-att-xfer&quot;/&gt;
+// &#x8BBE;&#x7F6E;&#x6765;&#x8BDD;&#x8FDB;&#x5165;dialplan&#x54EA;&#x4E2A;context&#x8FDB;&#x884C;&#x8DEF;&#x7531;
+// &#x5982;&#x679C;&#x6CE8;&#x518C;&#x5230;&#x8BE5;profile&#x4E0A;&#x7684;&#x7528;&#x6237;&#xFF0C;&#x8BBE;&#x7F6E;&#x4E86;user_context&#x7684;&#x4F18;&#x5148;&#x7EA7;&#x6BD4;&#x8FD9;&#x91CC;&#x7684;&#x9AD8;
+&lt;param name=&quot;context&quot; value=&quot;public&quot;/&gt;
+// &#x8BBE;&#x7F6E;&#x9ED8;&#x8BA4;&#x7684;dialplan&#x7C7B;&#x578B;
+&lt;param name=&quot;dialplan&quot; value=&quot;XML&quot;/&gt;
+// &#x8BBE;&#x7F6E;&#x6765;&#x53BB;&#x8BDD;&#x5A92;&#x4F53;&#x7F16;&#x7801;&#xFF0C;&#x9ED8;&#x8BA4;&#x5F15;&#x7528;vars.xml&#x7684;global_codec_prefs
+&lt;param name=&quot;inbound-codec-prefs&quot; value=&quot;$${global_codec_prefs}&quot;/&gt;
+&lt;param name=&quot;outbound-codec-prefs&quot; value=&quot;$${global_codec_prefs}&quot;/&gt;
+// rtp&#x548C;sip&#x5730;&#x5740;
+&lt;param name=&quot;rtp-ip&quot; value=&quot;$${local_ip_v4}&quot;/&gt;
+&lt;param name=&quot;sip-ip&quot; value=&quot;$${local_ip_v4}&quot;/&gt;
+// &#x5F15;&#x7528;vars.xml&#x4E2D;&#x7684;internal_sip_port,&#x9ED8;&#x8BA4;5060
+&lt;param name=&quot;sip-port&quot; value=&quot;$${internal_sip_port}&quot;/&gt;
+// &#x4ECE;&#x8BE5;profile&#x8FDB;&#x6765;&#x7684;invite&#x8BF7;&#x6C42;&#x90FD;&#x9700;&#x8981;&#x7ECF;&#x8FC7;Digest&#x8BA4;&#x8BC1;
+&lt;param name=&quot;auth-calls&quot; value=&quot;$${internal_auth_calls}&quot;/&gt;
+// &#x7528;&#x4E8E;&#x8BBE;&#x7F6E;NAT&#x73AF;&#x5883;&#x4E2D;&#x516C;&#x7F51;&#x7684;RTP IP&#x548C;SIP IP&#x3002;&#x8BE5;&#x8BBE;&#x7F6E;&#x4F1A;&#x5F71;&#x54CD;SDP&#x4E2D;&#x7684;IP&#x5730;&#x5740;
+&lt;param name=&quot;ext-rtp-ip&quot; value=&quot;auto-nat&quot;/&gt;
+&lt;param name=&quot;ext-sip-ip&quot; value=&quot;auto-nat&quot;/&gt;
+// &#x4F7F;&#x7528;api&#x67E5;&#x770B;&#x8BBE;&#x7F6E;&#x7684;&#x503C;
+Sofia status profile internal
+</code></pre><ul>
+<li>external.xml</li>
+</ul>
+<p>&#x4E0E;internal.xml&#x4E2D;&#x6700;&#x5927;&#x7684;&#x4E0D;&#x540C;&#x662F;auth-calls&#x8BBE;&#x7F6E;&#x4E3A;false&#xFF0C;&#x5373;&#x4EFB;&#x4F55;&#x4EBA;&#x90FD;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;5080&#x7AEF;&#x53E3;
+&#x53D1;&#x9001;SIP INVITE&#x8BF7;&#x6C42;</p>
+<pre><code>graph LR
+&#x5185;&#x90E8;&#x7528;&#x6237;1000-- 5060 ---Freeswitch
+&#x5185;&#x90E8;&#x7528;&#x6237;1001-- 5060 ---Freeswitch
+Freeswitch-- 5080 SIP&#x4E2D;&#x7EE7; ---&#x5916;&#x90E8;&#x7F51;&#x5173;
+</code></pre></li>
+</ol>
+</li>
+<li><p>&#x5E38;&#x7528;&#x547D;&#x4EE4;</p>
+<pre><code>// &#x5E2E;&#x52A9;
+freeswitch&gt; sofia
+</code></pre><ul>
+<li><p>&#x72B6;&#x6001;&#x76F8;&#x5173;&#x547D;&#x4EE4;</p>
+<pre><code>// &#x5217;&#x51FA;&#x67D0;&#x4E2A;profile&#x72B6;&#x6001;
+freeswitch&gt; sofia status profile internal
+// &#x5217;&#x51FA;&#x67D0;&#x4E2A;profile&#x4E0A;&#x6240;&#x6709;&#x5DF2;&#x6CE8;&#x518C;&#x7684;&#x7528;&#x6237;
+freeswitch&gt; sofia status profile internal reg
+// &#x8FC7;&#x6EE4;&#x67D0;&#x4E9B;&#x7B26;&#x5408;&#x6761;&#x4EF6;&#x7684;&#x7528;&#x6237;
+freeswitch&gt; soifa status profile internal reg 1000
+// &#x5217;&#x51FA;&#x67D0;&#x4E2A;&#x7279;&#x5B9A;&#x7528;&#x6237;
+freeswitch&gt; sofia status profile internal user 1000
+// &#x5217;&#x51FA;&#x7F51;&#x5173;&#x72B6;&#x6001;
+freeswitch&gt; sofia status gateway gw1
+
+// &#x4EE5;XML&#x683C;&#x5F0F;&#x5217;&#x51FA;&#x72B6;&#x6001;&#x4FE1;&#x606F;
+sofia xmlstatus profile internal
+</code></pre></li>
+<li><p>Profile &#x76F8;&#x5173;&#x547D;&#x4EE4;</p>
+<ol>
+<li>&#x542F;&#x52A8;&#x3001;&#x505C;&#x6B62;&#x3001;&#x91CD;&#x542F;&#x67D0;&#x4E2A;profile&#x547D;&#x4EE4;&#xFF0C;&#x9ED8;&#x8BA4;&#x6267;&#x884C;reloadxml<pre><code>sofia profile internal start    # &#x542F;&#x52A8;
+sofia profile internal stop     # &#x505C;&#x6B62;
+sofia profile internal restart  # &#x91CD;&#x542F;
+</code></pre></li>
+<li>&#x4FEE;&#x6539;&#x53C2;&#x6570;&#xFF0C;&#x53EF;&#x4EE5;&#x4E0D;&#x7528;&#x91CD;&#x542F;&#xFF0C;&#x76F4;&#x63A5;&#x91CD;&#x65B0;&#x8BFB;&#x53D6;xml<pre><code>sofia profile internal rescan
+</code></pre></li>
+<li>&#x6DFB;&#x52A0;&#x7F51;&#x5173;<pre><code>sofia profile external rescan
+</code></pre></li>
+<li>&#x4FEE;&#x6539;&#x7F51;&#x5173;&#xFF0C;&#x8981;&#x5148;&#x5220;&#x9664;&#xFF0C;&#x518D;rescan<pre><code>sofia profile external killgw gw1
+sofia profile external rescan
+</code></pre></li>
+<li>&#x6307;&#x5B9A;&#x67D0;&#x4E2A;&#x7F51;&#x5173;&#x5411;&#x5916;&#x6CE8;&#x518C;&#x6216;&#x6CE8;&#x9500;<pre><code>sofia profile external register gw1     # &#x6CE8;&#x518C;
+sofia profile external unregister gw1   # &#x6CE8;&#x9500;
+</code></pre></li>
+<li>&#x5F00;&#x542F;Profile&#x7684;SIP&#x8DDF;&#x8E2A;&#x6293;SIP&#x5305;<pre><code>sofia profile internal siptrace on
+</code></pre></li>
+<li>&#x6E05;&#x7406;&#x5DF2;&#x6CE8;&#x518C;&#x7684;&#x7528;&#x6237;<pre><code>sofia profile internal flush_inbound_reg 1000@192.168.1.144
+// &#x6709;&#x65F6;&#x5019;&#x53EF;&#x80FD;&#x53D1;&#x73B0;&#x6CA1;&#x54DF;&#x6E05;&#x9664;&#x6389;&#xFF0C;&#x53EF;&#x80FD;&#x7528;&#x6237;&#x53C8;&#x91CD;&#x65B0;&#x6CE8;&#x518C;&#x4E86;
+sofia status profile internal reg 1000
+</code></pre></li>
+</ol>
+</li>
+<li><p>SIP Capture</p>
+<p>freeswitch&#x5185;&#x7F6E;&#x4E86;Homer Capture Agent&#x7528;&#x4E8E;&#x6293;&#x5305;&#x3002;Homer&#x4F7F;&#x7528;HEP&#x3001;HEP2&#x3001;IPIP&#x534F;&#x8BAE;&#x7684;
+&#x6293;&#x5305;&#x5206;&#x6790;&#x5DE5;&#x5177;&#x3002;</p>
+<ol>
+<li>Capture Agent&#x8FD0;&#x884C;&#x4E8E;freeswitch&#x5185;&#x90E8;&#xFF0C;&#x7528;&#x4E8E;&#x5C06;&#x6536;&#x5230;&#x7684;SIP&#x5305;&#x8FDB;&#x884C;&#x5C01;&#x88C5;&#x5E76;&#x901A;&#x8FC7;HEP/HEP2
+&#x6216;IPIP&#x534F;&#x8BAE;&#x53D1;&#x9001;&#x5230;&#x8FDC;&#x7AEF;&#x7684;Capture Node<pre><code>// conf/sip_profiles/internal.xml
+&lt;param name=&quot;sip-trace&quot;  value=&quot;yes&quot;/&gt;
+// or
+sofia profile internal capture on
+sofia profile internal capture off
+</code></pre></li>
+<li>Capture Node&#x6536;&#x5230;&#x5C01;&#x88C5;&#x540E;&#x7684;SIP&#x5305;&#x4EE5;&#x540E;&#xFF0C;&#x5206;&#x6790;&#x5B58;&#x50A8;;&#x6280;&#x672F;&#x4EBA;&#x5458;&#x901A;&#x8FC7;web&#x8BBF;&#x95EE;<pre><code>// conf/auto_configs/sofia.conf.xml
+&lt;param name=&quot;capture-server&quot; value=&quot;udp:192.168.0.100:6060&quot;/&gt;
+</code></pre></li>
+</ol>
+</li>
+<li><p>global&#x76F8;&#x5173;</p>
+<pre><code>// &#x5168;&#x5C40;sip&#x6D88;&#x606F;&#x8DDF;&#x8E2A;
+sofia global siptrace on
+sofia global siptrace off
+
+// &#x5168;&#x5C40;sip&#x6355;&#x83B7;
+sofia global capture on
+sofia global capture off
+</code></pre></li>
+<li><p>debug&#x76F8;&#x5173;</p>
+<ol>
+<li>&#x6253;&#x5F00;&#x66F4;&#x4F4E;&#x7EA7;&#x522B;&#x7684;&#x8C03;&#x8BD5;&#x5668;
+```
+// &#x5728;console&#x4E0A;&#x5F00;&#x542F;&#x8BE6;&#x7EC6;&#x7684;&#x5E95;&#x5C42;&#x8C03;&#x8BD5;&#x4FE1;&#x606F;0-9&#x7EA7;
+sofia loglevel all 9
+// &#x4EC5;&#x6253;&#x5F00;nua&#x6A21;&#x5757;&#x7684;&#x65E5;&#x5FD7;
+sofia loglevel nua 9
+// &#x5173;&#x95ED;&#x8C03;&#x8BD5;&#x4FE1;&#x606F;
+sofia loglevel all 0</li>
+</ol>
+<p>// &#x5C06;&#x6253;&#x5370;&#x5230;&#x63A7;&#x5236;&#x53F0;&#x7684;&#x4FE1;&#x606F;&#xFF0C;&#x5199;&#x5230;&#x65E5;&#x5FD7;&#x6587;&#x4EF6;
+sofia tracelevel debug      // sofia&#x65E5;&#x5FD7;&#x6620;&#x5C04;&#x5230;debug&#x7EA7;&#x522B;
+sofia tracelevel notice     // sofia&#x65E5;&#x5FD7;&#x6620;&#x5C04;&#x5230;notice&#x7EA7;&#x522B;
+```</p>
+</li>
+<li><p>&#x5176;&#x4ED6;&#x547D;&#x4EE4;</p>
+<pre><code>// &#x8FD4;&#x56DE;&#x6CE8;&#x518C;&#x7528;&#x6237;&#x7684;username
+sofia_username_of 1000@192.168.1.144    # 1000
+// &#x8FD4;&#x56DE;&#x6CE8;&#x518C;&#x7528;&#x6237;&#x7684;&#x8054;&#x7CFB;&#x5730;&#x5740;
+sofia_contact 1000@192.168.1.144 
+# sofia/internal/sip:1000@192.168.1.144:39988;rinstance=e9ce1bbdd471ab2d
+// &#x5728;&#x5141;&#x8BB8;&#x591A;&#x70B9;&#x6CE8;&#x518C;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x8BA1;&#x7B97;&#x591A;&#x5C11;&#x5BA2;&#x6237;&#x7AEF;&#x6CE8;&#x518C;&#x4E86;
+sofia_count_reg 1000@192.168.1.144  # 0 
+// &#x8FD4;&#x56DE;&#x5176;&#x4ED6;&#x670D;&#x52A1;&#x5668;&#x7684;&#x670D;&#x52A1;&#x5730;&#x5740;&#x548C;&#x7AEF;&#x53E3;&#x53F7;
+sofia_dig 192.168.1.144
+// &#x5217;&#x51FA;&#x7528;&#x6237;&#x5F53;&#x524D;&#x7684;&#x4FE1;&#x606F;
+sofia_presence_data list 1000@192.168.1.144
+// &#x663E;&#x793A;&#x7528;&#x6237;&#x5F53;&#x524D;&#x7684;&#x4FE1;&#x606F;&#x7684;&#x67D0;&#x4E00;&#x4E2A;&#x4FE1;&#x606F;
+sofia_presence_data status 1000@192.168.1.144
+</code></pre></li>
+<li><p>&#x5176;&#x4ED6;</p>
+<p>&#x4FEE;&#x6539;&#x53C2;&#x6570;&#x4E00;&#x822C;&#x4E0D;&#x7528;&#x91CD;&#x542F;&#xFF0C;&#x5355;&#x6839;IP&#x548C;&#x7AEF;&#x53E3;&#x53F7;&#x6709;&#x5173;&#x7684;&#x4E00;&#x822C;&#x8981;&#x91CD;&#x542F;&#x3002;<br>&#x91CD;&#x542F;&#x524D;&#x8981;&#x4E2D;&#x65AD;&#x6240;&#x6709;&#x901A;&#x8BDD;&#xFF0C;&#x5426;&#x5219;&#x4E0D;&#x6210;&#x529F;&#x3002;</p>
+</li>
+</ul>
+</li>
+<li><p>NAT&#x7A7F;&#x8D8A;</p>
+<ol>
+<li>&#x6982;&#x5FF5;&#xFF1A;&#x9002;&#x5F53;&#x7684;&#x89E3;&#x51B3;&#x5728;NAT&#x7F51;&#x7EDC;&#x73AF;&#x5883;&#x4E0B;&#x7684;&#x5185;&#x5916;&#x901A;&#x4FE1;&#x95EE;&#x9898;&#xFF0C;&#x79F0;&#x4E3A;NAT&#x7A7F;&#x8D8A;</li>
+<li>NAT&#xFF1A;Network Address Translation(&#x7F51;&#x7EDC;&#x5730;&#x5740;&#x8F6C;&#x6362;), &#x5F53;&#x5185;&#x7F51;&#x7684;IP&#x9700;&#x8981;&#x4E0E;&#x5916;&#x754C;&#x7684;IP(&#x516C;&#x7F51;)
+&#x901A;&#x4FE1;&#x65F6;&#xFF0C;&#x901A;&#x8FC7;&#x8DEF;&#x7531;&#x5668;&#x63D0;&#x4F9B;&#x7684;&#x7F51;&#x7EDC;&#x5730;&#x5740;&#x8F6C;&#x6362;(NAT)&#x529F;&#x80FD;&#x8F6C;&#x6362;&#x4E3A;&#x4E00;&#x4E2A;&#x5408;&#x6CD5;&#x7684;&#x5916;&#x7F51;IP&#x5730;&#x5740;&#x6765;&#x4E0E;
+&#x5916;&#x754C;&#x901A;&#x4FE1;&#x3002;<pre><code>// &#x79C1;&#x6709;IP&#x5730;&#x5740;
+A&#x7C7B;&#xFF1A;10.x.x.x
+B&#x7C7B;&#xFF1A;172.16.x.x ~ 172.31.x.x
+C&#x7C7B;&#xFF1A;192.168.x.x
+</code></pre></li>
+<li>&#x4E3A;&#x4E86;&#x4FDD;&#x6301;&#x5B9E;&#x65F6;&#x6027;&#xFF0C;SIP&#x4E00;&#x822C;&#x7528;UDP&#x627F;&#x8F7D;&#xFF0C;UDP&#x662F;&#x65E0;&#x8FDE;&#x63A5;&#x534F;&#x8BAE;&#xFF0C;NAT&#x7A7F;&#x8D8A;&#x56F0;&#x96BE;</li>
+<li>NAT&#x5EFA;&#x7ACB;&#x6620;&#x5C04;&#x5173;&#x7CFB;&#x662F;&#x5728;&#x5185;&#x7F51;&#x4E3B;&#x673A;&#x9996;&#x6B21;&#x5411;&#x5916;&#x7F51;&#x53D1;&#x5305;&#x65F6;&#x5EFA;&#x7ACB;&#x7684;&#xFF0C;&#x8BE5;&#x6280;&#x672F;&#x53EB;UDP Hole Punching&#x5373;&#x6253;&#x6D1E;</li>
+<li><p>&#x6D1E;&#x662F;&#x6709;&#x751F;&#x547D;&#x5468;&#x671F;&#x7684;&#xFF0C;&#x4E00;&#x6BB5;&#x65F6;&#x95F4;&#x6CA1;&#x6709;&#x6570;&#x636E;&#x901A;&#x8FC7;&#xFF0C;&#x5219;&#x81EA;&#x52A8;&#x6D88;&#x5931;</p>
+</li>
+<li><p>NAT&#x79CD;&#x7C7B;</p>
+<ol>
+<li>&#x9759;&#x6001;NAT(Static NAT): &#x5185;&#x90E8;&#x7F51;&#x7EDC;&#x4E2D;&#x7684;&#x6BCF;&#x4E2A;&#x4E3B;&#x673A;&#x88AB;&#x6C38;&#x4E45;&#x7684;&#x6620;&#x5C04;&#x6210;&#x5916;&#x90E8;&#x7F51;&#x7EDC;&#x7684;&#x67D0;&#x4E2A;&#x5408;&#x6CD5;&#x5730;&#x5740;</li>
+<li>&#x52A8;&#x6001;&#x5730;&#x5740;NAT(pooled NAT)&#xFF1A;&#x5728;&#x5916;&#x90E8;&#x7F51;&#x8DEF;&#x4E2D;&#x5B9A;&#x4E49;&#x4E00;&#x7CFB;&#x5217;&#x7684;&#x5408;&#x6CD5;&#x5730;&#x5740;&#xFF0C;&#x91C7;&#x7528;&#x52A8;&#x6001;&#x5206;&#x914D;&#x7684;&#x65B9;&#x6CD5;&#x6620;&#x5C04;&#x5230;&#x5185;&#x90E8;&#x7F51;&#x7EDC;&#x3002;</li>
+<li><p>&#x7F51;&#x7EDC;&#x5730;&#x5740;&#x7AEF;&#x53E3;&#x8F6C;&#x6362;(Network Address Port Translation,NAPT)&#xFF1A;&#x6620;&#x5C04;&#x6210;&#x5916;&#x90E8;&#x7F51;&#x7EDC;&#x7684;&#x4E00;&#x4E2A;IP&#x5730;&#x5740;&#x7684;&#x4E0D;&#x540C;&#x7AEF;&#x53E3;<br>&#x5185;&#x7F51;&#x4E3B;&#x673A;&#x5EFA;&#x7ACB;&#x4E00;&#x4E2A;UDP Socket(192.168.0.2:5060),&#x7B2C;&#x4E00;&#x6B21;&#x4F7F;&#x7528;&#x8FD9;&#x4E2A;socket&#x7ED9;&#x5916;&#x90E8;&#x4E3B;&#x673A;&#x53D1;&#x9001;&#x6570;&#x636E;&#x65F6;&#xFF0C;<br>NAT&#x8BBE;&#x5907;&#x4F1A;&#x5206;&#x914D;&#x4E00;&#x4E2A;&#x516C;&#x7F51;&#x7684;IP:Port&#x5BF9;&#xFF0C;&#x5EFA;&#x7ACB;&#x6620;&#x5C04;&#x5173;&#x7CFB;(1.2.3.4:5060)<br>&#x53EA;&#x6709;&#x8BE5;&#x79CD;&#x65B9;&#x6CD5;&#x80FD;&#x8282;&#x7701;&#x5730;&#x5740;&#x7A7A;&#x95F4;&#xFF0C;&#x53C8;&#x5206;&#x4E3A;&#x4EE5;&#x4E0B;2&#x5927;&#x7C7B;4&#x5C0F;&#x79CD;&#xFF1A;</p>
+<ul>
+<li><p>Full Cone NAT(&#x5168;&#x9525;&#x578B;NAT)</p>
+<p>&#x5185;&#x90E8;&#x4E3B;&#x673A;&#x5411;&#x5916;&#x6253;&#x4E86;&#x4E00;&#x4E2A;&#x6D1E;&#xFF0C;&#x5916;&#x7F51;&#x7684;&#x4EFB;&#x4F55;&#x4E3B;&#x673A;&#x90FD;&#x53EF;&#x4EE5;&#x5229;&#x7528;&#x8FD9;&#x4E2A;&#x6D1E;&#x4E0E;&#x5B83;&#x901A;&#x4FE1;</p>
+</li>
+<li><p>Restricted Cone NAT(&#x9650;&#x5236;&#x578B;NAT)</p>
+<p>&#x5185;&#x90E8;&#x4E3B;&#x673A;&#x5411;&#x67D0;&#x4E00;&#x4E2A;&#x5916;&#x90E8;&#x4E3B;&#x673A;&#x6253;&#x4E86;&#x4E00;&#x4E2A;&#x6D1E;&#x540E;&#xFF0C;&#x53EA;&#x6709;&#x8BE5;&#x5916;&#x90E8;&#x4E3B;&#x673A;&#x624D;&#x80FD;&#x5229;&#x7528;&#x8FD9;&#x4E2A;&#x6D1E;</p>
+</li>
+<li><p>Port Restricted Cone NAT(&#x7AEF;&#x53E3;&#x9650;&#x5236;&#x578B;NAT)</p>
+<p>&#x5185;&#x90E8;&#x4E3B;&#x673A;&#x5411;&#x5916;&#x90E8;&#x4E3B;&#x673A;&#x4E0A;&#x67D0;&#x4E00;&#x7A0B;&#x5E8F;&#xFF08;&#x4E00;&#x4E2A;&#x7AEF;&#x53E3;&#xFF09;&#x6253;&#x4E86;&#x4E00;&#x4E2A;&#x6D1E;&#xFF0C;&#x5219;&#x53EA;&#x6709;&#x8BE5;&#x7A0B;&#x5E8F;&#x53EF;&#x4EE5;&#x5229;&#x7528;&#x8FD9;&#x4E2A;&#x6D1E;&#xFF0C;&#x5176;&#x4ED6;&#x4E0D;&#x884C;</p>
+</li>
+<li><p>Symmetric NAT(&#x5BF9;&#x79F0;&#x578B;NAT)</p>
+<p>&#x540C;&#x4E00;&#x5185;&#x90E8;&#x4E3B;&#x673A;&#x8054;&#x7CFB;&#x4E0D;&#x540C;&#x7684;&#x5916;&#x90E8;&#x4E3B;&#x673A;&#x65F6;&#x90FD;&#x9700;&#x8981;&#x6253;&#x4E0D;&#x540C;&#x7684;&#x6D1E;</p>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><p>freeswitch &#x62D3;&#x6251;&#x7ED3;&#x6784;</p>
+<ol>
+<li>fs&#x8FD0;&#x884C;&#x4E8E;&#x516C;&#x7F51;&#xFF0C;&#x4E00;&#x822C;&#x7528;&#x4E8E;VoIP&#x4E1A;&#x52A1;<pre><code>graph LR
+A[&quot;fa:fa-laptop A&quot;]
+A---NAT
+NAT---Internet[&quot;fa:fa-cloud Internet&quot;]
+Internet---FreeSWITCH
+FreeSWITCH---&#x5916;&#x90E8;&#x7F51;&#x5173;
+</code></pre></li>
+<li>fs&#x8FD0;&#x884C;&#x4E8E;&#x5185;&#x7F51;&#xFF0C;&#x4E00;&#x822C;&#x7528;&#x4E8E;&#x516C;&#x53F8;&#x5185;&#x90E8;IP-PBX&#x4E1A;&#x52A1;<pre><code>graph LR
+A[&quot;fa:fa-laptop A&quot;]
+A---FreeSWITCH
+FreeSWITCH---NAT[&quot;fa:fa-cloud NAT&quot;]
+NAT---Internet[&quot;fa:fa-cloud Internet&quot;]
+Internet---&#x5916;&#x90E8;&#x7F51;&#x5173;
+</code></pre></li>
+<li>fs&#x8FD0;&#x884C;&#x4E8E;&#x5185;&#x7F51;&#xFF0C;&#x5927;&#x516C;&#x53F8;&#x4E1A;&#x52A1;<pre><code>graph LR
+A[&quot;fa:fa-laptop A&quot;]
+A---FreeSWITCH
+FreeSWITCH---NAT[&quot;fa:fa-cloud NAT&quot;]
+NAT---Internet[&quot;fa:fa-cloud Internet&quot;]
+Internet---&#x5916;&#x90E8;&#x7F51;&#x5173;
+B-.-FreeSWITCH
+Internet---B[&quot;fa:fa-laptop B&quot;]
+Internet---NAT1
+NAT1---C
+</code></pre></li>
+</ol>
+</li>
+<li><p>NAT&#x662F;&#x600E;&#x4E48;&#x5F71;&#x54CD;SIP/RTP&#x901A;&#x4FE1;(&#x4EE5;&#x4E0B;&#x90FD;&#x662F;&#x7528;&#x7684;&#x62D3;&#x6251;&#x4E00;&#x7684;&#x7ED3;&#x6784;&#x8FDB;&#x884C;&#x8BF4;&#x660E;&#x7684;)</p>
+<ol>
+<li>SIP&#x5F71;&#x54CD;<pre><code>REGISTER 1000@1.2.3.5 SIP/2.0
+Contact: 1000@192.168.0.2:5060
+</code></pre><ul>
+<li>freeswitch&#x8DB3;&#x591F;&#x806A;&#x660E;&#xFF0C;&#x8BB0;&#x4F4F;&#x5916;&#x7F51;IP</li>
+<li>&#x8BA9;&#x5BA2;&#x6237;&#x7AEF;&#x77E5;&#x9053;NAT&#x8BBE;&#x5907;&#x6620;&#x5C04;&#x5B8C;&#x7684;&#x5916;&#x7F51;&#x5730;&#x5740;&#x548C;IP&#xFF0C;&#x7528;STUN&#x670D;&#x52A1;&#x89E3;&#x51B3;</li>
+</ul>
+</li>
+<li><p>RTP&#x5F71;&#x54CD;</p>
+<pre><code>INVITE 9196@1.2.3.5
+Content-Type: application/sdp
+
+c=IN 192.168.0.2
+m=audio 50542 RTP/AVP 8 0 101
+</code></pre><ul>
+<li>freeswitch&#x8DB3;&#x591F;&#x806A;&#x660E;&#xFF0C;&#x8BB0;&#x4F4F;&#x5916;&#x7F51;IP</li>
+<li>&#x8BA9;&#x5BA2;&#x6237;&#x7AEF;&#x77E5;&#x9053;NAT&#x8BBE;&#x5907;&#x6620;&#x5C04;&#x5B8C;&#x7684;&#x5916;&#x7F51;&#x5730;&#x5740;&#x548C;IP&#xFF0C;&#x7528;STUN&#x670D;&#x52A1;&#x89E3;&#x51B3;</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><p>NAT&#x7A7F;&#x8D8A;&#x65B9;&#x6CD5;</p>
+<ul>
+<li>&#x4E86;&#x89E3;&#x7F51;&#x7EDC;&#x62D3;&#x6251;&#x548C;&#x7F51;&#x7EDC;&#x73AF;&#x5883;<pre><code>// ip138.com&#x56FD;&#x5185;&#x7684;
+// &#x67E5;&#x770B;&#x672C;&#x673A;&#x6240;&#x5BF9;&#x5E94;&#x7684;&#x516C;&#x7F51;IP
+curl ifconfig.me  // &#x56FD;&#x5916;&#x7684;
+</code></pre></li>
+<li><p>&#x7981;&#x7528;&#x8DEF;&#x7531;&#x5668;&#x7684;ALG(Application Level Gateway)&#xFF1A;&#x67D0;&#x4E9B;&#x8DEF;&#x7531;&#x5668;&#x6709;ALG&#x529F;&#x80FD;&#xFF0C;&#x5B83;&#x4EEC;&#x4F1A;&#x4FEE;&#x6539;SIP&#x5305;&#x4E2D;&#x7684;IP&#x5730;&#x5740;&#xFF0C;&#x201C;&#x5E2E;&#x52A9;&#x201D;
+&#x8FDB;&#x884C;NAT&#x7A7F;&#x8D8A;&#xFF0C;&#x4F46;&#x5B83;&#x4EEC;&#x5B9E;&#x73B0;&#x5F80;&#x5F80;&#x6709;bug&#xFF0C;&#x800C;&#x4E14;&#x9ED8;&#x8BA4;&#x5F00;&#x542F;&#xFF0C;&#x6240;&#x4EE5;&#x7981;&#x7528;&#x5B83;&#x3002;</p>
+</li>
+<li><p>SIP&#x7A7F;&#x8D8A;</p>
+<p>freeswitch&#x9ED8;&#x8BA4;&#x4F7F;&#x7528;ACL&#x6765;&#x5224;&#x65AD;NAT&#x73AF;&#x5883;&#xFF0C;&#x5728;conf/sip_profiles/internal.xml</p>
+<pre><code>&lt;param name=&quot;apply-nat-acl&quot; value=&quot;yes&quot;/&gt;
+</code></pre><p>nat.auto&#x662F;&#x4E00;&#x4E2A;ACL(Access Control List)&#xFF0C;&#x5B83;&#x5305;&#x542B;RFC1918&#x89C4;&#x5B9A;&#x7684;&#x79C1;&#x7F51;&#x5730;&#x5740;&#xFF0C;&#x5E76;&#x53BB;&#x6389;&#x4E86;&#x672C;&#x5730;&#x7F51;&#x7EDC;&#x7684;&#x5730;&#x5740;&#x3002;&#x5F53;SIP
+&#x5BA2;&#x6237;&#x7AEF;&#x5411;FreeSWITCH&#x6CE8;&#x518C;&#x65F6;&#xFF0C;FreeSWITCH&#x4F1A;&#x6BD4;&#x8F83;SIP&#x6D88;&#x606F;&#x7684;Contact&#x5730;&#x5740;&#x662F;&#x5426;&#x5305;&#x542B;&#x5728;&#x8FD9;&#x4E2A;ACL&#x4E2D;&#xFF0C;&#x5982;&#x679C;&#x5305;&#x542B;&#xFF0C;&#x5219;
+&#x8BF4;&#x660E;&#x6765;&#x81EA;&#x4E00;&#x4E2A;NAT&#x80CC;&#x540E;&#x7684;&#x8BBE;&#x5907;&#xFF0C;&#x5B83;&#x628A;Contact&#x5730;&#x5740;&#x81EA;&#x52A8;&#x66FF;&#x6362;&#x6210;&#x8BE5;&#x8BBE;&#x5907;&#x7684;&#x5916;&#x7F51;&#x5730;&#x5740;</p>
+<pre><code>recv 557 bytes from udp/[1.2.3.4]:56020 at 04:05:37.636135
+------------------------------------------------------------------------
+REGISTER sip:1.2.3.5 SIP/2.0
+Contact: &lt;sip:1002@192.168.0.2:56020;rinstance=6622cfa07990b53c&gt;
+
+freeswitch&gt; sofia status profile internal reg
+Registrations:
+========================================================================
+Call-ID:         YTU5MzZiMjB1ODkwNzQ1NGQ1Zjg0OTE3YTUxNGExNWI
+User:            1002@1.2.3.5
+Contact:         &quot;1002&quot; &lt;sip:1002@192.168.0.2:54892;
+                 rinstance=1d165ab726aed220;fs_nat=yes;
+                 fs_path=sip%3A1002%401.2.3.4%3A54892%3B
+                 rinstance%3D1d165ab726aed220&gt;
+ Agent:          Bria 3 release 3.5.0b stamp 69410
+ Status:         Registered(UDP-NAT) (Unkown) EXP(2013-08-17 12:51:10) EXPSECS(3658)
+</code></pre></li>
+<li><p>RTP&#x7A7F;&#x8D8A;</p>
+<p>FreeSWITCH&#x7ED9;&#x5BF9;&#x65B9;&#x53D1;&#x9001;&#x7684;RTP&#x5730;&#x5740;&#x8C03;&#x6574;</p>
+<pre><code>[INFO] switch_rtp.c:4753 Auto Changing port from 192.168.1.124:50492 to 1.2.3.4:50492
+</code></pre><p>&#x8FD9;&#x79CD;&#x8C03;&#x6574;&#x662F;&#x81EA;&#x52A8;&#x5F00;&#x542F;&#x7684;&#xFF0C;&#x53EF;&#x4EE5;&#x628A;&#x5B83;&#x7981;&#x7528;&#x6389;&#xFF0C;&#x5728;conf/sip_profiles/internal.xml</p>
+<pre><code>&lt;param name=&quot;disable-rtp-auto-adjust&quot; value=&quot;true&quot;/&gt;
+</code></pre><p>&#x6216;&#x8005;&#x53EA;&#x9488;&#x5BF9;&#x4E2A;&#x522B;&#x547C;&#x53EB;&#x6765;&#x7981;&#x6B62;&#x81EA;&#x52A8;&#x8C03;&#x6574;,&#x5728;conf/directory/xxx.xml</p>
+<pre><code>&lt;param name=&quot;rtp_auto_adjust&quot; value=&quot;false&quot;/&gt;
+</code></pre></li>
+<li><p>&#x5176;&#x4ED6;&#x89E3;&#x51B3;&#x65B9;&#x6848;</p>
+<p>&#x6709;&#x4E9B;&#x201C;&#x5DEE;&#x201D;&#x8BBE;&#x5907;&#x4F1A;&#x81EA;&#x52A8;NAT&#x7A7F;&#x8D8A;&#xFF0C;&#x4F46;&#x5374;&#x628A;SIP&#x5305;&#x6539;&#x5F97;&#x4E71;&#x4E03;&#x516B;&#x7CDF;&#x3002;freeswitch&#x63D0;&#x4F9B;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x5176;&#x53EF;&#x4EE5;&#x5728;Profile&#x8BBE;&#x7F6E;&#xFF0C;
+&#x4EE5;&#x5B9E;&#x73B0;&#x5BF9;&#x8FD9;&#x4E9B;SIP&#x5305;&#x8FDB;&#x884C;&#x6DF1;&#x5EA6;&#x68C0;&#x6D4B;&#xFF0C;&#x8FDB;&#x800C;&#x51B3;&#x5B9A;&#x5230;&#x5E95;&#x8BE5;&#x7528;&#x54EA;&#x4E2A;IP&#x5730;&#x5740;&#x3002;&#x8BE5;&#x53C2;&#x6570;&#x4E5F;&#x53EF;&#x4EE5;&#x914D;&#x7F6E;&#x5728;&#x7528;&#x6237;&#x76EE;&#x5F55;&#x4E0B;</p>
+<pre><code>&lt;param name=&quot;aggressive-nat-detection&quot; value=&quot;true&quot;/&gt;
+</code></pre><p>FreeSWITCH&#x8FD8;&#x63D0;&#x4F9B;&#x4E00;&#x65CF;&#x79F0;&#x4E3A;NDLB&#x7684;&#x53C2;&#x6570;&#x914D;&#x7F6E;&#xFF0C;&#x914D;&#x7F6E;&#x5728;Profile&#x4E2D;</p>
+<pre><code>// No device left behind
+&lt;param name=&quot;NDLB-force-rport&quot; value=&quot;true&quot;/&gt;
+</code></pre><p>&#x67D0;&#x4E9B;&#x5BA2;&#x6237;&#x7AEF;&#x8BBE;&#x5907;&#x652F;&#x6301;rport&#xFF0C;&#x5728;&#x53D1;&#x8D77;&#x8BF7;&#x6C42;&#x65F6;&#x4F1A;&#x5728;Via&#x5B57;&#x6BB5;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;rport&#x7A7A;&#x53C2;&#x6570;</p>
+<pre><code>Via: SIP/2.0/UDP 192.168.0.2:5060;branch=z9hG4bK-d8754z-65d2be1ee849d851-1---d8754z-;rport
+</code></pre><p>Freeswitch&#x5728;&#x6536;&#x5230;&#x8BF7;&#x6C42;&#x540E;&#xFF0C;&#x5728;&#x54CD;&#x5E94;&#x5305;&#x8BBE;&#x7F6E;rport&#x7684;&#x503C;&#x4E3A;&#x5B9E;&#x9645;&#x6765;&#x6E90;&#x7AEF;&#x53E3;&#x503C;&#xFF0C;&#x540C;&#x65F6;&#x589E;&#x52A0;received&#x53C2;&#x6570;&#xFF0C;&#x6307;&#x5B9A;&#x6765;&#x6E90;IP</p>
+<pre><code>Via: SIP/2.0/UDP 192.168.0.2:5060;branch=z9hG4bK-d8754z-65d2be1ee849d851-1---d8754z-;
+rport=5060;received=1.2.3.4
+</code></pre><p>SIP&#x5BA2;&#x6237;&#x7AEF;&#x6536;&#x5230;&#x8BE5;&#x54CD;&#x5E94;&#xFF0C;&#x201C;&#x5B66;&#x4E60;&#x201D;&#x4E86;&#x81EA;&#x5DF1;&#x5BF9;&#x5E94;&#x7684;&#x5916;&#x7F51;&#x5730;&#x5740;&#xFF0C;Contact&#x5730;&#x5740;&#x5C31;&#x53EF;&#x4EE5;&#x586B;&#x81EA;&#x5DF1;&#x7684;&#x5916;&#x7F51;&#x5730;&#x5740;&#x4E86;</p>
+</li>
+</ul>
+</li>
+<li><p>&#x603B;&#x7ED3;&#xFF1A;NAT&#x7A7F;&#x8D8A;&#x95EE;&#x9898;&#x89E3;&#x51B3;&#x65B9;&#x6848;</p>
+<ol>
+<li><p>&#x5BA2;&#x6237;&#x7AEF;&#x89E3;&#x51B3;&#x65B9;&#x6848;</p>
+<p>&#x5BA2;&#x6237;&#x7AEF;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;ifconfig.me&#x4E4B;&#x7C7B;&#x7684;&#x670D;&#x52A1;&#x83B7;&#x53D6;&#x81EA;&#x5DF1;&#x7684;&#x5916;&#x7F51;IP&#xFF0C;&#x4F46;SIP&#x901A;&#x4FE1;&#x8FD8;&#x8981;&#x77E5;&#x9053;&#x5916;&#x7F51;&#x7684;&#x7AEF;&#x53E3;&#x53F7;&#xFF0C;&#x9700;&#x8981;&#x7528;STUN&#x6765;&#x5B9E;&#x73B0;&#x3002;&#x5927;&#x90E8;&#x5206;&#x7684;SIP&#x8BDD;&#x673A;&#x548C;&#x8F6F;&#x7535;&#x8BDD;&#x5747;&#x53EF;&#x4EE5;&#x9009;&#x62E9;&#x662F;&#x5426;&#x542F;&#x7528;STUN&#x670D;&#x52A1;&#xFF0C;&#x542F;&#x52A8;STUN&#x540E;&#xFF0C;&#x5728;SIP&#x6D88;&#x606F;&#x7684;Contact&#x76F4;&#x63A5;&#x586B;&#x5165;&#x5916;&#x7F51;&#x5730;&#x5740;</p>
+<pre><code>Contact: &quot;1002&quot; &lt;sip:1002@119.40.26.181:29054;rinstance=98cf71bfe4dbb8bf&gt;
+</code></pre><ul>
+<li>STUN(Session Traversal Utilities for NAT)&#x5BF9;&#x9525;&#x5F62;NAT&#x662F;&#x6709;&#x6548;&#x7684;&#xFF0C;&#x4F46;&#x5BF9;&#x5BF9;&#x79F0;&#x578B;&#x65E0;&#x6548;</li>
+<li>TURN(Traversal Using Relay NAT):&#x8BE5;&#x670D;&#x52A1;&#x5668;&#x4F5C;&#x4E3A;&#x4E00;&#x4E2A;&#x201C;&#x4E2D;&#x95F4;&#x4EBA;&#x201D;&#x5BF9;&#x53CC;&#x65B9;&#x7684;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x8F6C;&#x53D1;</li>
+<li>RSIP(Realm Specific IP)</li>
+<li>symmetric RTP</li>
+<li>ICE(Interactive Connectivity Establishment):&#x7EFC;&#x5408;&#x5229;&#x7528;STUN&#x548C;TURN</li>
+</ul>
+</li>
+<li><p>freeswitch&#x5904;&#x4E8E;&#x5BA2;&#x6237;&#x7AEF;&#x7684;&#x4F4D;&#x7F6E;</p>
+<p>freeswitch&#x652F;&#x6301;&#x4F7F;&#x7528;uPnP(Universal Plug and Play)&#x6216;NAT-PMP(NAT Port Mapping Protocol)&#x534F;&#x8BAE;&#x5728;&#x8DEF;&#x7531;&#x5668;&#x4E0A;&#x6253;&#x6D1E;</p>
+<pre><code>show nat_map     //&#x7AEF;&#x53E3;&#x6620;&#x5C04;
+nat_map status   //&#x6620;&#x5C04;&#x540E;&#x7684;&#x5916;&#x7F51;&#x5730;&#x5740;
+sofia status profile external    // &#x5F53;&#x524D;ext-sip-ip&#x548C;ext-rtp-ip
+
+// external.xml
+&lt;param name=&quot;ext-sip-ip&quot; value=&quot;auto-nat&quot;/&gt;
+&lt;param name=&quot;ext-rtp-ip&quot; value=&quot;auto-nat&quot;/&gt;
+// &#x8DEF;&#x7531;&#x5668;&#x4E0D;&#x652F;&#x6301;uPnP&#x548C;NAT-PMP&#x534F;&#x8BAE;&#xFF0C;&#x586B;STUN&#x670D;&#x52A1;&#x5668;&#x5730;&#x5740;
+&lt;param name=&quot;ext-sip-ip&quot; value=&quot;stun:stun.freeswitch.org&quot;/&gt;
+&lt;param name=&quot;ext-rtp-ip&quot; value=&quot;stun:stun.freeswitch.org&quot;/&gt;
+// stun API&#x67E5;&#x770B;&#x5916;&#x7F51;IP&#x548C;&#x7AEF;&#x53E3;
+freeswitch&gt; stun stun.freeswitch.org
+// &#x624B;&#x5DE5;&#x914D;&#x7F6E;
+// &#x66F4;&#x667A;&#x80FD;
+&lt;param name=&quot;ext-sip-ip&quot; value=&quot;autonat:119.40.26.181&quot;/&gt;
+&lt;param name=&quot;ext-rtp-ip&quot; value=&quot;autonat:119.40.26.181&quot;/&gt;
+
+&lt;param name=&quot;ext-sip-ip&quot; value=&quot;119.40.26.181&quot;/&gt;
+&lt;param name=&quot;ext-rtp-ip&quot; value=&quot;119.40.26.181&quot;/&gt;
+</code></pre></li>
+</ol>
+</li>
+</ol>
+</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="seven_du_book_advanced.html" class="navigation navigation-prev " aria-label="Previous page: 4.freeswitch权威指南 -- 高级篇 16_">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="pbx.html" class="navigation navigation-next " aria-label="Next page: 6.pbx">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"5.freeswitch cookbook","level":"1.3.5","depth":2,"next":{"title":"6.pbx","level":"1.3.6","depth":2,"path":"freeswitch/pbx.md","ref":"freeswitch/pbx.md","articles":[]},"previous":{"title":"4.freeswitch权威指南 -- 高级篇 16_","level":"1.3.4","depth":2,"path":"freeswitch/seven_du_book_advanced.md","ref":"freeswitch/seven_du_book_advanced.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"freeswitch/cookbook.md","mtime":"2019-06-25T16:58:28.408Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-06-25T16:59:42.175Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

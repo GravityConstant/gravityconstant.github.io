@@ -1,0 +1,1145 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>3.freeswitch权威指南 -- 实战篇12_13 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="seven_du_book_advanced.html" />
+    
+    
+    <link rel="prev" href="seven_du_book_10_11.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    golang
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../golang/thewaytogo.html">
+            
+                <a href="../golang/thewaytogo.html">
+            
+                    
+                    1.thewaytogo
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../golang/build_and_install.html">
+            
+                <a href="../golang/build_and_install.html">
+            
+                    
+                    2.golang 编译和编译包
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    freeswitch
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="mtg_notice.html">
+            
+                <a href="mtg_notice.html">
+            
+                    
+                    1.MTG落地网关注意事项
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="seven_du_book_10_11.html">
+            
+                <a href="seven_du_book_10_11.html">
+            
+                    
+                    2.freeswitch权威指南 -- 实战篇10_11
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.3" data-path="seven_du_book_12_13.html">
+            
+                <a href="seven_du_book_12_13.html">
+            
+                    
+                    3.freeswitch权威指南 -- 实战篇12_13
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="seven_du_book_advanced.html">
+            
+                <a href="seven_du_book_advanced.html">
+            
+                    
+                    4.freeswitch权威指南 -- 高级篇 16_
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="cookbook.html">
+            
+                <a href="cookbook.html">
+            
+                    
+                    5.freeswitch cookbook
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="pbx.html">
+            
+                <a href="pbx.html">
+            
+                    
+                    6.pbx
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >3.freeswitch权威指南 -- 实战篇12_13</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h3 id="chapter12-&#x9AD8;&#x7EA7;&#x529F;&#x80FD;&#x548C;&#x914D;&#x7F6E;&#x5B9E;&#x4F8B;">Chapter12 &#x9AD8;&#x7EA7;&#x529F;&#x80FD;&#x548C;&#x914D;&#x7F6E;&#x5B9E;&#x4F8B;</h3>
+<p>&#x5185;&#x5BB9;&#x6982;&#x8981;&#xFF1A;</p>
+<ol>
+<li>&#x547C;&#x53EB;&#x4E2D;&#x5FC3;&#x5E94;&#x7528;</li>
+<li>&#x591A;&#x4EBA;&#x4F1A;&#x8BAE;</li>
+<li>&#x4E0E;&#x6570;&#x636E;&#x5E93;&#x8FDE;&#x63A5;</li>
+<li><p>&#x8BDD;&#x5355;&#x53CA;&#x8BA1;&#x8D39;</p>
+</li>
+<li><p>&#x4F7F;&#x7528;mod_fifo&#x5B9E;&#x73B0;&#x7B80;&#x5355;&#x547C;&#x53EB;&#x961F;&#x5217;</p>
+<p>&#x81EA;&#x52A8;&#x7535;&#x8BDD;&#x5206;&#x914D;(ACD): Automatic Call Distribution</p>
+<ul>
+<li>&#x547C;&#x53EB;&#x505C;&#x6CCA;&#x548C;&#x53D6;&#x56DE;</li>
+<li><p>&#x914D;&#x7F6E;&#x5EA7;&#x5E2D;</p>
+<ol>
+<li>&#x9759;&#x6001;&#x5EA7;&#x5E2D;&#x914D;&#x7F6E;
+&#x5728;autoload_configs/fifo.conf.xml
+```
+<fifo name="book" importance="0">
+<member timeout="60" simo="1" lag="5">user/1000</member>
+<member timeout="60" simo="1" lag="5">user/1002</member>
+<member timeout="60" simo="1" lag="5">user/1003</member>
+</fifo>
+// dialplan&#x4E0A;&#x914D;&#x7F6E;<extension name="fifo test">
+<condition field="destination_number" expression="^(1234)$">
+ <action application="set" data="hold_music=$${hold_music}">
+ <action application="fifo" data="book in">
+</action></action></condition>
+</extension>
+
+</li>
+</ol>
+<p>reloadxml
+fifo reparse
+// &#x67E5;&#x770B;
+fifo list</p>
+<pre><code>2. &#x52A8;&#x6001;&#x5EA7;&#x5E2D;&#x914D;&#x7F6E;
+</code></pre><p>fifo_member add fifo-test user/1007
+fifo_member del fifo-test user/1007
+```</p>
+</li>
+<li>FIFO<ol>
+<li>&#x76F8;&#x5173;&#x901A;&#x9053;&#x53D8;&#x91CF;<pre><code>&lt;!--&#x4F18;&#x5148;&#x7EA7;&#x8BBE;&#x7F6E;1-10&#x9ED8;&#x8BA4;5--&gt;
+&lt;action application=&quot;set&quot; data=&quot;fifo_priority=1&quot;/&gt;
+&lt;action application=&quot;fifo&quot; data=&quot;book in&quot;/&gt;
+</code></pre>&#x4E00;&#x4E2A;&#x5B8C;&#x6574;&#x5B9E;&#x4F8B;<pre><code>&lt;extension name=&quot;fifo test&quot;&gt;
+&lt;condition field=&quot;destination_number&quot; expression=&quot;^(1234)$&quot;&gt;
+ &lt;action application=&quot;answer&quot;/&gt;
+ &lt;action application=&quot;set&quot; data=&quot;language=zh&quot;/&gt; &lt;!--&#x6CA1;&#x8BBE;&#x7F6E;&#x64AD;&#x653E;&#x7684;&#x4E5F;&#x662F;&#x4E2D;&#x6587;--&gt;
+ &lt;action application=&quot;set&quot; data=&quot;fifo_music=$${hold_music}&quot;/&gt;
+ &lt;action application=&quot;set&quot; data=&quot;tts_engine=tts_commandline&quot;/&gt;
+ &lt;action application=&quot;set&quot; data=&quot;tts_voice=Toisanese&quot;/&gt; &lt;!--&#x95FD;&#x5357;&#x8BED;,Mandarin&#x56FD;&#x8BED;--&gt;
+ &lt;action application=&quot;set&quot; data=&quot;fifo_chime_list=say:&#x5750;&#x5E2D;&#x5FD9;&#xFF0C;&#x7EE7;&#x7EED;&#x7B49;&#x5F85;&#x8BF7;&#x6309;1&#xFF0C;&#x8F6C;&#x5176;&#x4ED6;&#x670D;&#x52A1;&#x8BF7;&#x6309;2&quot;/&gt;
+ &lt;action application=&quot;set&quot; data=&quot;fifo_chime_freq=15&quot;/&gt; &lt;!--play via 15s--&gt;
+ &lt;action application=&quot;set&quot; data=&quot;fifo_orbit_exten=1007:45&quot;/&gt; &lt;!--wait timeout 45s,press key 2 transfer to 1007--&gt;
+ &lt;action application=&quot;set&quot; data=&quot;fifo_orbit_dialplan=XML&quot;/&gt;
+ &lt;action application=&quot;set&quot; data=&quot;fifo_orbit_context=default&quot;/&gt;
+ &lt;action application=&quot;set&quot; data=&quot;fifo_orbit_announce=say:&#x4E3A;&#x4FDD;&#x8BC1;&#x670D;&#x52A1;&#x8D28;&#x91CF;&#xFF0C;&#x60A8;&#x7684;&#x7535;&#x8BDD;&#x53EF;&#x80FD;&#x88AB;&#x5F55;&#x97F3;&quot;/&gt; &lt;!--play to caller--&gt;
+ &lt;action application=&quot;set&quot; data=&quot;fifo_caller_exit_key=2&quot;/&gt; &lt;!--press key 2 to transfer--&gt;
+ &lt;action application=&quot;set&quot; data=&quot;fifo_caller_exit_to_orbit=true&quot;/&gt;
+ &lt;!--play caller_id_number to callee--&gt;
+ &lt;action application=&quot;set&quot; data=&quot;fifo_override_announce=say:tts_commandline:Toisanese:&#x6765;&#x7535;&#x53F7;&#x7801;${caller_id_number}&quot;/&gt;
+ &lt;action application=&quot;fifo&quot; data=&quot;book in&quot;/&gt;
+&lt;/condition&gt;
+&lt;/extension&gt;
+</code></pre></li>
+<li>&#x76F8;&#x5173;&#x4E8B;&#x4EF6;</li>
+<li>b-leg&#x901A;&#x9053;&#x53D8;&#x91CF;&#x8BBE;&#x7F6E;<pre><code>&lt;member&gt;{origination_call_id_name=7777}user/1007&lt;/member&gt;
+&lt;member&gt;{my_worker_number=1234}user/1007&lt;/member&gt;
+&lt;member&gt;{ignore_early_media=true}sofia/gateway/zq/139xxx&lt;/member&gt;
+</code></pre></li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p>&#x4F7F;&#x7528;mod_callcenter&#x5B9E;&#x73B0;&#x547C;&#x53EB;&#x4E2D;&#x5FC3;&#x5E94;&#x7528;</p>
+<ul>
+<li><p>&#x7B80;&#x4ECB;</p>
+<ol>
+<li>&#x5B89;&#x88C5;<pre><code>make mod_callcenter-install
+// &#x5931;&#x8D25;&#xFF0C;&#x5219;&#x4F7F;&#x7528;
+cd /opt/src/freeswitch/src/mod/applications/mod_callcenter
+make &amp;&amp; make install
+load mod_callcenter
+</code></pre></li>
+<li>&#x57FA;&#x672C;&#x6982;&#x5FF5;<ul>
+<li>queue&#x961F;&#x5217;</li>
+<li>agent&#x5EA7;&#x5E2D;</li>
+<li>strategy&#x7B56;&#x7565;<ol>
+<li>ring-all&#xFF1A;&#x632F;&#x94C3;&#x6240;&#x6709;&#x5EA7;&#x5E2D;&#xFF0C;&#x54EA;&#x4E2A;&#x5148;&#x63A5;&#x662F;&#x54EA;&#x4E2A;</li>
+<li>long-idle-agent&#xFF1A;&#x9009;&#x62E9;&#x7A7A;&#x95F2;&#x65F6;&#x95F4;&#x6700;&#x957F;&#x7684;&#x5EA7;&#x5E2D;</li>
+<li>round-robin&#xFF1A;&#x8F6E;&#x5FAA;</li>
+<li>top-down&#xFF1A;&#x6309;&#x56FA;&#x5B9A;&#x987A;&#x5E8F;</li>
+<li>agent-with-least-talk-time&#xFF1A;&#x603B;&#x662F;&#x9009;&#x62E9;&#x901A;&#x8BDD;&#x65F6;&#x95F4;&#x6700;&#x77ED;&#x7684;&#x5EA7;&#x5E2D;</li>
+<li>agent-with-fewest-calls&#xFF1A;&#x603B;&#x662F;&#x9009;&#x62E9;&#x63A5;&#x7535;&#x8BDD;&#x6B21;&#x6570;&#x6700;&#x5C11;&#x7684;&#x5EA7;&#x5E2D;</li>
+<li>sequentially-by-agent-order&#xFF1A;&#x6839;&#x636E;&#x68AF;&#x961F;&#x548C;&#x987A;&#x5E8F;&#x9009;&#x62E9;</li>
+<li>random&#xFF1A;&#x968F;&#x673A;&#x9009;&#x62E9;</li>
+</ol>
+</li>
+<li>status&#x5EA7;&#x5E2D;&#x72B6;&#x6001;<ol>
+<li>Logged Out&#xFF1A;&#x9000;&#x51FA;&#x670D;&#x52A1;&#x72B6;&#x6001;</li>
+<li>Available&#xFF1A;&#x53EF;&#x7528;&#x72B6;&#x6001;</li>
+<li>Available (On Demand)&#xFF1A;&#x4E00;&#x79CD;&#x7279;&#x6B8A;&#x7684;&#x53EF;&#x7528;&#x72B6;&#x6001;</li>
+<li>On Break&#xFF1A;&#x5EA7;&#x5E2D;&#x5DF2;&#x767B;&#x5F55;&#xFF0C;&#x4F46;&#x4E0D;&#x53EF;&#x4EE5;&#x63A5;&#x7535;&#x8BDD;</li>
+</ol>
+</li>
+<li>states&#x5EA7;&#x5E2D;&#x547C;&#x53EB;&#x72B6;&#x6001;<ol>
+<li>Idle&#xFF1A;&#x7A7A;&#x95F2;</li>
+<li>Waiting&#xFF1A;&#x7B49;&#x5F85;&#x63A5;&#x53D7;&#x547C;&#x53EB;</li>
+<li>Receiving&#xFF1A;&#x6B63;&#x5728;&#x63A5;&#x53D7;&#x547C;&#x53EB;</li>
+<li>In a queue call&#xFF1A;&#x5F53;&#x524D;&#x6B63;&#x5728;&#x4E00;&#x4E2A;&#x961F;&#x5217;&#x547C;&#x53EB;&#x4E2D;</li>
+</ol>
+</li>
+<li>types&#x5EA7;&#x5E2D;&#x7C7B;&#x578B;<ol>
+<li>callback&#xFF1A;onhook&#x5EA7;&#x5E2D;</li>
+<li>uuid-standby&#xFF1A;offhook&#x5EA7;&#x5E2D;</li>
+</ol>
+</li>
+<li>tier&#x68AF;&#x961F;&#xFF1A;&#x5C06;&#x961F;&#x5217;&#x4E0E;&#x5EA7;&#x5E2D;&#x8FDE;&#x63A5;&#x8D77;&#x6765;&#x7684;&#x6865;&#x6881;</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><p>&#x5EA7;&#x5E2D;&#x914D;&#x7F6E;&#x4E0E;&#x7BA1;&#x7406;</p>
+<ol>
+<li>&#x9759;&#x6001;&#x5EA7;&#x5E2D;&#x914D;&#x7F6E;
+```<!--autoload_configs/fifo.conf.xml-->
+<queue> ... </queue>
+
+</li>
+</ol>
+<p><agent name="1005@default" type="callback" contact="[leg_timeout=10]user/1005" status="Available" max-no-answer="3" wrap-up-time="10" reject-delay-time="10" busy-delay-time="60">
+<agent name="1006@default" type="callback" contact="[leg_timeout=10]user/1006" status="Available" max-no-answer="3" wrap-up-time="10" reject-delay-time="10" busy-delay-time="60"></agent></agent></p>
+<agent name="1007@default" type="callback" contact="[leg_timeout=10]user/1007" status="Available" max-no-answer="3" wrap-up-time="10" reject-delay-time="10" busy-delay-time="60">
+
+<p><tier agent="1005@default" queue="support@default" level="1" position="1">
+<tier agent="1006@default" queue="support@default" level="1" position="1"></tier></tier></p>
+<tier agent="1007@default" queue="support@default" level="1" position="1">
+
+<!--dialplan-->
+<extension name="Callcenter Example">
+  <condition field="destination_number" expression="^(28324304)$">
+    <action application="answer">
+    <action application="callcenter" data="support@default">
+  </action></action></condition>
+</extension>
+
+<p>reload mod_callcenter
+reload xml</p>
+<pre><code>2. &#x52A8;&#x6001;&#x7BA1;&#x7406;&#x961F;&#x5217;&#x548C;&#x5EA7;&#x5E2D;
+</code></pre><p>callcenter_config
+callcenter_config queue list
+callcenter_config agent list
+callcenter_config tier list
+callcenter_config agent add 1008@default callback
+callcenter_config agent set contact 1008@default user/1008
+callcenter_config agent set status 1008@default Available
+callcenter_config tier add support@default 1008@default 1 1</p>
+<pre><code>3. offhook&#x5EA7;&#x5E2D;
+</code></pre><!--座席必须已经是配置好了的-->
+<p><extension name="callcenter offhook">
+  <condition field="destination_number" expression="^(4099)$"></condition></extension></p>
+<pre><code>&lt;action application=&quot;set&quot; data=&quot;transfer_after_bridge=4099&quot;/&gt;
+&lt;action application=&quot;sleep&quot; data=&quot;300&quot;/&gt;
+&lt;action application=&quot;set&quot; data=&quot;r=${callcenter_config(agent set uuid ${caller_id_number}@default &apos;${uuid}&apos;)}&quot;/&gt;
+&lt;action application=&quot;set&quot; data=&quot;r=${callcenter_config(agent set type ${caller_id_number}@default &apos;uuid-standby&apos;)}&quot;/&gt;
+&lt;action application=&quot;set&quot; data=&quot;r=${callcenter_config(agent set status ${caller_id_number}@default &apos;Available (On Demand)&apos;)}&quot;/&gt;
+&lt;action application=&quot;set&quot; data=&quot;r=${callcenter_config(agent set state ${caller_id_number}@default &apos;Waiting&apos;)}&quot;/&gt;
+&lt;action application=&quot;set&quot; data=&quot;cc_warning_tone=tone_stream://%(15 200,0,500,600,700)&quot;/&gt;
+&lt;action application=&quot;answer&quot;/&gt;
+&lt;action application=&quot;playback&quot; data=&quot;$${hold_music}&quot;/&gt;
+</code></pre><p>  &lt;/condition&gt;
+&lt;/extension&gt;
+```</p>
+</tier></agent></li>
+</ul>
+</li>
+<li><p>&#x6570;&#x636E;&#x5E93;</p>
+<ul>
+<li>&#x9ED8;&#x8BA4;&#x6570;&#x636E;&#x5E93;<ol>
+<li>&#x6838;&#x5FC3;&#x6570;&#x636E;&#x5E93;&#x8868;<pre><code>//&#x5728;/usr/local/freeswitch/db&#x6216;/usr/local/freeswitch/var/lib/freeswitch/db
+&gt; sqlite3 core.db
+sqlite&gt; .tables
+// freeswitch&#x5927;&#x90E8;&#x5206;show&#x547D;&#x4EE4;&#x90FD;&#x662F;&#x5C45;&#x4E8E;sql&#x67E5;&#x8BE2;&#x7684;
+sqlite&gt; select * from channels;
+// &#x67E5;&#x770B;&#x8868;&#x7ED3;&#x6784;
+sqlite&gt; .schema
+</code></pre></li>
+</ol>
+</li>
+<li><p>ODBC</p>
+<ol>
+<li>&#x589E;&#x52A0;ODBC&#x6570;&#x636E;&#x5E93;&#x652F;&#x6301;<pre><code>yum install -y unixODBC unixODBC-devel
+apt-get install unixODBC unixODBC-devel
+</code></pre></li>
+<li>mysql&#x7684;odbc&#x914D;&#x7F6E;
+```
+wget -c <a href="http://dev.mysql.com/get/mysql80-community-release-el7-1.noarch.rpm" target="_blank">http://dev.mysql.com/get/mysql80-community-release-el7-1.noarch.rpm</a>
+yum install -y mysql80-community-release-el7-1.noarch.rpm
+yum repolist enabled | grep mysql.<em>
+rpm -qa gpg-</em>   // &#x67E5;&#x8BE2;yum&#x516C;&#x94A5;
+yum install -y mysql-community-server
+systemctl start mysqld.service</li>
+</ol>
+<p>grep &quot;password&quot; /var/log/mysqld.log // &#x67E5;&#x8BE2;&#x521D;&#x59CB;&#x5BC6;&#x7801;
+mysql -uroot -p 
+// &#x66F4;&#x6539;&#x5BC6;&#x7801;
+ALTER USER &apos;root&apos;@&apos;localhost&apos; IDENTIFIED BY &apos;Hello01.&apos;;
+// &#x6CA1;&#x6709;&#x6388;&#x6743;&#xFF0C;&#x53EA;&#x652F;&#x6301;localhost&#x8BBF;&#x95EE;
+mysql&gt; GRANT ALL PRIVILEGES ON <em>.</em> TO &apos;root&apos;@&apos;%&apos; IDENTIFIED BY &apos;123456&apos; WITH GRANT OPTION;
+mysql&gt; FLUSH PRIVILEGES;</p>
+<p>yum install -y mysql-connector-odbc
+// /etc/odbcinst.ini&#x589E;&#x52A0;&#x6570;&#x636E;&#x5E93;&#x9A71;&#x52A8;&#xFF0C;&#x5B89;&#x88C5;&#x6570;&#x636E;&#x5E93;&#x53EF;&#x80FD;&#x9ED8;&#x8BA4;&#x652F;&#x6301;&#xFF0C;&#x4E0D;&#x7528;&#x914D;&#x7F6E;
+[MySQL ODBC 8.0 Unicode Driver]
+Driver=/usr/lib64/libmyodbc8w.so
+UsageCount=1
+// /etc/odbc.ini&#x589E;&#x52A0;DSN(&#x6570;&#x636E;&#x6E90;)
+[freeswitch_mysql]
+Driver=/usr/lib64/libmyodbc8w.so
+SERVER=localhost
+PORT=3306
+DATABASE=freeswitch
+OPTION=67108864
+USER=root
+PASSWORD=Hello01.
+Threading=0</p>
+<p>// &#x67E5;&#x770B;&#x914D;&#x7F6E;&#x662F;&#x5426; &#x6210;&#x529F;
+isql -v freeswitch_mysql</p>
+<pre><code>3. postgresql&#x7684;odbc&#x914D;&#x7F6E;
+</code></pre><p>yum install -y postgresql-odbc.x86_64
+apt-get install odbc-postgresql</p>
+<p>vim /etc/odbcinst.ini
+[PostgreSQL]
+Description=ODBC for PostgreSQL
+Driver=/usr/lib/psqlodbcw.so
+Setup=/usr/lib/libodbcpsqlS.so
+Driver64=/usr/lib64/psqlodbcw.so
+Setup64=/usr/lib64/libodbcpsqlS.so
+FileUsage=1</p>
+<p>vim /etc/odbc.ini
+[freeswitch]
+Driver=/usr/lib64/psqlodbcw.so
+Description=POSTGRESQL
+Servername=localhost
+Port=5432
+Protocol=6.4
+FetchBufferSize=99
+Username=postgres
+Password=123456
+DATABASE=freeswitch
+ReadOnly=no
+Debug=1
+CommLog=1</p>
+<p>// &#x6D4B;&#x8BD5;
+isql -v freeswitch</p>
+<pre><code>4. &#x4F7F;&#x7528;odbc
+</code></pre><p>// &#x6838;&#x5FC3;&#x6570;&#x636E;&#x5E93;&#x4F7F;&#x7528;
+// autoload_configs/switch.conf.xml,&#x5728;/etc/odbc.ini&#x914D;&#x7F6E;&#x4E86;u,p&#x7701;&#x7565;
+<param name="core-db-dsn" value="odbc://freeswitch::">
+// mod_sofia&#x4F7F;&#x7528;internal.xml&#x914D;&#x7F6E;
+// mod_fifo&#x4F7F;&#x7528;
+// mod_callcenter&#x4F7F;&#x7528;
+```</p>
+</li>
+<li>&#x4F7F;&#x7528;&#x6570;&#x636E;&#x5E93;&#x539F;&#x751F;&#x5BA2;&#x6237;&#x7AEF;&#x76F4;&#x63A5;&#x8FDE;&#x63A5;&#x6570;&#x636E;&#x5E93;<pre><code>./configure --enable-core-pgsql-support
+&lt;param name=&quot;odbc-dsn&quot; value=&quot;pgsql://hostaddr=127.0.0.1 dbname=freeswitch 
+user=postgres password=123456 options=&apos;-c client_min_messages=NOTICE&quot; 
+application_name=freeswitch&quot;/&gt;
+</code></pre></li>
+</ul>
+</li>
+<li><p>&#x89C6;&#x9891;&#x901A;&#x8BDD;<br>&#x57FA;&#x4E8E;SIP&#x7684;&#x89C6;&#x9891;&#x901A;&#x8BDD;</p>
+<ul>
+<li>&#x914D;&#x7F6E;&#x89C6;&#x9891;&#x901A;&#x8BDD;<ol>
+<li>freeswitch&#x652F;&#x6301;&#x7684;&#x89C6;&#x9891;&#x7F16;&#x89E3;&#x7801;&#xFF1A;H261&#x3001;H263&#x3001;H263-1998(H263+)&#x3001;
+H263-2000(H263++)&#x3001;H264&#x3001;VP8&#x7B49;</li>
+<li>freeswitch&#x89C6;&#x9891;&#x7F16;&#x89E3;&#x7801;&#x76EE;&#x524D;&#x4EC5;&#x652F;&#x6301;&#x900F;&#x4F20;&#xFF0C;&#x8981;&#x6C42;&#x901A;&#x8BDD;&#x53CC;&#x65B9;&#x4F7F;&#x7528;&#x4E00;&#x6837;&#x7684;&#x7F16;&#x89E3;&#x7801;</li>
+<li>conf/var.xml<pre><code>&lt;X-PRE-PROCESS cmd=&quot;set&quot; data=&quot;global_codec_prefs=OPUS,G722,PCMU,PCMA,VP8,H264&quot;/&gt;
+&lt;X-PRE-PROCESS cmd=&quot;set&quot; data=&quot;outbound_codec_prefs=OPUS,G722,PCMU,PCMA,VP8,H264&quot;/&gt;
+</code></pre></li>
+<li>&#x76EE;&#x524D;&#x5E02;&#x573A;&#x4E0A;&#x5927;&#x91CF;&#x652F;&#x6301;H263&#x3001;H264&#xFF0C;&#x4F46;H264&#x7248;&#x7A0E;&#x5C06;&#x6765;&#x53EF;&#x80FD;&#x6536;&#x8D39;&#xFF0C;
+Chrome&#x7684;WebRTC&#x4EC5;&#x652F;&#x6301;VP8</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p>&#x591A;&#x4EBA;&#x7535;&#x8BDD;&#x4F1A;&#x8BAE;</p>
+<ul>
+<li>&#x97F3;&#x9891;&#x4F1A;&#x8BAE;&#xFF1A;30xx,31xx,32xx,33xx<ol>
+<li>&#x4F7F;&#x7528;DTMF&#x6309;&#x952E;&#x8FDB;&#x884C;&#x63A7;&#x5236;&#xFF1A;0&#x9759;&#x97F3;&#x5207;&#x6362;</li>
+<li>&#x914D;&#x7F6E;dialplan&#xFF0C;nb_conferences</li>
+<li>&#x4F7F;&#x7528;API&#x547D;&#x4EE4;&#x63A7;&#x5236;&#x4F1A;&#x8BAE;<pre><code>conference list
+</code></pre></li>
+</ol>
+</li>
+<li>&#x89C6;&#x9891;&#x4F1A;&#x8BAE;<ol>
+<li>FPS&#x5E27;&#x9891;(Frame Per Second)&#xFF1A;&#x7535;&#x5F71;&#x4F7F;&#x7528;24FPS&#xFF0C;PAL&#x5236;&#x5F0F;&#x7684;&#x7535;&#x89C6;&#x4E3A;25FPS&#xFF0C;
+NTSC&#x5236;&#x5F0F;&#x4E3A;29.97FPS&#xFF0C;&#x800C;&#x666E;&#x901A;SIP&#x4F7F;&#x7528;15&#x6216;30FPS</li>
+<li>Intraframe&#x4E5F;&#x79F0;&#x4E3A;&#x5173;&#x952E;&#x5E27;(key frame)&#xFF1A;&#x8BE5;&#x5E27;&#x56FE;&#x50CF;&#x662F;&#x5B8C;&#x6574;&#x7684;</li>
+<li>Interframe&#x4E5F;&#x79F0;&#x4E3A;&#x975E;&#x5173;&#x952E;&#x5E27;(P &#x5E27;),&#x9700;&#x8981;&#x5F15;&#x7528;&#x524D;&#x9762;&#x7684;&#x5173;&#x952E;&#x5E27;&#x8FD8;&#x539F;&#x56FE;&#x50CF;&#xFF0C;
+B&#x5E27;&#x662F;&#x53CC;&#x5411;&#x5F15;&#x7528;&#xFF0C;&#x4F46;&#x4E00;&#x822C;&#x4E0D;&#x7528;&#x4E8E;&#x5B9E;&#x65F6;&#x901A;&#x4FE1;</li>
+<li>&#x591A;&#x753B;&#x9762;&#x878D;&#x5C4F;</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p>&#x8BDD;&#x5355;call detail record</p>
+<ul>
+<li>csv&#x683C;&#x5F0F;&#x8BDD;&#x5355;<br>mod_cdr_csv&#x652F;&#x6301;&#x8BB0;&#x5F55;CSV&#xFF0C;&#x5728;autoloads_configs/cdr_csv.conf.xml&#x914D;&#x7F6E;<pre><code>// &#x8BBE;&#x7F6E;&#x4F7F;&#x7528;&#x7684;&#x6A21;&#x677F;
+&lt;param name=&quot;default-template&quot; value=&quot;example&quot;/&gt;
+// &#x8BB0;&#x5F55;&#x90A3;&#x4E2A;&#x811A;&#x7684;&#x8BDD;&#x5355;
+&lt;param name=&quot;legs&quot; value=&quot;ab&quot;/&gt;
+// &#x8BB0;&#x5F55;&#x6240;&#x6709;&#x8BDD;&#x5355;
+&lt;param name=&quot;master-file-only&quot; value=&quot;true&quot;/&gt;
+// &#x5904;&#x7406;&#x65E7;&#x8BDD;&#x5355;&#xFF08;&#x6309;&#x65E5;&#x671F;&#x4EA7;&#x751F;&#xFF09;crontab&#x5B9A;&#x65F6;
+fs_cli -x &quot;cdr_csv rotate&quot;
+</code></pre></li>
+<li><p>&#x76F4;&#x63A5;&#x5C06;&#x8BDD;&#x5355;&#x5199;&#x5165;&#x6570;&#x636E;&#x5E93;</p>
+<pre><code>yum list postgresql*
+yum install -y postgresql10-devel
+cd freeswitch/src/mod/event_handlers/mod_cdr_pg_csv
+make
+&lt;param name=&quot;db-info&quot; value=&quot;host=localhost dbname=freeswitch user=postgres password=123456 connect_timeout=10&quot; /&gt;
+&lt;param name=&quot;db-table&quot; value=&quot;cdr&quot;/&gt;
+
+// &#x9ED8;&#x8BA4;&#x5B57;&#x6BB5;&#x4E0E;&#x6570;&#x636E;&#x5E93;&#x540C;&#x540D;&#xFF0C;&#x4E0D;&#x540C;&#x540D;&#x4F7F;&#x7528;
+&lt;field var=&quot;local_ip_v4&quot; column=&quot;server_ip&quot;/&gt;
+// &#x8BBE;&#x7F6E;&#x5B57;&#x6BB5;&#x4E3A;&#x6574;&#x578B;
+&lt;field var=&quot;duration&quot; quote=&quot;false&quot;/&gt;
+</code></pre></li>
+<li>&#x4F7F;&#x7528;HTTP&#x670D;&#x52A1;&#x5668;&#x63A5;&#x6536;&#x8BDD;&#x5355;  <ol>
+<li>&#x5F00;&#x59CB;mod_xml_cdr</li>
+<li>conf/autoload_configs/xml_cdr.conf.xml&#x914D;&#x7F6E;url<pre><code>&lt;param name=&quot;url&quot; value=&quot;http://localhost/cdr_curl/post.php&quot;/&gt;
+</code></pre></li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p>&#x8BA1;&#x8D39;</p>
+<ul>
+<li>&#x5B89;&#x88C5;&#x6A21;&#x5757;<pre><code>make mod_nibblebill-install
+</code></pre></li>
+<li>odbc&#x914D;&#x7F6E;&#x6216;&#x662F;&#x539F;&#x751F;&#x914D;&#x7F6E;conf/autoload_configs/nibblebill.conf.xml<pre><code>&lt;param name=&quot;odbc-dsn&quot; value=&quot;pgsql://hostaddr=127.0.0.1 dbname=freeswitch user=postgres password=123456&quot;/&gt;
+&lt;param name=&quot;db-info&quot; value=&quot;host=localhost dbname=freeswitch user=postgres password=123456 connect_timeout=10&quot; /&gt;
+</code></pre></li>
+<li><p>&#x5EFA;&#x6570;&#x636E;&#x5E93;&#xFF0C;&#x63D2;&#x5165;&#x6570;&#x636E;</p>
+<pre><code>create table accounts (
+  id bigserial not null,
+  name varchar(256),
+  cash double precision not null
+);
+insert into accounts (name, cash) values (&apos;Seven&apos;, 100);
+</code></pre></li>
+<li><p>&#x6A21;&#x5757;&#x548C;&#x8D26;&#x6237;&#x8BBE;&#x7F6E;</p>
+<pre><code>&lt;!--&#x901A;&#x8FC7;id&#x5F15;&#x7528;&#x8BA1;&#x8D39;&#x8D26;&#x6237;--&gt;
+&lt;!--conf/autoload_configs/nibblebill.conf.xml--&gt;
+&lt;param name=&quot;db_column_account&quot; value=&quot;id&quot;/&gt;
+&lt;!--conf/directory/default/1002.xml--&gt;
+&lt;!--nibble_account&#x6307;&#x5B9A;&#x8BA1;&#x8D39;&#x8D26;&#x6237;&#xFF0C;&#x5728;&#x4E0A;&#x9762;db_column_account&#x914D;&#x7F6E;--&gt;
+&lt;variable name=&quot;nibble_rate&quot; value=&quot;0.01&quot;/&gt;
+&lt;variable name=&quot;nibble_account&quot; value=&quot;1&quot;/&gt;
+
+&lt;!--&#x901A;&#x8FC7;name&#x5F15;&#x7528;&#x8BA1;&#x8D39;&#x8D26;&#x6237;--&gt;
+&lt;!--conf/autoload_configs/nibblebill.conf.xml--&gt;
+&lt;param name=&quot;db_column_account&quot; value=&quot;name&quot;/&gt;
+&lt;!--conf/directory/default/1002.xml--&gt;
+&lt;!--nibble_account&#x6307;&#x5B9A;&#x8BA1;&#x8D39;&#x8D26;&#x6237;&#xFF0C;&#x5728;&#x4E0A;&#x9762;db_column_account&#x914D;&#x7F6E;--&gt;
+&lt;variable name=&quot;nibble_rate&quot; value=&quot;0.01&quot;/&gt;
+&lt;variable name=&quot;nibble_account&quot; value=&quot;Seven&quot;/&gt;
+
+&lt;!--&#x8D26;&#x6237;&#x8BBE;&#x7F6E;&#x7684;&#x5176;&#x4ED6;&#x914D;&#x7F6E;--&gt;
+&lt;!--&#x6307;&#x5B9A;&#x9694;&#x591A;&#x5C11;&#x65F6;&#x95F4;&#x5199;&#x5165;&#x6570;&#x636E;&#x5E93;&#xFF0C;&#x6263;&#x4E00;&#x6B21;&#x8D39;&#x7528;--&gt;
+&lt;param name=&quot;global_heartbeat&quot; value=&quot;60&quot;/&gt;
+
+&lt;!--&#x5728;dialplan&#x4E2D;&#x8BBE;&#x7F6E;&#x4E0D;&#x540C;&#x8D39;&#x7387;&#xFF0C;&#x5982;&#x957F;&#x9014;&#x8BBE;&#x4E3A;0.3--&gt;
+&lt;extension name=&quot;Toll Bill&quot;&gt;
+  &lt;condition field=&quot;destination_number&quot; expression=&quot;^(0.*)$&quot;&gt;
+    &lt;action application=&quot;set&quot; data=&quot;nibble_rate=0.3&quot;/&gt;
+    &lt;action application=&quot;bridge&quot; data=&#x2018;sofia/gateway/...
+</code></pre></li>
+<li>&#x91CD;&#x542F;&#x6A21;&#x5757;&#x751F;&#x6548;<pre><code>reload mod_nibblebill
+</code></pre></li>
+</ul>
+</li>
+</ol>
+<h4 id="chapter13-freeswitch&#x4E0E;freeswitch&#x5BF9;&#x63A5;">Chapter13 Freeswitch&#x4E0E;Freeswitch&#x5BF9;&#x63A5;</h4>
+<ul>
+<li><p>&#x542F;&#x52A8;&#x591A;&#x4E2A;freeswitch</p>
+<ul>
+<li><p>&#x7EC3;&#x4E60;</p>
+<pre><code>mkdir /usr/local/freeswitch2
+cp -R /usr/local/freeswitch/conf /usr/local/freeswitch2
+mkdir /usr/local/freeswitch2/log
+mkdir /usr/local/freeswitch2/db
+ln -sf /usr/local/freeswitch/sounds /usr/local/freeswitch2/sounds
+
+# autoload_configs/event_socket.conf.xml
+&lt;param name=&quot;listen-port&quot; value=&quot;9021&quot;/&gt; # 8021
+# vars.xml
+&lt;X-PRE-PROCESS cmd=&quot;set&quot; data=&quot;internal_sip_port=7060&quot;/&gt; # 5060
+&lt;X-PRE-PROCESS cmd=&quot;set&quot; data=&quot;external_sip_port=7080&quot;/&gt; # 5080
+# &#x7528;&#x4E8E;&#x751F;&#x4EA7;&#x73AF;&#x5883;,&#x907F;&#x514D;rtp&#x7AEF;&#x53E3;&#x51B2;&#x7A81;&#xFF0C;autoload_configs/switch.conf.xml
+&lt;param name=&quot;rtp-start-port&quot; value=&quot;16384&quot;/&gt;
+&lt;param name=&quot;rtp-end-port&quot; value=&quot;32768&quot;/&gt;
+# &#x5176;&#x4ED6;&#x6709;&#x7528;&#x5230;&#x7684;&#x7AEF;&#x53E3;&#x5747;&#x9700;&#x66F4;&#x6539;&#xFF0C;&#x5982;mod_erlang_event
+
+# &#x542F;&#x52A8;
+cd /usr/local/freeswitch2
+/usr/local/freeswitch/bin/freeswitch -conf conf -log log -db db
+
+# fs_cli
+/usr/local/freeswitch/bin/fs_cli -P 9021
+</code></pre><p>bash&#x542F;&#x52A8;&#x811A;&#x672C;</p>
+<pre><code>#!/bin/bash
+
+FSDIR=/usr/local/freeswitch2
+cd FSDIR
+/usr/local/freeswitch/bin/freeswitch -conf conf -log log -db db
+</code></pre></li>
+<li><p>&#x8FDB;&#x9636; -- &#x91CD;&#x65B0;&#x7F16;&#x8BD1;</p>
+<pre><code>./configure --prefix=/opt/freeswitch
+make &amp;&amp; make install
+
+# &#x6539;&#x7AEF;&#x53E3;&#xFF0C;&#x8BBE;&#x7F6E;&#x6210;linux&#x670D;&#x52A1;&#x7B49;
+</code></pre></li>
+</ul>
+</li>
+<li><p>Freeswitch&#x4E0E;Freeswitch&#x5BF9;&#x63A5;</p>
+<p>&#x5047;&#x5B9A;&#x4E24;&#x4E2A;freeswitch&#x5728;&#x4E0D;&#x540C;&#x673A;&#x5668;&#x4E0A;  </p>
+<ul>
+<li>&#x53CC;&#x673A;&#x5BF9;&#x63A5;<pre><code># A&#x673A;&#x5668;&#x4E0A;conf/dialplan/default.xml
+&lt;extension name=&quot;B&quot;&gt;
+  &lt;condition field=&quot;destination_number&quot; expression=&quot;^1111(.*)$&quot;&gt;
+    &lt;action application=&quot;bridge&quot; data=&quot;sofia/external/sip:$1@192.168.1.112:5080&quot;/&gt;
+  &lt;/condition&gt;
+&lt;/extension&gt;
+# B&#x673A;&#x5668;&#x4E0A;conf/dialplan/public/duijie.xml
+&lt;extension name=&quot;public_extensions&quot;&gt;
+  &lt;condition field=&quot;destination_number&quot; expression=&quot;^(10[01][0-9])$&quot;&gt;
+    &lt;action application=&quot;transfer&quot; data=&quot;$1 XML default&quot;/&gt;
+  &lt;/condition&gt;
+&lt;/extension&gt;
+</code></pre></li>
+<li><p>&#x6C47;&#x63A5;</p>
+<pre><code>graph TB
+cliD0((1000))---D
+cliD1((1001))---D
+cliD2((1002))---D
+D[&#x6C47;&#x63A5;&#x5C40;D]---A
+D---B
+D---C
+A---cliA0((1000))
+A---cliA1((1001))
+A---cliA2((1002))
+B---cliB0((1000))
+B---cliB1((1001))
+B---cliB2((1002))
+C---cliC0((1000))
+C---cliC1((1001))
+C---cliC2((1002))
+</code></pre><ol>
+<li>A&#x4E0A;&#x7528;&#x6237;&#x547C;&#x51FA;<pre><code># &#x7EDF;&#x4E00;&#x9001;&#x5230;D&#xFF0C;&#x7531;D&#x8F6C;&#x53D1;,conf/dialplan/default.xml
+&lt;extension name=&quot;D&quot;&gt;
+&lt;condition field=&quot;destinatio_number&quot; expression=&quot;^([B-Z].*)$&quot;&gt;
+ &lt;action application=&quot;bridge&quot; data=&quot;sofia/external/sip:$1@192.168.1.D:5080&quot;/&gt;
+&lt;/condition&gt;
+&lt;/extension&gt;
+</code></pre></li>
+<li>D&#x4E0A;&#x8F6C;&#x53D1;<pre><code># &#x672C;&#x5730;&#x7528;&#x6237;&#xFF0C;conf/dialplan/public/localuser.xml
+&lt;extension name=&quot;D&quot;&gt;
+&lt;condition field=&quot;destination_number&quot; expression=&quot;^D(.*)$&quot;&gt;
+ &lt;action application=&quot;transfer&quot; data=&quot;$1 XML default&quot;/&gt;
+&lt;/condition&gt;
+&lt;/extension&gt;
+# &#x51FA;&#x5C40;&#x7528;&#x6237;&#xFF0C;conf/dialplan/public/localuser.xml
+&lt;extension name=&quot;D_out&quot;&gt;
+&lt;condition field=&quot;destination_number&quot; expression=&quot;^([A-CE-Z])(.*)$&quot;&gt;
+ &lt;!--&#x7AEF;&#x5C40;&#x76F4;&#x63A5;&#x53EF;&#x8FBE;&#xFF0C;&#x6C47;&#x63A5;&#x5C40;&#x4EC5;&#x4F20;&#x8F93;SIP&#x4FE1;&#x4EE4;&#xFF0C;RTP&#x6D41;&#x7531;&#x7AEF;&#x5C40;&#x81EA;&#x5DF1;&#x4F20;&#x8F93;--&gt;
+ &lt;action application=&quot;set&quot; data=&quot;bypass_media=true&quot;/&gt;
+ &lt;action application=&quot;bridge&quot; data=&quot;sofia/external/sip:$2@192.168.1.$1:5080&quot;/&gt;
+&lt;/condition&gt;
+&lt;/extension&gt;
+# D&#x4E0A;&#x6240;&#x6709;&#x901A;&#x8BDD;&#x90FD;&#x4F7F;&#x7528;bypass_media,&#x5728;conf/sip_profiles/external.xml
+&lt;param name=&quot;inbound-bypass-media&quot; value=&quot;true&quot;/&gt;
+</code></pre></li>
+<li>&#x7AEF;&#x5C40;&#x4E0A;&#x4E5F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;bypass_media,&#x4F46;&#x4E00;&#x822C;&#x7528;&#x6237;&#x90FD;&#x5728;NAT&#x8BBE;&#x5907;&#x540E;&#x9762;&#xFF0C;&#x4E0D;&#x53EF;&#x7528;</li>
+</ol>
+</li>
+<li><p>&#x53CC;&#x5F52;&#x5C5E;<br>&#x5907;&#x4EFD;&#x6C47;&#x63A5;&#x5C40;</p>
+<pre><code>graph TB
+D[&#x6C47;&#x63A5;&#x5C40;D]---A
+D---B
+D---C
+E[&#x6C47;&#x63A5;&#x5C40;E]---A
+E---B
+E---C
+A---cliA0((1000))
+A---cliA1((1001))
+A---cliA2((1002))
+B---cliB0((1000))
+B---cliB1((1001))
+B---cliB2((1002))
+C---cliC0((1000))
+C---cliC1((1001))
+C---cliC2((1002))
+</code></pre><ol>
+<li>A&#x4E0A;&#x7528;&#x6237;&#x547C;&#x51FA;&#xFF0C;
+```<h1 id="&#x7EDF;&#x4E00;&#x9001;&#x5230;d&#xFF0C;e&#x53EA;&#x505A;&#x5907;&#x4EFD;&#xFF0C;confdialplandefaultxml">&#x7EDF;&#x4E00;&#x9001;&#x5230;D&#xFF0C;E&#x53EA;&#x505A;&#x5907;&#x4EFD;&#xFF0C;conf/dialplan/default.xml</h1>
+<extension name="DE">
+<condition field="destinatio_number" expression="^([B-Z].*)$">
+ <action application="bridge" data="sofia/external/sip:$1@192.168.1.D:5080|
+ sofia/external/sip:$1@192.168.1.E:5080">
+</action></condition>
+</extension>
+
+</li>
+</ol>
+<h1 id="&#x5206;&#x522B;&#x9001;&#x5230;d&#x3001;e&#xFF0C;&#x8D1F;&#x8F7D;&#x5E73;&#x5747;&#xFF0C;&#x6545;&#x969C;&#x65F6;&#xFF0C;&#x6709;&#x4E00;&#x53F0;&#x627F;&#x62C5;">&#x5206;&#x522B;&#x9001;&#x5230;D&#x3001;E&#xFF0C;&#x8D1F;&#x8F7D;&#x5E73;&#x5747;&#xFF0C;&#x6545;&#x969C;&#x65F6;&#xFF0C;&#x6709;&#x4E00;&#x53F0;&#x627F;&#x62C5;</h1>
+<p><extension name="DE">
+  <condition field="destinatio_number" expression="^([B-Z].*[13579])$"></condition></extension></p>
+<pre><code>&lt;action application=&quot;bridge&quot;
+data=&quot;sofia/external/sip:$1@192.168.1.D:5080|
+sofia/external/sip:$1@192.168.1.E:5080&quot;/&gt;
+</code></pre><p>  &lt;/condition&gt;
+&lt;/extension&gt;
+<extension name="ED">
+  <condition field="destinatio_number" expression="^([B-Z].*[24680])$"></condition></extension></p>
+<pre><code>&lt;action application=&quot;bridge&quot;
+data=&quot;sofia/external/sip:$1@192.168.1.E:5080|
+sofia/external/sip:$1@192.168.1.D:5080&quot;/&gt;
+</code></pre><p>  &lt;/condition&gt;
+&lt;/extension&gt;
+```</p>
+<ol>
+<li>&#x53EF;&#x4EE5;&#x4F7F;&#x7528;mod_distributor&#x6A21;&#x5757;&#x5B9E;&#x73B0;</li>
+</ol>
+</li>
+<li><p>&#x957F;&#x9014;&#x5C40;</p>
+<p>&#x4E00;&#x822C;&#x6765;&#x8BB2;&#xFF0C;&#x4E00;&#x4E2A;&#x5730;&#x7EA7;&#x5E02;&#x7684;&#x7535;&#x8BDD;&#x7F51;&#x7EDC;&#x6709;&#x4E24;&#x4E2A;&#x6C47;&#x63A5;&#x5C40;&#x5C31;&#x591F;&#x7528;&#x4E86;&#x3002;&#x5982;&#x679C;&#x8981;&#x5728;&#x4E0D;&#x540C;&#x7684;&#x5730;&#x7EA7;&#x5E02;&#x95F4;&#x6253;&#x957F;&#x9014;&#x7535;&#x8BDD;&#xFF0C;&#x4E0A;&#x9762;&#x9700;&#x8981;&#x518D;&#x5EFA;&#x8BBE;&#x957F;&#x9014;&#x5C40;</p>
+<pre><code>graph TB
+
+style T1 fill:#f00,stroke:#ff0,stroke-width:6px
+style T2 fill:#f00,stroke:#ff0,stroke-width:6px
+style t1 fill:#f00,stroke:#ff0,stroke-width:4px
+style t2 fill:#f00,stroke:#ff0,stroke-width:4px
+style D fill:#f9f,stroke:#333,stroke-width:4px
+style E fill:#f9f,stroke:#333,stroke-width:4px
+style d fill:#f9f,stroke:#333,stroke-width:4px
+style e fill:#f9f,stroke:#333,stroke-width:4px
+
+T1[&#x957F;&#x9014;&#x5C40;T1]---D
+T1---E
+T2[&#x957F;&#x9014;&#x5C40;T2]---D
+T2---E
+
+t1[&#x957F;&#x9014;&#x5C40;t1]---d
+t1---e
+t2[&#x957F;&#x9014;&#x5C40;t2]---d
+t2---e
+
+T1---t1
+T1---t2
+T2---t1
+T2---t2
+
+t1-.-E
+
+D[&#x6C47;&#x63A5;&#x5C40;D]---A
+D---B
+D---C
+E[&#x6C47;&#x63A5;&#x5C40;E]---A
+E---B
+E---C
+A---cliA0((1000))
+A---cliA1((1001))
+B---cliB0((1000))
+B---cliB1((1001))
+C---cliC0((1000))
+C---cliC1((1001))
+
+d[&#x6C47;&#x63A5;&#x5C40;d]---a
+d---b
+d---c
+e[&#x6C47;&#x63A5;&#x5C40;e]---a
+e---b
+e---c
+a---clia0((1000))
+a---clia1((1001))
+b---clib0((1000))
+b---clib1((1001))
+c---clic0((1000))
+c---clic1((1001))
+
+d-.-C
+</code></pre><p>&#x5982;&#x679C;&#x7AEF;&#x5C40;a&#x7528;&#x6237;1000&#x547C;&#x53EB;&#x7AEF;&#x5C40;A&#x7528;&#x6237;1000&#xFF0C;&#x62E8;0T1A1000&#xFF0C;0&#x662F;&#x56FD;&#x5185;&#x957F;&#x9014;&#x5B57;&#x51A0;</p>
+</li>
+<li><p>ACL(Access Control List)</p>
+<p>&#x5728;&#x751F;&#x4EA7;&#x73AF;&#x5883;&#x4E2D;&#xFF0C;&#x7AEF;&#x5C40;&#x901A;&#x8FC7;public dialplan&#x4EC5;&#x5C06;&#x5916;&#x9762;&#x7684;&#x6765;&#x8BDD;&#x8DEF;&#x7531;&#x5230;&#x672C;&#x5730;&#x7528;&#x6237;&#x3002;
+&#x4F46;&#x5728;&#x6C47;&#x63A5;&#x5C40;&#x6A21;&#x5F0F;&#xFF0C;&#x4ECE;public dialplan&#x4E0D;&#x9274;&#x6743;&#xFF0C;&#x522B;&#x4EBA;&#x4F1A;&#x514D;&#x8D39;&#x6C47;&#x63A5;&#x5230;&#x5176;&#x4ED6;&#x6C47;&#x63A5;&#x5C40;&#x3002;<br>&#x6240;&#x4EE5;&#x5173;&#x95ED;5080&#x7AEF;&#x53E3;&#xFF0C;&#x5168;&#x90E8;&#x4F7F;&#x7528;5060&#x7AEF;&#x53E3;&#x8FDB;&#x884C;&#x9274;&#x6743;  </p>
+<p>cidr:&#x65E0;&#x72B6;&#x6001;&#x57DF;&#x95F4;&#x8DEF;&#x7531;(Classless Inter Domain Routing)</p>
+<pre><code># conf/sip_profiles/internal.xml&#x4F7F;&#x7528;domain&#x9274;&#x6743;
+&lt;param name=&quot;apply-inbound-acl&quot; value=&quot;domains&quot;/&gt;
+
+# conf/autoload_configs/acl.conf.xml
+&lt;list name=&quot;domains&quot; default=&quot;deny&quot;&gt;
+  &lt;!-- domain= is special it scans the domain from the directory to build the ACL --&gt;
+  &lt;node type=&quot;allow&quot; domain=&quot;$${domain}&quot;/&gt;
+  &lt;!-- use cidr= if you wish to allow ip ranges to this domains acl. --&gt;
+  &lt;node type=&quot;allow&quot; cidr=&quot;192.168.1.A/32&quot;/&gt;
+  &lt;node type=&quot;allow&quot; cidr=&quot;192.168.1.B/32&quot;/&gt;
+  &lt;node type=&quot;allow&quot; cidr=&quot;192.168.1.C/32&quot;/&gt;
+&lt;/list&gt;
+</code></pre></li>
+</ul>
+</li>
+<li><p>Freeswitch&#x4F5C;&#x4E3A;PBX</p>
+<ul>
+<li><p>&#x666E;&#x901A;PBX&#x8BBE;&#x7F6E;</p>
+<pre><code>graph TB
+
+D[&#x6C47;&#x63A5;&#x5C40;D]---A
+D---B
+D---C
+A---FS1000
+A---cliA1((1001))
+A---cliA2((1002))
+B---cliB0((1000))
+B---cliB1((1001))
+B---cliB2((1002))
+C---cliC0((1000))
+C---cliC1((1001))
+C---cliC2((1002))
+
+FS1000---cliFS0((600))
+FS1000---cliFS1((601))
+FS1000---cliFS2((602))
+FS1000---cliFS3((...))
+</code></pre><p>conf/sip_profiles/external/gw_A.xml</p>
+<pre><code>&lt;include&gt;
+    &lt;gateway name=&quot;gw_A&quot;&gt;
+        &lt;param name=&quot;realm&quot; value=&quot;192.168.1.112&quot;/&gt;
+        &lt;param name=&quot;username&quot; value=&quot;1000&quot;/&gt;
+        &lt;param name=&quot;password&quot; value=&quot;1234&quot;/&gt;
+    &lt;/gateway&gt;
+&lt;/include&gt;
+</code></pre><p>conf/dialplan/default.xml</p>
+<pre><code>&lt;extension name=&quot;gw_A&quot;&gt;
+  &lt;condition field=&quot;destination_number&quot; expression=&quot;^0(.*)$&quot;&gt;
+    &lt;!--&#x8BBE;&#x7F6E;&#x4E3B;&#x53EB;&#x53F7;&#x7801;&#x53D8;&#x6362;--&gt;
+    &lt;action application=&quot;set&quot; data=&quot;effective_caller_id_number=1000${caller_id_number}&quot;/&gt;
+    &lt;action application=&quot;bridge&quot; data=&quot;sofia/gateway/gw_A/$1&quot;/&gt;
+  &lt;/condition&gt;
+&lt;/extension&gt;
+</code></pre><p>&#x8BBE;&#x7F6E;&#x900F;&#x4F20;&#xFF0C;&#x5728;192.168.1.112&#x7684;freeswitch&#x4E2D;conf/diectory/default/1000.xml</p>
+<pre><code>// &#x6CE8;&#x91CA;
+&lt;!--&lt;variable name=&quot;effective_caller_id_number&quot; value=&quot;600&quot;/&gt;--&gt;
+</code></pre></li>
+<li><p>DID(A&#x547C;&#x53EB;600)<br>&#x5982;&#x4F55;&#x5728;A&#x6784;&#x9020;&#x547C;&#x53EB;&#x5B57;&#x7B26;&#x4E32;</p>
+<pre><code># &#x627E;did&#x6865;&#x63A5;&#x5B57;&#x7B26;&#x4E32;&#x5982;&#x4F55;&#x5199;
+freeswitch&gt; sofia status profile internal reg 1000
+# &#x53D1;&#x73B0;&#x6CA1;&#x6709;&#x8F93;&#x51FA;
+freeswitch&gt; sofia status profile internal reg
+freeswitch&gt; sofia_contact interna/1000@192.168.1.112
+# &lt;sip:gw+gw_A@192.168.1.28:5080;transport=udp;gw=gw_A&gt;
+
+freeswitch&gt; echo test               # test
+freeswitch&gt; echo $${domain}         # $${domain}
+freeswitch&gt; expand echo $${domain}  # 192.168.1.112
+
+expand sofia_contact internal/1000@$${domain}
+expand echo originate ${sofia_contact(internal/1000@$${domain})} &amp;echo
+expand originate ${sofia_contact(internal/1000@$${domain})} &amp;echo
+
+regex sip:gw+gw_A|^sip:gw\+(.*)|sip:1000606
+expand echo originate ${regex(${sofia_contact(internal/1000@$${domain})}
+|^(.*)sip:gw\+\w+@(.*)|$1sip:1000600@$2)} &amp;echo
+expand originate ${regex(${sofia_contact(internal/1000@$${domain})}
+|^(.*)sip:gw\+\w+@(.*)|$1sip:1000600@$2)} &amp;echo
+
+# &#x8FD9;&#x6761;&#x662F;&#x4E2D;&#x7EE7;&#x5728;&#x5185;&#x7F51;&#xFF0C;freeswitch&#x5728;&#x5916;&#x7F51;&#x65F6;&#xFF0C;&#x6211;&#x7684;&#x914D;&#x7F6E;
+&lt;action application=&quot;bridge&quot; data=&quot;${regex(${sofia_contact(internal/zq)}|^(.+)sip:.+@(.+)|%1sip:$1@%2)    }&quot;/&gt;
+</code></pre><p>&#x5B9E;&#x73B0;&#x5982;&#x4E0B;:</p>
+<pre><code>&lt;!--A&#x7684;freeswitch&#x4E0A;conf/dialplan/default.xml--&gt;
+&lt;extension name=&quot;FS_DID&quot;&gt;
+  &lt;condition field=&quot;destination_number&quot; expression=&quot;^(1000.*)$&quot;&gt;
+    &lt;action application=&quot;bridge&quot;
+    &lt;!--&#x4F7F;&#x7528;regex&#x6355;&#x83B7;&#x7EC4;&#x4F7F;&#x7528;%&#x53F7;--&gt;
+    data=&quot;${regex(${sofia_contact(internal/1000@$${domain})}|^(.*)sip:gw\+\w+@(.*)|%1sip:1000600@%2)}&quot;/&gt;
+  &lt;/condition&gt;
+&lt;/extension&gt;
+
+&lt;!--FS1000&#x4E0A;&#x7684;conf/dialplan/public/fs_did.xml--&gt;
+&lt;include&gt;
+    &lt;extension name=&quot;F_DID&quot;&gt;
+        &lt;condition field=&quot;destination_number&quot; expression=&quot;^1000(.*)$&quot;&gt;
+            &lt;action application=&quot;bridge&quot; data=&quot;user/$1&quot;/&gt;
+        &lt;/condition&gt;
+    &lt;/extension&gt;
+&lt;/include&gt;
+</code></pre></li>
+<li><p>&#x4F7F;&#x7528;pbx&#x4E0A;&#x7684;&#x7F51;&#x5173;&#x547C;&#x5165;&#x547C;&#x51FA;</p>
+<pre><code>graph TB
+
+A---FS1000
+A---cliA1((1001))
+A---cliA2((1002))
+
+style G stroke:#f66,stroke-width:2px,stroke-dasharray: 5, 5
+FS1000---G
+FS1000---cliFS0((600))
+FS1000---cliFS1((601))
+FS1000---cliFS2((602))
+FS1000---cliFS3((...))
+</code></pre><ol>
+<li>&#x547C;&#x5165;
+```<h1 id="&#x5728;fs1000&#x7684;confdialplanpubliczqluodididxml">&#x5728;FS1000&#x7684;conf/dialplan/public/zq_luodi_DID.xml</h1>
+<include>
+ <extension name="in">
+     <condition field="destination_number" expression="^28324284$">
+         <action application="bridge" data="sofia/gateway/gw_out_ip/1002">
+     </action></condition>
+ </extension>
+</include>
+# &#x5728;FS1000&#x7684;conf/sip_profiles/external/gw_out_ip.xml
+<include>
+ <gateway name="gw_out_ip">
+     <param name="realm" value="218.104.238.162">
+     <param name="username" value="1000">
+     <param name="password" value="1234">
+ </gateway>
+</include>
+
+</li>
+</ol>
+<p>sofia profile external rescan
+reloadxml</p>
+<pre><code>2. &#x547C;&#x51FA;
+</code></pre><h1 id="a&#x4E0A;&#x7684;confdialplandefaultxml">A&#x4E0A;&#x7684;conf/dialplan/default.xml</h1>
+<!--FS in public net,call out router-->
+<extension name="public_net_callout">
+  <condition field="destination_number" expression="^(2222.*)$">
+    <action application="bridge" data="${regex(${sofia_contact(internal/1000@$${domain})}|
+    ^(.*)sip:gw\+\w+@(.*)|%1sip:${destination_number}@%2)}">
+  </action></condition>
+</extension>
+
+<h1 id="fs1000&#x4E0A;&#x7684;confdialplanpublicfsoutxml">FS1000&#x4E0A;&#x7684;conf/dialplan/public/fs_out.xml</h1>
+<p><include></include></p>
+<pre><code>&lt;extension name=&quot;out&quot;&gt;
+    &lt;condition field=&quot;destination_number&quot; expression=&quot;^2222(.*)$&quot;&gt;
+        &lt;action application=&quot;bridge&quot; data=&quot;sofia/gateway/zq/$1&quot;/&gt;
+    &lt;/condition&gt;
+&lt;/extension&gt;
+</code></pre><p>&lt;/include&gt;</p>
+<h1 id="fs1000&#x4E0A;&#x7684;confdialplanpubliczqxml">FS1000&#x4E0A;&#x7684;conf/dialplan/public/zq.xml</h1>
+<p><include></include></p>
+<pre><code>&lt;gateway name=&quot;zq&quot;&gt;
+    &lt;param name=&quot;realm&quot; value=&quot;192.168.1.201&quot;/&gt;
+    &lt;param name=&quot;register&quot; value=&quot;false&quot;/&gt;
+&lt;/gateway&gt;
+</code></pre><p>&lt;/include&gt;</p>
+<pre><code>1002&#x901A;&#x8FC7;NAT&#x6CE8;&#x518C;&#x5230;&#x5916;&#x7F51;&#x7684;freeswitch&#xFF0C;&#x4F1A;&#x63D0;&#x793A;&#x4E00;&#x4E2A;IP 124.72.38.191 Rejected by acl &quot;domains&quot;. Falling back to Digest auth.&#x91CD;&#x65B0;&#x53D1;&#x8D77;&#x6458;&#x8981;&#x8BA4;&#x8BC1;&#xFF0C;&#x4E0D;&#x662F;&#x9519;&#x8BEF;&#xFF0C;
+&#x4E0D;&#x80FD;&#x5728;conf/autoload_configs/acl.conf.xml&#x6DFB;&#x52A0;
+</code></pre><p><node type="allow" cidr="124.72.38.191/32">
+reloadacl
+```
+&#x5426;&#x5219;&#x8DEF;&#x7531;&#x56DE;&#x5230;context public,&#x800C;&#x4E0D;&#x662F;&#x9ED8;&#x8BA4;&#x7684;default</node></p>
+</li>
+</ul>
+</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="seven_du_book_10_11.html" class="navigation navigation-prev " aria-label="Previous page: 2.freeswitch权威指南 -- 实战篇10_11">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="seven_du_book_advanced.html" class="navigation navigation-next " aria-label="Next page: 4.freeswitch权威指南 -- 高级篇 16_">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"3.freeswitch权威指南 -- 实战篇12_13","level":"1.3.3","depth":2,"next":{"title":"4.freeswitch权威指南 -- 高级篇 16_","level":"1.3.4","depth":2,"path":"freeswitch/seven_du_book_advanced.md","ref":"freeswitch/seven_du_book_advanced.md","articles":[]},"previous":{"title":"2.freeswitch权威指南 -- 实战篇10_11","level":"1.3.2","depth":2,"path":"freeswitch/seven_du_book_10_11.md","ref":"freeswitch/seven_du_book_10_11.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"freeswitch/seven_du_book_12_13.md","mtime":"2019-06-25T16:45:53.591Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-06-25T16:59:42.175Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
